@@ -1,0 +1,364 @@
+==========================================
+Customizable Weather Plasmoid (CWP) 1.5.14
+==========================================
+
+This is another weather plasmoid.
+It aims to be highly customizable, but a little harder to setup than other weather plasmoids.
+Nearly any weather forecast provider can be used, as long as the data is provided as html files (no flash).
+The information how to extract the information from these html files is stored inside xml files.
+Commands like grep, head, tail, sed, awk, ... will do this job.
+
+For now, xml files for the weather providers
+
+www.weather.com (°F) (city identifier example: USDC0001)
+br.weather.com (°C) (city identifier example: BRXX0043)
+de.weather.com (°C) (city identifier example: 80331 or UKXX0085)
+espanol.weather.com (°C) (city identifier example: Ciudad-de-Mexico-MXDF0132)
+fr.weather.com (°C) (city identifier example: Paris-FRXX0076)
+in.weather.com (°C) (city identifier example: New-Delhi-INXX0096)
+uk.weather.com (°C) (city identifier example: London-UKXX0085)
+wetter.com (°C) (city identifier example: DE0006515)
+myforecast.com (°C) (city identifier example: 12844)
+myforecast.com (°F) (city identifier example: 12844)
+www.weather.com.cn (°C) (city identifier example: 101010100)
+accuweather.com US (°C) (city identifier example: 85001)
+accuweather.com US (°F) (city identifier example: 85001)
+accuweather.com world (°C) (city identifier example: AFR|ZA|SF004|JOHANNESBURG)
+accuweather.com world (°F) (city identifier example: AFR|ZA|SF004|JOHANNESBURG)
+ilmeteo.it (°C) (city identifier example: Roma)
+pogodynka.pl (°C) (city identifier example: Warszawa)
+freemeteo.com (°C) (city identifier example: gid=3117735&la=4; control language by la=<code>, try different numbers on freemeteo page)
+freemeteo.com (°F) (city identifier example: gid=3117735&la=4; control language by la=<code>, try different numbers on freemeteo page)
+www.gismeteo.com (°C) (city identifier example: 4944)
+
+are included, but feel free to write your own ones.
+Please note, that some of the xml files might not work properly for all locations.
+If they don't, try to update your definition files: either install latest cwp release or/and download latest xml definition
+file package from
+http://www.kde-look.org/content/show.php/show.php?content=98925
+and unpack the xml files into ~/.<kdedir>/share/apps/cwp (the cwp application folder inside your home kde directory).
+
+To access extended information about current weather condition, left-click inside the current weather description!
+The time, when the provider updated his weather information is shown italic when clicked on update time.
+
+CWP saves current weather data on exit inside $HOME/.<kdedir>/share/apps/cwp folder, so after crashes you might want to clean up
+this directory, or completely remove it.
+
+Parts of the source code are taken from weather plasmoid 0.4, KDE 4.2, qimageblitz, yaWP.
+Thanks to the developers!
+
+Installation
+============
+
+First, you need a complete build environment. You must install packages cmake, make, gcc, g++, gettext and
+KDE development packages. These packages are called differently, depending on your distribution:
+kde-devel on Ubuntu, task-kde4-devel on Mandriva, or similar.
+
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix` ..
+make
+make install
+kbuildsycoca4
+
+If you upgraded from a previous version, don't forget to restart plasma:
+Run the following command from the console: "kquitapp plasma-desktop && sleep 3 && plasma-desktop && exit"
+
+!!!!!!!!!!!!!!
+Please note: You might have to re-install CWP after KDE or Qt upggrades, otherwise you might experience plasma crashes.
+!!!!!!!!!!!!!!
+
+Writing your own translation file
+=================================
+
+If your language is not provided with customizable weather plasmoid, you might want to write your own file.
+This is very, very easy.
+Let's assume, you want to write a french translation file. Proceed in the following way:
+
+- go into "po" subdirectory of the "cwp-<version>" directory
+- copy "plasma_applet_cwp.pot" to "fr.po" (replace fr by your language code)
+- open the resulting fr.po with lokalize (the KDE 4 translation program, alternatively KBabel, the KDE 3 translation program
+  or any text editor)
+- In the beginning of the file, you should at least replace "FULL NAME <EMAIL@ADDRESS>" and "CHARSET"
+- CHARSET should be replaced by "utf-8". Example:
+
+"Project-Id-Version: 1.0.1\n"
+"Last-Translator: Georg Hennig <georg.hennig@web.de>\n"
+"Language-Team: Deutsch\n"
+"Content-Type: text/plain; charset=utf-8\n"
+
+- Translate all occurences of
+
+msgid "something to translate"
+msgstr "your translation"
+
+- Careful with leading / trailing spaces and ":"! They must appear in your translation, too!
+- Save the file (make sure to use UTF-8 encoding)
+- Reinstall customizable weather plasmoid (complete cmake, make, make install process as described under "Installation")
+- Check, whether your translation worked, and send me your translated file <georg.hennig@web.de>
+
+
+Setup
+=====
+
+Add the plasmoid to your desktop.
+
+If you plan to use custom xml files or icon background images, place them inside a $HOME/.<kdedir>/share/apps/cwp folder.
+NOTE: a custom background file should have the following name:
+background_<some_description>.<extension>
+<extension> can be png, gif or jpg.
+
+Otherwise, if you upgrade from a 0.3 or earlier version, you can delete $HOME/.custom_weather folder.
+
+Open the customizable weather applet configuration dialog:
+
+You can always export / import settings using the buttons on the first tab of the configuration dialog.
+
+Select the weather provider that you want to use.
+
+Enter an appropriate city identifier code for the location you want. You need to go the homepage of the provider
+and look at the adress line of your browser.
+Look above for examples (USDC0001 for www.weather.com).
+
+Update frequency: update weather data every ... minute.
+
+Other settings only affect the GUI:
+
+
+Weather data
+------------
+
+Provider: dito (see above)
+!!!!!!!!!!!!!!
+Note: If you switch from °C to °F (or vice versa), you MUST close the configuration dialog and reload weather data,
+otherwise the change won't take effect.
+!!!!!!!!!!!!!!
+
+Show temperature unit: Show or hide "C" or "F", so temperatures are shown as "10°" instead of "10°C".
+
+City idenntifier: dito (see above)
+
+Custom image: Usually a satellite image (or some other image from the web or a local image)
+  This image is displayed directly in layouts supporting custom images. If you click on this custom image thumbnail, the whole
+  image will be diplayed in a popup window. This window can be closed by clicking inside it or by clicking anywhere else inside the plasmoid.
+  If you are using other layouts, a small icon (small earth image) appears in the corner. Clicking on it will show the custom image.
+  If you don't want to see this small earth image on these layouts, set an empty custom image's URL.
+  Inside configuration dialog, you can select a satellite image from the list provided: Click on the small button with the earth icon,
+  and chose it from the list.
+
+Custom image list: A list of custom images that are diplayed. You can change between them with arrow buttons.
+  If the list is empty, the current url (see above) is used (without title), if the current url is empty, too, no custom image is displayed.
+    Buttons:
+    New: Create a new custom image item using current url and given name.
+    Save: Save current url to current custom image, overwriting its url (not its title!).
+    Edit Name: Edit the name of the current custom image.
+    Remove: Remove the current custom image from the list.
+
+Preferred Locations: A preferred location consists of a weather provider, a city identifier and a single custom image or a list of custom images.
+  What preferred locations are used for: When right clicking into the weather plasmoid, the context
+  menu will appear (usually filled with "Reload weather data" and "Setup CWP".
+  Preferred locations (their names) will appear in this context menu, so you can quickly switch between
+  different locations (give it some time to download the weather data!).
+  Only 25 preferred locations can be added to the context menu, additional preferred locations are ignored.
+  Buttons:
+    New: Create a new preferred location from current weather provider and city identifier.
+    Save: Save current weather provider and city identifier to current preferred location, overwriting its weather provider and city identifier.
+    Edit Name: Edit the name of the current preferred location.
+    Remove: Remove the current preferred location.
+
+Update frequency: update weather data every ... minute.
+
+Display update time: show time, when weather data has been fetched
+
+
+Layout 1
+--------
+
+Layout: horizontal or vertical layout? How many days of the forecast should be displayed? 3, 5 or 7? Or with location image? Compact?
+
+Day names: Just try, which fits best.
+!!!!!!!!!!!!!!
+Please note, that Qt obviously requires LC_ALL (not other LC_xxx variables!!!) set to your locale!
+Check with "locale", whether it's set correctly.
+!!!!!!!!!!!!!!
+
+Weather icons: Use weather icons from weather provider, native KDE icons or custom icons. Custom icons are svg or svgz files.
+  Use yaWP theme files, for example.
+
+Scale weather icons: scale them, might be below some text.
+
+Icon background: Some weather icons require white (or other) background. Select the appropriate background here.
+
+Omit icon description: dito, use this to make the plasmoid smaller but still readable.
+
+Font: dito
+
+Scale font: dito
+
+Font color: dito
+
+Enable font shadow: black font shadow for bright font color, and vice versa
+
+
+Layout 2
+--------
+
+Forecast separator: None, custom weather plasmoid style, plasma style
+
+Background: Default (solid), Translucent  (like folder view plasmoid), None (effectivly transparent), Custom with custom color and transparency
+!!!!!!!!!!!!!!
+Please note, that if you're running it from panel, Default (solid) and Translucent background settings don't have any effect!
+!!!!!!!!!!!!!!
+
+Wind layout: Description from weather provider (Southwest at 6 mph) or draw a Wind rose (might not work on some weather providers and locations)
+
+Scale wind arrow: Scale the wind rose's arrow.
+
+Invert wind rose direction: Invert the direction the wind rose's arrow points to, so it will point to where the wind comes from.
+
+
+Translation
+-----------
+
+dito
+
+<N;S;E;W;> translation: translate short names of the wind rose (north, south, east, west). Don't forget the separating/trailing semicolon!!!
+
+
+Add satellite images to satellite images xml files
+==================================================
+
+Simply add a line
+	<image name="Any name" url="Url to image" />
+Make sure to find an url that doesn't change with time or date!
+If you think, that your satellite image link is interesting for other people, too, contact me: <georg.hennig@web.de>
+
+
+Write your own weather provider xml files
+=========================================
+
+Find an appropriate weather forecast provider.
+It should display the data of a specific location including current temperature, wind, humidity, sunrise, sunset, ...
+and at least a 7 day forecast including the current day.
+
+The internet adress should have the following format:
+<prefix><zip code><suffix>
+prefix will be something like "http://..."
+and suffix may be empty, if no suffix is required.
+
+Now save the source code of this site and parse it (example):
+
+cat weather.html | grep foobar | head -n 5 | tail -n 1 | awk '{print $2}' | sed -e "s/\s*//g"
+
+If this command successfully prints the value you wanted to see, write
+grep foobar | head -n 5 | tail -n 1 | awk '{print $2}' | sed -e "s/\s*//g"
+into the appropriate xml tag.
+
+NOTE: Make sure to escape all characters not allowed in xml files:
+" ==> &quot;
+' ==> &apos;
+& ==> &amp;
+> ==> &gt;
+< ==> &lt;
+
+To debug your xml file, run "plasmoidviewer plasma_applet_cwp" from the console, configure it
+and have a look at the debug output.
+
+XML tag reference
+=================
+
+xml_file_version
+----------------
+type="cwp" (to identify cwp xml files)
+version: a string identifying your custom xml file version
+name: the desired name of this xml file
+example_zip: give an example of a valid zip string
+unit: "F" or "C"
+
+url..._follow:
+--------------
+if the data is not provided on the main page but inside a frame or linked from this page,
+  this tag gives the command how to extract the url where the real weather data is shown.
+  The url: ... tags will use this followed url instead.
+
+locale_settings
+---------------
+
+locale: set locale if necessary to have proper special characters in some languages.
+encoding: convert data using given encoding. Valid values: utf8, latin1, (ascii, local8bit, ucs4, utf16).
+	Most likely you won't need the last four.
+
+all
+---
+url: url to be used: urc, url1, ..., url7
+
+
+data:location
+-------------
+
+location: command to extract the location, for example city name
+country: command to extract the country name
+
+data:sun
+--------
+
+sunrise: command to extract the sunrise time
+sunset: command to extract the sunset time
+
+data:current:temperature
+------------------------
+
+update_time: command to extract the time, when provider updated its information
+temperature: command to extract the current temperature
+temperature_felt: command to extract the current temperature as it is felt (chill)
+
+data:current:wind
+-----------------
+
+wind: command to extract the current wind description
+wind_code: command to extract the current wind code (like N, or North, ... = a unique description of wind direction)
+wind_speed: command to extract the current (16 mph or similar)
+
+data:current:icon
+-----------------
+
+icon: command to extract the weather icon's url
+icon_code: command to extract the weather icon's code
+icon_text: command to extract the icon's text (cloudy, rainy, ...)
+
+data:current:additional
+-----------------------
+
+humidity: command to extract the humidity
+rain: command to extract the rain information
+dew_point: command to extract the dew point information
+visibility: command to extract the visibility information
+pressure: command to extract the pressure information
+uv_index: command to extract the uv index information
+
+data:dayX
+---------
+
+name: command to extract the name of the day (monday, tuesday) or the date
+temperature_low: command to extract the lower temperature
+temperature_high: command to extract the higher temperature
+icon: command to extract the weather icon's url
+icon_code: command to extract the weather icon's code
+icon_text: command to extract the icon's text
+
+icon:transform
+--------------
+
+purpose: translate weather provider specific icon codes to weather.com icon codes (Numbers 0-47)
+
+i#: input weather icon code (provider specific)
+o#: output weather icon code (0-47, www.weather.com)
+
+
+wind:transform
+--------------
+
+purpose: translate weather provider specific description of the wind direction to parsable Strings (N, NE, NNW, ...)
+
+i#: input wind direction description (provider specific)
+o#: output wind direction description (N, NE, ...)

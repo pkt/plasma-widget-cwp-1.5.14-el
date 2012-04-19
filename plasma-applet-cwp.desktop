@@ -1,0 +1,40 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CWP
+Name[de]=CWP
+Name[es]=PPC
+Name[fr]=CWP
+Name[hu]=CWP
+Name[it]=CWP
+Name[nb]=CWP
+Name[pl]=CWP
+Name[sr]=ППВ
+Name[sr@latin]=PPV
+Name[zh_CN]=CWP
+Comment=A customizable weather plasmoid
+Comment[de]=Ein konfigurierbares Wetter-Plasmoid
+Comment[es]=Plasmoide Personalizable del Clima
+Comment[fr]=plasmoid météo customisable
+Comment[hu]=Egy részletesen konfigurálható időjárásjelentő
+Comment[it]=Un plasmoide meteorologico personalizzabile
+Comment[nb]=En konfigurerbar værmeldingsplasmoid
+Comment[pl]=Konfigurowalna prognoza pogody
+Comment[sr]=Подесиви Плазмоид за Време
+Comment[sr@latin]=Podesivi Plazmoid za Vreme
+Comment[zh_CN]=显示气象实况和气象预报的可自定义的plasmoid
+Type=Service
+Icon=weather-showers-day
+X-KDE-ServiceTypes=Plasma/Applet
+
+X-KDE-Library=plasma_applet_cwp
+X-KDE-PluginInfo-Author=Georg Hennig
+X-KDE-PluginInfo-Email=georg.hennig@web.de
+X-KDE-PluginInfo-Name=plasma_applet_cwp
+X-KDE-PluginInfo-Version=1.5.14
+X-KDE-PluginInfo-Website=http://www.kde-look.org/content/show.php/show.php?content=98925
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
+
+X-PlasmoidCategory=System Information

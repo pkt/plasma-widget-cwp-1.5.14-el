@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<custom_weather>
+	<xml_file_version type="cwp" version="2012-04-02" name="www.weather.com.cn" search_page="http://www.weather.com.cn" example_zip="101010100" unit="C" />
+
+	<locale_settings locale="utf-8" encoding="utf8" />
+
+	<urlc urlc_prefix="http://www.weather.com.cn/data/sk/" urlc_suffix=".html" urlc_follow="" />
+
+	<url1 url1_prefix="http://www.weather.com.cn/html/weather/" url1_suffix=".shtml" url1_follow="" />
+
+	<url2 url2_prefix="" url2_suffix="" url2_follow="" />
+
+	<url3 url3_prefix="" url3_suffix="" url3_follow="" />
+
+	<url4 url4_prefix="" url4_suffix="" url4_follow="" />
+
+	<url5 url5_prefix="" url5_suffix="" url5_follow="" />
+
+	<url6 url6_prefix="" url6_suffix="" url6_follow="" />
+
+	<url7 url7_prefix="" url7_suffix="" url7_follow="" />
+
+	<data_location url="urlc"
+		location="sed -e &quot;s/.*city\&quot;:\&quot;\([^\&quot;]*\).*/\1/&quot;"
+		country="echo -n"
+		/>
+
+	<data_sun url="url1"
+		sunrise="grep -A 4 &quot;今日日出日落时间&quot; | tr -d &apos;\r&apos; | tr -d &apos;\n&apos; | awk &apos;{print}&apos; | sed -e &quot;s/.*&gt;\([0-9]*:[0-9]*\)&lt;.*&gt;\([0-9]*:[0-9]*\)&lt;.*/\1/&quot;"
+		sunset="grep -A 4 &quot;今日日出日落时间&quot; | tr -d &apos;\r&apos; | tr -d &apos;\n&apos; | awk &apos;{print}&apos; | sed -e &quot;s/.*&gt;\([0-9]*:[0-9]*\)&lt;.*&gt;\([0-9]*:[0-9]*\)&lt;.*/\2/&quot;"
+		/>
+
+	<data_current_temperature url="urlc"
+		update_time="sed -e &quot;s/.*time\&quot;:\&quot;\([^\&quot;]*\).*/\1/&quot;"
+		temperature="sed -e &quot;s/.*temp\&quot;:\&quot;\([^\&quot;]*\).*/\1/&quot;"
+		temperature_felt="echo -n"
+		/>
+
+	<data_current_wind url="urlc"
+		wind="sed -e &quot;s/.*WD\&quot;:\&quot;\([^\&quot;]*\).*WS\&quot;:\&quot;\([^\&quot;]*\).*/\1 - \2/&quot;"
+		wind_code="sed -e &quot;s/.*WD\&quot;:\&quot;\([^\&quot;]*\).*/\1/&quot;"
+		wind_speed="sed -e &quot;s/.*WS\&quot;:\&quot;\([^\&quot;]*\).*/\1/&quot;"
+		/>
+
+	<data_current_icon url="url1"
+		icon="grep -A 10 day | head -n 16 | tail -n 11 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot;"
+		icon_code="grep -A 10 day | head -n 16 | tail -n 11 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).gif/\1/&quot;"
+		icon_text="grep -A 10 day | head -n 16 | tail -n 11 | grep index | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_current_additional url="urlc"
+		humidity="sed -e &quot;s/.*SD\&quot;:\&quot;\([^\&quot;]*\).*/\1/&quot;"
+		rain="echo -n"
+		dew_point="echo -n"
+		visibility="echo -n"
+		pressure="echo -n"
+		uv_index="grep 紫外线 | head -n 1 | sed -e &quot;s/.*紫外线：\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day1 url="url1"
+		name="grep -A 3 day\ 1 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A 50 day\ 1 | grep -A 1 ℃ | head -n 1 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		temperature_high="grep -A 50 day\ 1 | grep -A 1 ℃ | head -n 3 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		icon="grep -A 28 day\ 1 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot;"
+		icon_code="grep -A 28 day\ 1 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).gif/\1/&quot;"
+		icon_text="grep -A 28 day\ 1 | grep -A 3 icon_weather | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day2 url="url1"
+		name="grep -A 3 day\ 2 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A 50 day\ 2 | grep ℃ | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		temperature_high="grep -A 50 day\ 2 | grep ℃ | head -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		icon="grep -A 28 day\ 2 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot;"
+		icon_code="grep -A 28 day\ 2 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).gif/\1/&quot;"
+		icon_text="grep -A 28 day\ 2 | grep -A 3 icon_weather | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day3 url="url1"
+		name="grep -A 3 day\ 3 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A 50 day\ 3 | grep ℃ | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		temperature_high="grep -A 50 day\ 3 | grep ℃ | head -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		icon="grep -A 28 day\ 3 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot;"
+		icon_code="grep -A 28 day\ 3 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).gif/\1/&quot;"
+		icon_text="grep -A 28 day\ 3 | grep -A 3 icon_weather | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day4 url="url1"
+		name="grep -A 3 day\ 4 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A 50 day\ 4 | grep ℃ | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		temperature_high="grep -A 50 day\ 4 | grep ℃ | head -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		icon="grep -A 28 day\ 4 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot;"
+		icon_code="grep -A 28 day\ 4 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).gif/\1/&quot;"
+		icon_text="grep -A 28 day\ 4 | grep -A 3 icon_weather | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day5 url="url1"
+		name="grep -A 3 day\ 5 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A 50 day\ 5 | grep ℃ | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		temperature_high="grep -A 50 day\ 5 | grep ℃ | head -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		icon="grep -A 28 day\ 5 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot;"
+		icon_code="grep -A 28 day\ 5 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).gif/\1/&quot;"
+		icon_text="grep -A 28 day\ 5 | grep -A 3 icon_weather | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day6 url="url1"
+		name="grep -A 3 day\ 6 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A 50 day\ 6 | grep ℃ | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		temperature_high="grep -A 50 day\ 6 | grep ℃ | head -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		icon="grep -A 28 day\ 6 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot;"
+		icon_code="grep -A 28 day\ 6 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).gif/\1/&quot;"
+		icon_text="grep -A 28 day\ 6 | grep -A 3 icon_weather | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day7 url="url1"
+		name="grep -A 3 day\ 7 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A 50 day\ 7 | grep ℃ | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		temperature_high="grep -A 50 day\ 7 | grep ℃ | head -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^0-9-]\([-]*[0-9]*\)℃.*/\1/&quot;"
+		icon="grep -A 28 day\ 7 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot;"
+		icon_code="grep -A 28 day\ 7 | grep icon_weather | head -n 1 | sed -e &quot;s/.*img src=\&quot;\([^\&quot;]*\).*/http:\/\/www.weather.com.cn\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).gif/\1/&quot;"
+		icon_text="grep -A 28 day\ 7 | grep -A 3 icon_weather | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<icon_transform
+		i1="d01" o1="30"
+		i2="d02" o2="26"
+		i3="d03" o3="39"
+		i4="d04" o4="37"
+		i5="d05" o5="38"
+		i6="d06" o6="07"
+		i7="d07" o7="09"
+		i8="d08" o8="09"
+		i9="d09" o9="11"
+		i10="d10" o10="11"
+		i11="d11" o11="40"
+		i12="d12" o12="40"
+		i13="d13" o13="41"
+		i14="d14" o14="13"
+		i15="d15" o15="13"
+		i16="d16" o16="14"
+		i17="d17" o17="14"
+		i18="d18" o18="20"
+		i19="d19" o19="06"
+		i20="d20" o20="23"
+		i21="d21" o21="09"
+		i22="d22" o22="11"
+		i23="d23" o23="11"
+		i24="d24" o24="40"
+		i25="d25" o25="40"
+		i26="d26" o26="14"
+		i27="d27" o27="14"
+		i28="d28" o28="16"
+		i29="d29" o29=""
+		i30="d30" o30=""
+		i31="d31" o31=""
+		i32="d32" o32=""
+		i33="n01" o33="29"
+		i34="n02" o34="26"
+		i35="n03" o35="45"
+		i36="n04" o36="37"
+		i37="n05" o37="38"
+		i38="n06" o38="07"
+		i39="n07" o39="09"
+		i40="n08" o40="09"
+		i41="n09" o41="11"
+		i42="n10" o42="11"
+		i43="n11" o43="40"
+		i44="n12" o44="40"
+		i45="n13" o45="46"
+		i46="n14" o46="13"
+		i47="n15" o47="13"
+		i48="n16" o48="14"
+		i49="n17" o49="14"
+		i50="n18" o50="20"
+		i51="n19" o51="06"
+		i52="n20" o52="23"
+		i53="n21" o53="09"
+		i54="n22" o54="11"
+		i55="n23" o55="11"
+		i56="n24" o56="40"
+		i57="n25" o57="40"
+		i58="n26" o58="14"
+		i59="n27" o59="14"
+		i60="n28" o60="16"
+		i61="n29" o61=""
+		i62="n30" o62=""
+		i63="n31" o63=""
+		i64="n32" o64=""
+		i65="n00" o65="31"
+		i66="d00" o66="32"
+	/>
+
+	<wind_transform i1="北风" o1="N"
+		i2="东北偏北风" o2="NNE"
+		i3="东北风" o3="NE"
+		i4="东北偏东风" o4="ENE"
+		i5="东风" o5="E"
+		i6="东南偏南风" o6="SSE"
+		i7="东南风" o7="SE"
+		i8="东南偏东风" o8="ESE"
+		i9="南风" o9="S"
+		i10="西北偏北风" o10="NNW"
+		i11="西北风" o11="NW"
+		i12="西北偏西风" o12="WNW"
+		i13="西风" o13="W"
+		i14="西南偏南风" o14="SSW"
+		i15="西南风" o15="SW"
+		i16="西南偏西风" o16="WSW"
+		i17="暂无实况" o17="Var"
+		i18="Variable" o18="Var"
+		i19="" o19=""
+		i20="" o20=""
+	/>
+</custom_weather>

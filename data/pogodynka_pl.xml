@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<custom_weather>
+	<xml_file_version type="cwp" version="2012-04-02" name="pogodynka.pl" search_page="http://www.pogodynka.pl" example_zip="polska/warszawa_warszawa" unit="C" />
+
+	<locale_settings locale="utf-8" encoding="utf8" />
+
+	<urlc urlc_prefix="http://www.pogodynka.pl/" urlc_suffix="" urlc_follow="" />
+
+	<url1 url1_prefix="http://www.pogodynka.pl/" url1_suffix="" url1_follow="grep 16dni | sed -e &quot;s/.*\&quot;\([^\&quot;]*16dni[^\&quot;]*\).*/http:\/\/www.pogodynka.pl\1/&quot;" />
+
+	<url2 url2_prefix="" url2_suffix="" url2_follow="" />
+
+	<url3 url3_prefix="" url3_suffix="" url3_follow="" />
+
+	<url4 url4_prefix="" url4_suffix="" url4_follow="" />
+
+	<url5 url5_prefix="" url5_suffix="" url5_follow="" />
+
+	<url6 url6_prefix="" url6_suffix="" url6_follow="" />
+
+	<url7 url7_prefix="" url7_suffix="" url7_follow="" />
+
+	<data_location url="urlc"
+		location="grep content_title | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/\([^(]*\)(\([^)]*\)).*/\1/&quot;"
+		country="grep content_title | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/\([^(]*\)(\([^)]*\)).*/\2/&quot;"
+		/>
+
+	<data_sun url="urlc"
+		sunrise="grep -A 2 info_info | head -n 2 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		sunset="grep -A 2 info_info | head -n 3 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		/>
+
+	<data_current_temperature url="urlc"
+		update_time="echo -n N/A"
+		temperature="grep -A 1 Temperatura | head -n 2 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&gt;]*\) &amp;#176;C.*/\1/&quot;"
+		temperature_felt="echo -n"
+		/>
+
+	<data_current_wind url="urlc"
+		wind_code="grep -A 1 Kierunek\ wiatru | head -n 2 | tail -n 1 | sed -e &quot;s/.*src=&apos;\([^&apos;]*\).*/http:\/\/www.pogodynka.pl\/\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).jpg.*/\1/&quot;"
+		wind_speed="grep -A 1 Sila\ wiatru | head -n 2 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		wind="grep -A 1 Sila\ wiatru | head -n 2 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_current_icon url="urlc"
+		icon="grep auto_icons | head -n 1 | sed -e &quot;s/.*url(&apos;\([^&apos;]*\).*/http:\/\/www.pogodynka.pl\1/&quot;"
+		icon_code="grep auto_icons | head -n 1 | sed -e &quot;s/.*url(&apos;\([^&apos;]*\).*/http:\/\/www.pogodynka.pl\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).png.*/\1/&quot;"
+		icon_text="grep -B 1 auto_icons | head -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_current_additional url="urlc"
+		humidity="echo -n"
+		rain="echo -n"
+		dew_point="echo -n"
+		visibility="echo -n"
+		pressure="grep -A 1 Ciśnienie | head -n 2 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		uv_index="echo -n"
+		/>
+
+	<data_day1 url="url1"
+		name="grep span\ class=\'godzina\' | head -n 1 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^0-9]*\).*/\1/&quot;"
+		temperature_low="echo -n"
+		temperature_high="grep -A 15 1[34]:00 | grep temperatura | head -n 1 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		icon="grep -A 15 1[34]:00 | grep ico | head -n 1 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot;"
+		icon_code="grep -A 15 1[34]:00 | grep ico | head -n 1 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).jpg.*/\1/&quot;"
+		icon_text="grep -A 15 1[34]:00 | grep opis | head -n 1 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day2 url="url1"
+		name="grep span\ class=\'godzina\' | head -n 2 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^0-9]*\).*/\1/&quot;"
+		temperature_low="grep -A 15 [12]:00 | grep temperatura | head -n 2 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_high="grep -A 15 1[34]:00 | grep temperatura | head -n 2 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		icon="grep -A 15 1[34]:00 | grep ico | head -n 3 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot;"
+		icon_code="grep -A 15 1[34]:00 | grep ico | head -n 3 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).jpg.*/\1/&quot;"
+		icon_text="grep -A 15 1[34]:00 | grep opis | head -n 3 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day3 url="url1"
+		name="grep span\ class=\'godzina\' | head -n 3 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^0-9]*\).*/\1/&quot;"
+		temperature_low="grep -A 15 [12]:00 | grep temperatura | head -n 3 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_high="grep -A 15 1[34]:00 | grep temperatura | head -n 3 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		icon="grep -A 15 1[34]:00 | grep ico | head -n 5 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot;"
+		icon_code="grep -A 15 1[34]:00 | grep ico | head -n 5 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).jpg.*/\1/&quot;"
+		icon_text="grep -A 15 1[34]:00 | grep opis | head -n 5 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day4 url="url1"
+		name="grep span\ class=\'godzina\' | head -n 4 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^0-9]*\).*/\1/&quot;"
+		temperature_low="grep -A 15 [12]:00 | grep temperatura | head -n 4 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_high="grep -A 15 1[34]:00 | grep temperatura | head -n 4 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		icon="grep -A 15 1[34]:00 | grep ico | head -n 7 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot;"
+		icon_code="grep -A 15 1[34]:00 | grep ico | head -n 7 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).jpg.*/\1/&quot;"
+		icon_text="grep -A 15 1[34]:00 | grep opis | head -n 7 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day5 url="url1"
+		name="grep span\ class=\'godzina\' | head -n 5 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^0-9]*\).*/\1/&quot;"
+		temperature_low="grep -A 15 [12]:00 | grep temperatura | head -n 5 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_high="grep -A 15 1[34]:00 | grep temperatura | head -n 5 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		icon="grep -A 15 1[34]:00 | grep ico | head -n 9 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot;"
+		icon_code="grep -A 15 1[34]:00 | grep ico | head -n 9 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).jpg.*/\1/&quot;"
+		icon_text="grep -A 15 1[34]:00 | grep opis | head -n 9 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day6 url="url1"
+		name="grep span\ class=\'godzina\' | head -n 6 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^0-9]*\).*/\1/&quot;"
+		temperature_low="grep -A 15 [12]:00 | grep temperatura | head -n 6 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_high="grep -A 15 1[34]:00 | grep temperatura | head -n 6 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		icon="grep -A 15 1[34]:00 | grep ico | head -n 11 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot;"
+		icon_code="grep -A 15 1[34]:00 | grep ico | head -n 11 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).jpg.*/\1/&quot;"
+		icon_text="grep -A 15 1[34]:00 | grep opis | head -n 11 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day7 url="url1"
+		name="grep span\ class=\'godzina\' | head -n 7 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^0-9]*\).*/\1/&quot;"
+		temperature_low="grep -A 15 [12]:00 | grep temperatura | head -n 7 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_high="grep -A 15 1[34]:00 | grep temperatura | head -n 7 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		icon="grep -A 15 1[34]:00 | grep ico | head -n 13 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot;"
+		icon_code="grep -A 15 1[34]:00 | grep ico | head -n 13 | tail -n 1 | sed -e &quot;s/[^\.]*img src=\([^&gt;]*\).*/http:\/\/www.pogodynka.pl\1/&quot; | sed -e &quot;s/.*\/\([^\/]*\).jpg.*/\1/&quot;"
+		icon_text="grep -A 15 1[34]:00 | grep opis | head -n 13 | tail -n 1 | sed -e &quot;s/[^&lt;]*&lt;[^&gt;]*&gt;&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<icon_transform
+		i1="n0z00d" o1="32"
+		i2="n1z00d" o2="34"
+		i3="n1z60d" o3="11"
+		i4="n2z00d" o4="30"
+		i5="n3z00d" o5="30"
+		i6="n3z60d" o6="39"
+		i7="n3z61d" o7="39"
+		i8="n3z70d" o8="41"
+		i9="n4z00d" o9="30"
+		i10="n5z00d" o10="30"
+		i11="n6z00d" o11="28"
+		i12="n6z60d" o12="11"
+		i13="n6z61d" o13="39"
+		i14="n6z70d" o14="41"
+		i15="n6z90d" o15="37"
+		i16="n7z00d" o16="28"
+		i17="n8z00d" o17="26"
+		i18="n8z60d" o18="39"
+		i19="n8z61d" o19="40"
+		i20="n8z68d" o20="5"
+		i21="n8z70d" o21="13"
+		i22="n8z71d" o22="41"
+		i23="n8z90d" o23="17"
+		i24="n0z00n" o24="31"
+		i25="n1z00n" o25="33"
+		i26="n1z60n" o26="45"
+		i27="n3z00n" o27="29"
+		i28="n3z60n" o28="45"
+		i29="n3z61n" o29="45"
+		i30="n3z70n" o30="46"
+		i31="n6z00n" o31="27"
+		i32="n6z60n" o32="11"
+		i33="n6z61n" o33="45"
+		i34="n6z70n" o34="46"
+		i35="n6z90n" o35="17"
+		i36="n8z00n" o36="27"
+		i37="n8z60n" o37="45"
+		i38="n8z61n" o38="40"
+		i39="n8z68n" o39="5"
+		i40="n8z70n" o40="13"
+		i41="n8z71n" o41="46"
+		i42="n8z90n" o42="17"
+		i43="" o43=""
+		i44="" o44=""
+		i45="" o45=""
+		i46="" o46=""
+		i47="" o47=""
+		i48="" o48=""
+	/>
+
+	<wind_transform
+		i1="0" o1="N"
+		i2="" o2="NNE"
+		i3="1" o3="NE"
+		i4="" o4="ENE"
+		i5="2" o5="E"
+		i6="" o6="SSE"
+		i7="3" o7="SE"
+		i8="" o8="ESE"
+		i9="4" o9="S"
+		i10="" o10="NNW"
+		i11="7" o11="NW"
+		i12="" o12="WNW"
+		i13="6" o13="W"
+		i14="" o14="SSW"
+		i15="5" o15="SW"
+		i16="" o16="WSW"
+		i17="8" o17="Var"
+		i18="" o18="Var"
+		i19="" o19=""
+		i20="" o20=""
+	/>
+</custom_weather>

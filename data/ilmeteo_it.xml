@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<custom_weather>
+	<xml_file_version type="cwp" version="2012-04-02" name="ilmeteo.it" search_page="http://www.ilmeteo.it" example_zip="Roma" unit="C" />
+
+	<locale_settings locale="utf-8" encoding="utf8" />
+
+	<urlc urlc_prefix="http://www.ilmeteo.it/meteo/" urlc_suffix="" urlc_follow="grep &quot;meteo\/previsioni.*&quot; | sed -e &quot;s/.*meteo\/previsioni\([^'\&quot;&lt;]*\).*/http:\/\/www.ilmeteo.it\/portale\/meteo\/previsioni\1\&amp;g=0/&quot; | sed -e &quot;s/amp;//g&quot; | sed -e &quot;s/\&amp;g=0\&amp;g=0/\&amp;g=0/g&quot;" />
+
+	<url1 url1_prefix="http://www.ilmeteo.it/meteo/" url1_suffix="" url1_follow="grep &quot;meteo\/previsioni.*&quot; | sed -e &quot;s/.*meteo\/previsioni\([^'\&quot;&lt;]*\).*/http:\/\/www.ilmeteo.it\/portale\/meteo\/previsioni\1\&amp;g=-1/&quot; | sed -e &quot;s/amp;//g&quot; | sed -e &quot;s/\&amp;g=-1\&amp;g=-1/\&amp;g=-1/g&quot;" />
+
+	<url2 url2_prefix="http://www.ilmeteo.it/meteo/" url2_suffix="" url2_follow="" />
+
+	<url3 url3_prefix="" url3_suffix="" url3_follow="" />
+
+	<url4 url4_prefix="" url4_suffix="" url4_follow="" />
+
+	<url5 url5_prefix="" url5_suffix="" url5_follow="" />
+
+	<url6 url6_prefix="" url6_suffix="" url6_follow="" />
+
+	<url7 url7_prefix="" url7_suffix="" url7_follow="" />
+
+	<data_location url="url2"
+		location="grep Link\ veloci | sed -e &quot;s/.*Link veloci: &lt;a href[^>]*>\([^&lt;]*\).*&lt;a href.*&lt;a href[^>]*>\([^&lt;]*\).*/\2/&quot;"
+		country="grep Link\ veloci | sed -e &quot;s/.*Link veloci: &lt;a href[^>]*>\([^&lt;]*\).*&lt;a href.*&lt;a href[^>]*>\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_sun url="urlc"
+		sunrise="grep SOLE | sed -e &quot;s/.*Sorge: \([0-9:]*\).* Tramonta: \([0-9:]*\).*/\1/&quot;"
+		sunset="grep SOLE | sed -e &quot;s/.*Sorge: \([0-9:]*\).* Tramonta: \([0-9:]*\).*/\2/&quot;"
+		/>
+
+	<data_current_temperature url="urlc"
+		update_time="grep td\ class=.f. -m 1 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;&lt;[^&gt;]*&gt;\([0-9]*\)\.\([0-9]*\).*/\1:\2/&quot;"
+		temperature="grep td\ class=.f. -m 1 | tail -n 1 | sed -e &quot;s/.*&lt;td&gt;\([0-9\-]\+\).*deg;C.*/\1/&quot;"
+		temperature_felt="grep td\ class=.f. -m 1 | tail -n 1 | sed -e &quot;s/.*c3a[^&gt;]*>\([^&amp;]*\).*/\1/&quot;"
+		/>
+
+	<data_current_wind url="urlc"
+		wind_code="grep td\ class=.f. -m 1 | tail -n 1 | sed -e &quot;s/&lt;\/td&gt;/\n/g&quot; | sed -e &quot;s/&lt;\/acronym&gt;/\n/g&quot; | grep . -m 6 | tail -n 1 | sed -e &quot;s/.*acronym[^&gt;]*&gt;\(.*\)/\1/&quot; | awk &apos;{ if ($1 ~ /[SEWN]+/) {print} else {print &quot;&quot;} }&apos; | sed -e &quot;s/\(.*\)&amp;nbsp;.*/\1/g&quot;"
+		wind_speed="grep td\ class=.f. -m 1 | tail -n 1 | sed -e &quot;s/&lt;\/td&gt;/\n/g&quot; | sed -e &quot;s/&lt;\/acronym&gt;/\n/g&quot; | grep . -m 6 | tail -n 1 | sed -e &quot;s/.*acronym[^&gt;]*&gt;\(.*\)/\1/&quot; | awk &apos;{ if ($1 ~ /[SEWN]+/) {print} else {print &quot;&quot;} }&apos; | sed -e &quot;s/.*&amp;nbsp;\(.*\)/\1 km\/h/g&quot;"
+		wind="grep td\ class=.f. -m 1 | tail -n 1 | sed -e &quot;s/&lt;\/td&gt;/\n/g&quot; | grep . -m 6 | tail -n 1 | sed -e &quot;s/.*&lt;span[^\&quot;]*\&quot;descri[^&gt;]*&gt;\(.*\)&lt;.*/\1/&quot;"
+		/>
+
+	<data_current_icon url="urlc"
+		icon="grep td\ class=.f. -m 1 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/http:\/\/www.ilmeteo.it\/portale\/meteo\/img\/\1.gif/&quot;"
+		icon_code="grep td\ class=.f. -m 1 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/\1/&quot;"
+		icon_text="grep td\ class=.f. -m 1 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s [^&gt;]*&gt;&lt;\/span&gt;&lt;\/td&gt;&lt;td&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		/>
+
+	<data_current_additional url="urlc"
+		humidity="grep td\ class=.f. -m 1 | tail -n 1 | sed -e &quot;s/.*c2a[^>;]*>\([^&lt;]*\).*/\1/&quot;"
+		rain="grep td\ class=.f. | grep &apos;pl5&apos; -m 1 | sed -e &quot;s/.*pl5[^&gt;]&gt;[^&lt;]*&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;lt;/&lt;/g&quot; | sed -e &quot;s/&amp;gt;/&gt;/g&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		dew_point="echo -n"
+		visibility="grep td\ class=.f. | grep &apos;c1b[^&lt;]*&lt;&apos; -m 1 | tail -n 1 | sed -e &quot;s/.*c1b[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;lt;/&lt;/g&quot; | sed -e &quot;s/&amp;gt;/&gt;/g&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		pressure="grep td\ class=.f. | grep &apos;[0-9]\+mb&lt;&apos; -m 1 | tail -n 1 | sed -e &quot;s/&lt;\/td&gt;/\n/g&quot; | grep id=\&quot;c2b | sed -e &quot;s/.*c2b[^&gt;]*&gt;\(.*\)/\1/&quot; | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		uv_index="grep td\ class=.f. | grep &apos;c1a[^&lt;]*&lt;&apos; -m 1 | tail -n 1 | sed -e &quot;s/.*c1a[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;lt;/&lt;/g&quot; | sed -e &quot;s/&amp;gt;/&gt;/g&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		/>
+
+	<data_day1 url="url1"
+		name="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 1 | tail -n 1 | sed -e &quot;s/.*tab(&apos;[^&apos;]*&apos;)\&quot;&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot; | sed -e &quot;s/&amp;igrave;/ì/&quot;"
+		temperature_low="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 1 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\1/&quot;"
+		temperature_high="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 1 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\2/&quot;"
+		icon="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 1 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/http:\/\/www.ilmeteo.it\/portale\/meteo\/img\/\1.gif/&quot;"
+		icon_code="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 1 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/\1/&quot;"
+		icon_text="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 1 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s [^&gt;]*&gt;&lt;\/span&gt;&lt;\/td&gt;&lt;td&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		/>
+
+	<data_day2 url="url1"
+		name="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 2 | tail -n 1 | sed -e &quot;s/.*tab(&apos;[^&apos;]*&apos;)\&quot;&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot; | sed -e &quot;s/&amp;igrave;/ì/&quot;"
+		temperature_low="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 2 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\1/&quot;"
+		temperature_high="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 2 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\2/&quot;"
+		icon="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 2 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/http:\/\/www.ilmeteo.it\/portale\/meteo\/img\/\1.gif/&quot;"
+		icon_code="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 2 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/\1/&quot;"
+		icon_text="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 2 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s [^&gt;]*&gt;&lt;\/span&gt;&lt;\/td&gt;&lt;td&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		/>
+
+	<data_day3 url="url1"
+		name="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 3 | tail -n 1 | sed -e &quot;s/.*tab(&apos;[^&apos;]*&apos;)\&quot;&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot; | sed -e &quot;s/&amp;igrave;/ì/&quot;"
+		temperature_low="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 3 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\1/&quot;"
+		temperature_high="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 3 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\2/&quot;"
+		icon="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 3 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/http:\/\/www.ilmeteo.it\/portale\/meteo\/img\/\1.gif/&quot;"
+		icon_code="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 3 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/\1/&quot;"
+		icon_text="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 3 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s [^&gt;]*&gt;&lt;\/span&gt;&lt;\/td&gt;&lt;td&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		/>
+
+	<data_day4 url="url1"
+		name="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 4 | tail -n 1 | sed -e &quot;s/.*tab(&apos;[^&apos;]*&apos;)\&quot;&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot; | sed -e &quot;s/&amp;igrave;/ì/&quot;"
+		temperature_low="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 4 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\1/&quot;"
+		temperature_high="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 4 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\2/&quot;"
+		icon="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 4 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/http:\/\/www.ilmeteo.it\/portale\/meteo\/img\/\1.gif/&quot;"
+		icon_code="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 4 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/\1/&quot;"
+		icon_text="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 4 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s [^&gt;]*&gt;&lt;\/span&gt;&lt;\/td&gt;&lt;td&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		/>
+
+	<data_day5 url="url1"
+		name="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 5 | tail -n 1 | sed -e &quot;s/.*tab(&apos;[^&apos;]*&apos;)\&quot;&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot; | sed -e &quot;s/&amp;igrave;/ì/&quot;"
+		temperature_low="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 5 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\1/&quot;"
+		temperature_high="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 5 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\2/&quot;"
+		icon="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 5 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/http:\/\/www.ilmeteo.it\/portale\/meteo\/img\/\1.gif/&quot;"
+		icon_code="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 5 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/\1/&quot;"
+		icon_text="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 5 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s [^&gt;]*&gt;&lt;\/span&gt;&lt;\/td&gt;&lt;td&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		/>
+
+	<data_day6 url="url1"
+		name="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 6 | tail -n 1 | sed -e &quot;s/.*tab(&apos;[^&apos;]*&apos;)\&quot;&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot; | sed -e &quot;s/&amp;igrave;/ì/&quot;"
+		temperature_low="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 6 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\1/&quot;"
+		temperature_high="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 6 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\2/&quot;"
+		icon="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 6 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/http:\/\/www.ilmeteo.it\/portale\/meteo\/img\/\1.gif/&quot;"
+		icon_code="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 6 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/\1/&quot;"
+		icon_text="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 6 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s [^&gt;]*&gt;&lt;\/span&gt;&lt;\/td&gt;&lt;td&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		/>
+
+	<data_day7 url="url1"
+		name="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 7 | tail -n 1 | sed -e &quot;s/.*tab(&apos;[^&apos;]*&apos;)\&quot;&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot; | sed -e &quot;s/&amp;igrave;/ì/&quot;"
+		temperature_low="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 7 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\1/&quot;"
+		temperature_high="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 7 | tail -n 1 | sed -e &quot;s/.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*&gt;\([^&amp;]*\)&amp;nbsp;&amp;deg;.*/\2/&quot;"
+		icon="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 7 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/http:\/\/www.ilmeteo.it\/portale\/meteo\/img\/\1.gif/&quot;"
+		icon_code="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 7 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s \([^\&quot;]*\).*/\1/&quot;"
+		icon_text="grep -B 1 -A 5 \?g=1 | tail -n 7 | head -n 7 | tail -n 1 | sed -e &quot;s/.*span class=\&quot;s [^&gt;]*&gt;&lt;\/span&gt;&lt;\/td&gt;&lt;td&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		/>
+
+	<icon_transform
+		i1="ss1" o1="36"
+		i2="ss2" o2="32"
+		i3="ss3" o3="30"
+		i4="ss4" o4="34"
+		i5="ss5" o5="39"
+		i6="ss6" o6="5"
+		i7="ss7" o7="13"
+		i8="ss8" o8="26"
+		i9="ss9" o9="11"
+		i10="ss10" o10="40"
+		i11="ss11" o11="41"
+		i12="ss12" o12="7"
+		i13="ss13" o13="17"
+		i14="ss14" o14="20"
+		i15="ss15" o15="21"
+		i16="ss16" o16="37"
+		i17="ss17" o17="6"
+		i18="ss18" o18="41"
+		i19="ss101" o19="31"
+		i20="ss102" o20="31"
+		i21="ss103" o21="33"
+		i22="ss104" o22="29"
+		i23="ss105" o23="45"
+		i24="ss106" o24="5"
+		i25="ss107" o25="46"
+		i26="ss108" o26="26"
+		i27="ss109" o27="11"
+		i28="ss110" o28="40"
+		i29="ss111" o29="41"
+		i30="ss112" o30="7"
+		i31="ss113" o31="17"
+		i32="ss114" o32="20"
+		i33="ss116" o33="47"
+		i34="ss117" o34="6"
+		i35="ss118" o35="41"
+		i36="ss4b" o36="28"
+		i37="" o37=""
+		i38="" o38=""
+		i39="" o39=""
+		i40="" o40=""
+		i41="" o41=""
+		i42="" o42=""
+		i43="" o43=""
+		i44="" o44=""
+		i45="" o45=""
+		i46="" o46=""
+		i47="" o47=""
+		i48="" o48=""
+	/>
+
+	<wind_transform i1="N" o1="N"
+		i2="NNE" o2="NNE"
+		i3="NE" o3="NE"
+		i4="ENE" o4="ENE"
+		i5="E" o5="E"
+		i6="SSE" o6="SSE"
+		i7="SE" o7="SE"
+		i8="ESE" o8="ESE"
+		i9="S" o9="S"
+		i10="NNW" o10="NNW"
+		i11="NW" o11="NW"
+		i12="WNW" o12="WNW"
+		i13="W" o13="W"
+		i14="SSW" o14="SSW"
+		i15="SW" o15="SW"
+		i16="WSW" o16="WSW"
+		i17="Var" o17="Var"
+		i18="Variable" o18="Var"
+		i19="" o19=""
+		i20="" o20=""
+	/>
+</custom_weather>

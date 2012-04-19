@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<custom_weather>
+	<xml_file_version type="cwp_satellite_images" version="2012-04-02" />
+
+<!--Global-->
+	<image name="- - Global - -" url="" />
+
+	<image name="Weather.com - Global - Africa / Europe (Infrared)" url="http://image.weather.com/images/sat/euro-africasat_600x405.jpg" />
+	<image name="Weather.com - Global - Pacific Ocean (Infrared)" url="http://image.weather.com/images/sat/pacglobsat_720x486.jpg" />
+	<image name="Weather.com - Global - West Pacific Ocean (Infrared)" url="http://image.weather.com/images/sat/wpacglobsat_600x405.jpg" />
+	<image name="Weather.com - Global - Western Hemisphere (Infrared)" url="http://image.weather.com/images/sat/goesdisk_600x405.jpg" />
+
+	<image name="Dwd.de - Global (Hammer)" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Global/kompHammer__aktuell__m00s,templateId=poster,property=poster.png" />
+	<image name="Dwd.de - Global (Flat)" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Global/wcm__aktuell,templateId=poster,property=poster.png" />
+
+	<image name="Dwd.de - Africa / Europe" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Global/met8__erde__aktuell,templateId=poster,property=poster.png" />
+	<image name="Dwd.de - America" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Global/goes12__erde__aktuell,templateId=poster,property=poster.png" />
+	<image name="Dwd.de - Pacific" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Global/goes11__erde__aktuell,templateId=poster,property=poster.png" />
+	<image name="Dwd.de - Australia" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Global/mtsat1r__erde__aktuell,templateId=poster,property=poster.png" />
+	<image name="Dwd.de - Indian Ocean" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Global/met7__erde__aktuell,templateId=poster,property=poster.png" />
+
+	<image name="Accuweather.com - World" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/iswmerc.jpg" />
+
+	<image name="Sat24.com - World (Visual) - animated" url="http://www.sat24.com/image.ashx?country=eu&amp;type=slide&amp;index=1&amp;sat" />
+
+	<image name="" url="" />
+
+
+<!--Africa & Mid East-->
+	<image name="- - Africa &amp; Mid East - -" url="" />
+
+	<image name="Weather.com - World - Africa (Infrared)" url="http://image.weather.com/images/sat/africasat_600x405.jpg" />
+	<image name="Weather.com - World - Middle East (Infrared)" url="http://image.weather.com/images/sat/mideastsat_600x405.jpg" />
+	<image name="Weather.com - World - Afghanistan (Infrared)" url="http://image.weather.com/images/sat/regions/afghan_sat_720_usen.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - Western Africa (Infrared 3.9)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR039Color-westernAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Western Africa (Infrared 10.8)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108Color-westernAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Western Africa (Visual 0.6)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_VIS006Color-westernAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Western Africa (Natural Colors)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-naturalcolor-westernAfrica.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - Central Africa (Infrared 3.9)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR039Color-centralAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Central Africa (Infrared 10.8)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108Color-centralAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Central Africa (Visual 0.6)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_VIS006Color-centralAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Central Africa (Natural Colors)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-naturalcolor-centralAfrica.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - Eastern Africa (Infrared 3.9)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR039Color-easternAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Eastern Africa (Infrared 10.8)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108Color-easternAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Eastern Africa (Visual 0.6)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_VIS006Color-easternAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Eastern Africa (Natural Colors)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-naturalcolor-easternAfrica.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - Southern Africa (Infrared 3.9)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR039Color-southernAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Southern Africa (Infrared 10.8)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108Color-southernAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Southern Africa (Visual 0.6)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_VIS006Color-southernAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Southern Africa (Natural Colors)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-naturalcolor-southernAfrica.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - Canary (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment1.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Marocco (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment8.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Algeria (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment9.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Libya (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment10.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Egypt (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment11.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Iraque (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment12.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Turkey (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment18.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-7 - Middle East (Infrared 11.5)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_IR115Color-middleEast.jpg" />
+	<image name="Eumetsat.org - Meteosat-7 - Middle East (Visual 0.7)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_VIS007Color-middleEast.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-7 - Northern Africa (Infrared 11.5)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_IR115Color-northernAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-7 - Northern Africa (Visual 0.7)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_VIS007Color-northernAfrica.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-7 - Central Africa (Infrared 11.5)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_IR115Color-centralAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-7 - Central Africa (Visual 0.7)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_VIS007Color-centralAfrica.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-7 - Southern Africa (Infrared 11.5)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_IR115Color-southernAfrica.jpg" />
+	<image name="Eumetsat.org - Meteosat-7 - Southern Africa (Visual 0.7)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_VIS007Color-southernAfrica.jpg" />
+
+	<image name="Accuweather.com - Northern Africa (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isafrn.jpg" />
+	<image name="Accuweather.com - Southern Africa (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isafrs.jpg" />
+	<image name="Accuweather.com - Mid East (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/ismide.jpg" />
+
+	<image name="Sat24.com - Turkey (Visual) - animated" url="http://www.sat24.com/images.php?country=tu&amp;sat=vis" />
+	<image name="Sat24.com - Turkey (Infrared) - animated" url="http://www.sat24.com/images.php?country=tu&amp;sat=ir" />
+
+	<image name="" url="" />
+
+
+<!--Asia-->
+	<image name="- - Asia - -" url="" />
+
+	<image name="Weather.com - World - Asia (Infrared)" url="http://image.weather.com/images/sat/asiasat_600x405.jpg" />
+	<image name="Weather.com - World - East Asia (Infrared)" url="http://image.weather.com/images/sat/east_asiasat_720x486.jpg" />
+	<image name="Weather.com - World - Japan (Infrared)" url="http://image.weather.com/images/sat/japan_sat_600x405.jpg" />
+	<image name="Weather.com - World - Central Asia (Infrared)" url="http://image.weather.com/images/sat/cen_asiasat_600x405.jpg" />
+	<image name="Weather.com - World - India (Infrared)" url="http://image.weather.com/images/sat/india_sat_600x405.jpg" />
+	<image name="Weather.com - World - Indian Ocean (Infrared)" url="http://image.weather.com/images/sat/indian_oce_sat_720x486.jpg" />
+
+	<image name="Imd.ernet.in - India (Infrared)" url="http://www.imd.gov.in/section/satmet/img/sector-ir.jpg" />
+	<image name="Imd.ernet.in - India (Infrared / Colour Composite)" url="http://www.imd.gov.in/section/satmet/img/sector-irc.jpg" />
+	<image name="Imd.ernet.in - India (Visible)" url="http://www.imd.gov.in/section/satmet/img/sector-vis.jpg" />
+	<image name="Imd.ernet.in - India (Water Vapour)" url="http://www.imd.gov.in/section/satmet/img/sector-wv.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-7 - Western Indian Ocean (Infrared 11.5)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_IR115Color-WIndianOcean.jpg" />
+	<image name="Eumetsat.org - Meteosat-7 - Western Indian Ocean (Visual 0.7)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_VIS007Color-WIndianOcean.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-7 - Eastern Indian Ocean (Infrared 11.5)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_IR115Color-EIndianOcean.jpg" />
+	<image name="Eumetsat.org - Meteosat-7 - Eastern Indian Ocean (Visual 0.7)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_VIS007Color-EIndianOcean.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-7 - Indonesia (Infrared 11.5)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_IR115Color-indonesia.jpg" />
+	<image name="Eumetsat.org - Meteosat-7 - Indonesia (Visual 0.7)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_VIS007Color-indonesia.jpg" />
+
+	<image name="Accuweather.com - Asia (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isasia.jpg" />
+	<image name="Accuweather.com - India (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isindia.jpg" />
+
+	<image name="" url="" />
+
+
+<!--Australia-->
+	<image name="- - Australia - -" url="" />
+
+	<image name="Weather.com - World - Australia (Infrared)" url="http://image.weather.com/images/sat/aussiesat_600x405.jpg" />
+	<image name="Weather.com - World - New Zealand (Infrared)" url="http://image.weather.com/images/sat/new_zealsat_720x486.jpg" />
+
+	<image name="Bom.gov.au - Australia (Infrared)" url="http://www.bom.gov.au/gms/IDE00035.jpg" />
+	<image name="Bom.gov.au - Australia (Infrared B/W)" url="http://www.bom.gov.au/gms/IDE00005.gif" />
+	<image name="Bom.gov.au - Australia (Visible)" url="http://www.bom.gov.au/gms/IDE00006.gif" />
+
+	<image name="Accuweather.com - Australia / New Zealand (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isaust.jpg" />
+
+	<image name="" url="" />
+
+
+<!--Europe-->
+	<image name="- - Europe - -" url="" />
+
+	<image name="Weather.com - World - Europe (Infrared)" url="http://image.weather.com/images/sat/europesat_600x405.jpg" />
+	<image name="Weather.com - World - United Kingdom (Infrared)" url="http://image.weather.com/images/sat/uksat_600x405.jpg" />
+	<image name="Weather.com - World - France (Infrared)" url="http://image.weather.com/images/sat/france_sat_720x486.jpg" />
+	<image name="Weather.com - World - Italy (Infrared)" url="http://image.weather.com/images/sat/italy_sat_600x405.jpg" />
+	<image name="Weather.com - World - Germany (Infrared)" url="http://image.weather.com/images/sat/germany_sat_600x405.jpg" />
+	<image name="Weather.com - World - Russia (Infrared)" url="http://image.weather.com/images/sat/russia_sat_600x405.jpg" />
+	<image name="Weather.com - World - Scandinavia (Infrared)" url="http://image.weather.com/images/sat/scand_sat_600x405.jpg" />
+
+	<image name="Dwd.de - MET9 - Europe (8km, Infrared)" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Regional/met8__europa__aktuell,templateId=poster,property=poster.png" />
+	<image name="Dwd.de - MET9 - Europe SW (8km, Infrared)" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Regional/mete__IR__SW__aktuell__m00s,templateId=poster,property=poster.png" />
+	<image name="Dwd.de - MET9 - Central Europe (1.5km, Infrared)" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Regional/mete__RGB__aktuell__m00s,templateId=poster,property=poster.png" />
+	<image name="Dwd.de - MET9 - Central Europe (3km, Infrared)" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Regional/met8__deut__aktuell,templateId=poster,property=poster.png" />
+	<image name="Dwd.de - MET9 - Germany (1km, Infrared)" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Regional/noaaDeutAktuell,templateId=poster,property=poster.jpg" />
+	<image name="Dwd.de - Germany (Rain)" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/SatWetter/satWetterAktuell,property=default.jpg" />
+	<image name="Dwd.de - Germany (Stability)" url="http://www.dwd.de/bvbw/generator/DWDWWW/Content/Oeffentlichkeit/WV/WVFK/Dynamisches/Objektiv/met8__SAI__aktuell__m00s,templateId=poster,property=poster.png" />
+
+	<image name="Eumetsat.org - Meteosat-9 - Full disc (Infrared 3.9)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR039Color-all.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Full disc (Infrared 10.8)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108Color-all.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Full disc (Visual 0.6)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_VIS006Color-all.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Full disc (Natural Colors)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-naturalcolor-all.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - Western Europe (Infrared 3.9)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR039EColor-westernEurope.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Western Europe (Infrared 10.8)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108EColor-westernEurope.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Western Europe (Visual 0.6)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_VIS006EColor-westernEurope.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Western Europe (Natural Colors)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-naturalcolor-westernEurope.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - Central Europe (Infrared 3.9)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR039EColor-centralEurope.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Central Europe (Infrared 10.8)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108EColor-centralEurope.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Central Europe (Visual 0.6)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_VIS006EColor-centralEurope.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Central Europe (Natural Colors)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-naturalcolor-centralEurope.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - Eastern Europe (Infrared 3.9)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR039EColor-easternEurope.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Eastern Europe (Infrared 10.8)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108EColor-easternEurope.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Eastern Europe (Visual 0.6)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_VIS006EColor-easternEurope.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Eastern Europe (Natural Colors)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-naturalcolor-easternEurope.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - Island (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment2.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - United Kingdom (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment4.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Spain (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment5.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - France (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment6.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Scandinavia (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment7.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Italy (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment14.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Germany / Poland (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment15.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Greece (RGB Composite)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment17.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-7 - Europe (Infrared 11.5)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_IR115Color-europe.jpg" />
+	<image name="Eumetsat.org - Meteosat-7 - Europe (Visual 0.7)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_VIS007Color-europe.jpg" />
+
+	<image name="Accuweather.com - Europe (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/iseurm.jpg" />
+	<image name="Accuweather.com - Western Europe (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/iseur3.jpg" />
+
+	<image name="Meteoromania.ro - INMH Romania Radar" url="http://www.inmh.ro/images/mradar.jpeg" />
+	<image name="Meteoromania.ro - INMH Romania Temperatures" url="http://www.meteoromania.ro/images/harta/temp.jpg" />
+	<image name="Meteoromania.ro - INMH Europe Eumetsat Meteosat 9 Infrared" url="http://www.inmh.ro/images/sateliti/neanimat.jpeg" />
+
+	<image name="Terkep.idokep.hu - Hungary (Rain)" url="http://terkep.idokep.hu/kep.php?kep=felhokep" />
+
+	<image name="Sat24.com - Europe (Visual) - animated" url="http://www.sat24.com/images.php?country=eu&amp;sat=vis" />
+	<image name="Sat24.com - Europe (Infrared) - animated" url="http://www.sat24.com/images.php?country=eu&amp;sat=ir" />
+
+	<image name="Sat24.com - Alpes (Visual) - animated" url="http://www.sat24.com/images.php?country=alps&amp;sat=vis" />
+	<image name="Sat24.com - Alpes (Infrared) - animated" url="http://www.sat24.com/images.php?country=alps&amp;sat=ir" />
+
+	<image name="Sat24.com - Germany (Visual) - animated" url="http://www.sat24.com/images.php?country=de&amp;sat=vis" />
+	<image name="Sat24.com - Germany (Infrared) - animated" url="http://www.sat24.com/images.php?country=de&amp;sat=ir" />
+
+	<image name="Sat24.com - Netherlands/Benelux (Visual) - animated" url="http://www.sat24.com/images.php?country=nl&amp;sat=vis" />
+	<image name="Sat24.com - Netherlands/Benelux (Infrared) - animated" url="http://www.sat24.com/images.php?country=nl&amp;sat=ir" />
+
+	<image name="Sat24.com - Spain/Portugal (Visual) - animated" url="http://www.sat24.com/images.php?country=sp&amp;sat=vis" />
+	<image name="Sat24.com - Spain/Portugal (Infrared) - animated" url="http://www.sat24.com/images.php?country=sp&amp;sat=ir" />
+
+	<image name="Sat24.com - France (Visual) - animated" url="http://www.sat24.com/images.php?country=fr&amp;sat=vis" />
+	<image name="Sat24.com - France (Infrared) - animated" url="http://www.sat24.com/images.php?country=fr&amp;sat=ir" />
+
+	<image name="Sat24.com - Greece (Visual) - animated" url="http://www.sat24.com/images.php?country=gr&amp;sat=vis" />
+	<image name="Sat24.com - Greece (Infrared) - animated" url="http://www.sat24.com/images.php?country=gr&amp;sat=ir" />
+
+	<image name="Sat24.com - Italy (Visual) - animated" url="http://www.sat24.com/images.php?country=it&amp;sat=vis" />
+	<image name="Sat24.com - Italy (Infrared) - animated" url="http://www.sat24.com/images.php?country=it&amp;sat=ir" />
+
+	<image name="Sat24.com - Poland (Visual) - animated" url="http://www.sat24.com/images.php?country=pl&amp;sat=vis" />
+	<image name="Sat24.com - Poland (Infrared) - animated" url="http://www.sat24.com/images.php?country=pl&amp;sat=ir" />
+
+	<image name="Sat24.com - Scandinavia (Visual) - animated" url="http://www.sat24.com/images.php?country=scan&amp;sat=vis" />
+	<image name="Sat24.com - Scandinavia (Infrared) - animated" url="http://www.sat24.com/images.php?country=scan&amp;sat=ir" />
+
+	<image name="Sat24.com - UK/Ireland (Visual) - animated" url="http://www.sat24.com/images.php?country=gb&amp;sat=vis" />
+	<image name="Sat24.com - UK/Ireland (Infrared) - animated" url="http://www.sat24.com/images.php?country=gb&amp;sat=ir" />
+
+	<image name="Zdf.de - Germany (Rain) - animated" url="http://www.zdf.de/CMO/frontend/subsystem_we/WeShowPicture/0,6008,161,00.gif" />
+	<image name="Zdf.de - Germany/North (Rain) - animated" url="http://www.zdf.de/CMO/frontend/subsystem_we/WeShowPicture/0,6008,165,00.gif" />
+	<image name="Zdf.de - Germany/East (Rain) - animated" url="http://www.zdf.de/CMO/frontend/subsystem_we/WeShowPicture/0,6008,169,00.gif" />
+	<image name="Zdf.de - Germany/West (Rain) - animated" url="http://www.zdf.de/CMO/frontend/subsystem_we/WeShowPicture/0,6008,181,00.gif" />
+	<image name="Zdf.de - Germany/Southeast (Rain) - animated" url="http://www.zdf.de/CMO/frontend/subsystem_we/WeShowPicture/0,6008,173,00.gif" />
+	<image name="Zdf.de - Germany/Southwest (Rain) - animated" url="http://www.zdf.de/CMO/frontend/subsystem_we/WeShowPicture/0,6008,177,00.gif" />
+
+	<image name="Meteo.arso.gov.si - Slovenia (Radar)" url="http://meteo.arso.gov.si/uploads/probase/www/observ/radar/si1_zm_si_latest.jpg" />
+
+	<image name="" url="" />
+
+
+<!--North America-->
+	<image name="- - North America - -" url="" />
+
+	<image name="Weather.com - World - Canada (Infrared)" url="http://image.weather.com/images/sat/canadasat_720x486.jpg" />
+	<image name="Weather.com - World - Mexico (Infrared)" url="http://image.weather.com/images/sat/mexsat_600x405.jpg" />
+
+	<image name="Weather.com - World - Central Mexico (Infrared)" url="http://image.weather.com/images/sat/mexcensat_600x405.jpg" />
+	<image name="Weather.com - World - Gulf of Mexico (Infrared)" url="http://image.weather.com/images/sat/gomex_sat_600x405.jpg" />
+
+	<image name="Weather.com - US - Complete (Infrared)" url="http://image.weather.com/images/sat/ussat_600x405.jpg" />
+	<image name="Weather.com - US - Complete (Visible)" url="http://image.weather.com/images/sat/usvis_600x405.jpg" />
+	<image name="Weather.com - US - Complete (Water Vapor)" url="http://image.weather.com/images/sat/usvap_600x405.jpg" />
+
+	<image name="Weather.com - US - Central (Infrared)" url="http://image.weather.com/images/sat/regions/central_sat_720x486.jpg" />
+	<image name="Weather.com - US - Central (Visible)" url="http://image.weather.com/images/sat/regions/cen_vis_sat_720x486.jpg" />
+	<image name="Weather.com - US - Central (Doppler Radar)" url="http://image.weather.com/web/radar/us_cn_9regradar_plus_usen.jpg" />
+	<image name="Weather.com - US - East Central (Infrared)" url="http://image.weather.com/images/sat/regions/east_cen_sat_720x486.jpg" />
+	<image name="Weather.com - US - East Central (Visible)" url="http://image.weather.com/images/sat/regions/ec_vis_sat_720x486.jpg" />
+	<image name="Weather.com - US - East Central (Doppler Radar)" url="http://image.weather.com/web/radar/us_ec_9regradar_plus_usen.jpg" />
+	<image name="Weather.com - US - Midwest (Doppler Radar)" url="http://image.weather.com/web/radar/us_mw_4regradar_plus_usen.jpg" />
+	<image name="Weather.com - US - North Central (Infrared)" url="http://image.weather.com/images/sat/regions/n_central_sat_720x486.jpg" />
+	<image name="Weather.com - US - North Central (Visible)" url="http://image.weather.com/images/sat/regions/nc_vis_sat_720x486.jpg" />
+	<image name="Weather.com - US - North Central (Doppler Radar)" url="http://image.weather.com/web/radar/us_nc_9regradar_plus_usen.jpg" />
+	<image name="Weather.com - US - Northeast (Infrared)" url="http://image.weather.com/web/maps/satellite/regions/northeast_sat_720x486.jpg" />
+	<image name="Weather.com - US - Northeast (Visible)" url="http://image.weather.com/images/sat/regions/ne_vis_sat_720x486.jpg" />
+	<image name="Weather.com - US - Northeast (Doppler Radar)" url="http://image.weather.com/web/radar/us_ne_9regradar_plus_usen.jpg" />
+	<image name="Weather.com - US - South Central (Infrared)" url="http://image.weather.com/web/maps/satellite/regions/s_central_sat_720x486.jpg" />
+	<image name="Weather.com - US - South Central (Visible)" url="http://image.weather.com/images/sat/regions/scen_vis_sat_720x486.jpg" />
+	<image name="Weather.com - US - South Central (Doppler Radar)" url="http://image.weather.com/web/radar/us_sc_9regradar_plus_usen.jpg" />
+	<image name="Weather.com - US - Southeast (Infrared)" url="http://image.weather.com/web/maps/satellite/regions/southeast_sat_720x486.jpg" />
+	<image name="Weather.com - US - Southeast (Visible)" url="http://image.weather.com/images/sat/regions/se_vis_sat_720x486.jpg" />
+	<image name="Weather.com - US - Southeast (Doppler Radar)" url="http://image.weather.com/web/radar/us_se_9regradar_plus_usen.jpg" />
+	<image name="Weather.com - US - Southwest (Infrared)" url="http://image.weather.com/web/maps/satellite/regions/southwest_sat_720x486.jpg" />
+	<image name="Weather.com - US - Southwest (Visible)" url="http://image.weather.com/images/sat/regions/sw_vis_sat_720x486.jpg" />
+	<image name="Weather.com - US - Southwest (Doppler Radar)" url="http://image.weather.com/web/radar/us_sw_9regradar_plus_usen.jpg" />
+	<image name="Weather.com - US - Northwest (Infrared)" url="http://image.weather.com/web/maps/satellite/regions/northwest_sat_720x486.jpg" />
+	<image name="Weather.com - US - Northwest (Visible)" url="http://image.weather.com/images/sat/regions/nw_vis_sat_720x486.jpg" />
+	<image name="Weather.com - US - Northwest (Doppler Radar)" url="http://image.weather.com/web/radar/us_nw_9regradar_plus_usen.jpg" />
+	<image name="Weather.com - US - West Central (Infrared)" url="http://image.weather.com/images/sat/regions/west_cen_sat_720x486.jpg" />
+	<image name="Weather.com - US - West Central (Visible)" url="http://image.weather.com/images/sat/regions/wc_vis_sat_720x486.jpg" />
+	<image name="Weather.com - US - West Central (Doppler Radar)" url="http://image.weather.com/web/radar/us_wc_9regradar_plus_usen.jpg" />
+	<image name="Weather.com - US - West (Infrared)" url="http://image.weather.com/images/sat/westsat_600x405.jpg" />
+	<image name="Weather.com - US - West (Radar)" url="http://image.weather.com/web/radar/us_we_4regradar_plus_usen.jpg" />
+	<image name="Weather.com - US - Hawaii (Infrared)" url="http://image.weather.com/images/sat/hisat_600x405.jpg" />
+	<image name="Weather.com - US - Hawaii (Radar)" url="http://image.weather.com/web/radar/us_hawaii_radar_plus_usen.jpg" />
+	<image name="Weather.com - US - Alaska (Infrared)" url="http://image.weather.com/images/sat/aksat_720x486.jpg" />
+	<image name="Weather.com - US - Alaska (Radar)" url="http://image.weather.com/web/radar/us_alaska_radar_plus_usen.jpg" />
+
+	<image name="Accuweather.com - Mexico (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/ismex.jpg" />
+
+	<image name="" url="" />
+
+
+<!--Central America-->
+	<image name="- - Central America - -" url="" />
+
+	<image name="Weather.com - World - Central America (Infrared)" url="http://image.weather.com/images/sat/cenamersat_600x405.jpg" />
+
+	<image name="Weather.com - World - Caribbean (Infrared)" url="http://image.weather.com/images/sat/caribsat_600x405.jpg" />
+
+	<image name="Accuweather.com - Central America (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/iscam.jpg" />
+	<image name="Accuweather.com - Caribbean (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/iscar.jpg" />
+
+	<image name="" url="" />
+
+
+<!--South America-->
+	<image name="- - South America - -" url="" />
+
+	<image name="Weather.com - World - South America (Infrared)" url="http://image.weather.com/images/sat/sasat_600x405.jpg" />
+	<image name="Weather.com - World - Brazil (Infrared)" url="http://image.weather.com/web/maps/pt_BR/satellite/regions/brazil_sat_720x486.jpg" />
+	<image name="Weather.com - World - Argentina (Infrared)" url="http://image.weather.com/web/maps/satellite/regions/sat_argent_720x486.jpg" />
+
+	<image name="Weather.com - World - Venezuela (Infrared)" url="http://image.weather.com/images/sat/colomven_sat_720x486.jpg" />
+
+	<image name="Weather.com - World - Northwest Brazil (Infrared)" url="http://image.weather.com/web/maps/pt_BR/satellite/regions/nwbrazilsat_720x486.jpg" />
+	<image name="Weather.com - World - Northeast Brazil (Infrared)" url="http://image.weather.com/web/maps/pt_BR/satellite/regions/nebrazilsat_720x486.jpg" />
+	<image name="Weather.com - World - South Brazil (Infrared)" url="http://image.weather.com/web/maps/pt_BR/satellite/regions/sbrazilsat_720x486.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - America (Infrared 3.9)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR039Color-america.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - America (Infrared 10.8)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108Color-america.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - America (Visual 0.6)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_VIS006Color-america.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - America (Natural Colors)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-naturalcolor-america.jpg" />
+
+	<image name="Accuweather.com - Central South America (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/iscsam.jpg" />
+	<image name="Accuweather.com - Northern South America (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isnsam.jpg" />
+	<image name="Accuweather.com - Southern South America (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isssam.jpg" />
+
+	<image name="Smn.gov.ar - South America - Infrared" url="http://www.smn.gov.ar/pronos/imagenes/satsa.jpg" />
+	<image name="Smn.gov.ar - South America - Cloud Top Temperature" url="http://www.smn.gov.ar/pronos/imagenes/satopes.jpg" />
+	<image name="Smn.gov.ar - South America - Water Vapor" url="http://www.smn.gov.ar/pronos/imagenes/vapsa.jpg" />
+
+	<image name="Smn.gov.ar - Argentina - Infrared" url="http://www.smn.gov.ar/pronos/imagenes/sat.jpg" />
+	<image name="Smn.gov.ar - Argentina - Cloud Top Temperature" url="http://www.smn.gov.ar/pronos/imagenes/topes.jpg" />
+	<image name="Smn.gov.ar - Argentina - Visible" url="http://www.smn.gov.ar/pronos/imagenes/satvis.jpg" />
+
+	<image name="" url="" />
+
+
+<!--Atlantic Ocean-->
+
+	<image name="- - Atlantic Ocean - -" url="" />
+
+	<image name="Weather.com - World - Atlantic Ocean (Infrared)" url="http://image.weather.com/images/sat/atl_oce_sat_600x405.jpg" />
+	<image name="Weather.com - World - Tropical Atlantic Ocean (Infrared)" url="http://image.weather.com/images/sat/tropsat_600x405.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - West Atlantic (Infrared 3.9)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR039Color-westAtlantic.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - West Atlantic (Infrared 10.8)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108Color-westAtlantic.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - West Atlantic (Visual 0.6)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_VIS006Color-westAtlantic.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - West Atlantic (Natural Colors)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-naturalcolor-westAtlantic.jpg" />
+
+	<image name="Accuweather.com - Atlantic (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isatl.jpg" />
+
+	<image name="Accuweather.com - Eastern Atlantic (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isatle.jpg" />
+	<image name="Accuweather.com - Northern Atlantic (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isatln.jpg" />
+	<image name="Accuweather.com - Western Atlantic (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isatlw.jpg" />
+	<image name="Accuweather.com - Central Atlantic (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/iscatl.jpg" />
+
+	<image name="Accuweather.com - World - Northern Atlantic (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isnatl.jpg" />
+
+	<image name="" url="" />
+
+
+<!--Pacific Ocean-->
+	<image name="- - Pacific Ocean - -" url="" />
+
+	<image name="Weather.com - World - Pacific Ocean (Infrared)" url="http://image.weather.com/images/sat/pac_oce_sat_600x405.jpg" />
+
+	<image name="Accuweather.com - World - North East Pacific (Infrared)" url="http://sirocco.accuweather.com/sat_mosaic_640x480_public/IR/isnepac.jpg" />
+
+	<image name="" url="" />
+
+
+<!--Polar-->
+	<image name="- - Polar - -" url="" />
+
+	<image name="Weather.com - World - North Pole (Infrared)" url="http://image.weather.com/images/sat/sat_ir_ltst_5nhnpole_nl_600x405.jpg" />
+	<image name="Weather.com - World - South Pole (Infrared)" url="http://image.weather.com/images/sat/southpole_sat_600x405.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-9 - Antarctic (Infrared 3.9)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR039Color-antarctic.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Antarctic (Infrared 10.8)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108Color-antarctic.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Antarctic (Visual 0.6)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_VIS006Color-antarctic.jpg" />
+	<image name="Eumetsat.org - Meteosat-9 - Antarctic (Natural Colors)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-naturalcolor-antarctic.jpg" />
+
+	<image name="Eumetsat.org - Meteosat-7 - Antarctic (Infrared 11.5)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_IR115Color-antarctic.jpg" />
+	<image name="Eumetsat.org - Meteosat-7 - Antarctic (Visual 0.7)" url="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MTP_VIS007Color-antarctic.jpg" />
+
+</custom_weather>

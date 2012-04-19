@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<custom_weather>
+	<xml_file_version type="cwp" version="2012-04-02" name="www.gismeteo.com" search_page="http://www.gismeteo.ru" example_zip="4944" unit="C" />
+
+	<locale_settings locale="utf-8" encoding="utf8" />
+
+	<urlc urlc_prefix="http://gismeteo.ru/city/daily/" urlc_suffix="" urlc_follow="" />
+
+	<url1 url1_prefix="http://gismeteo.ru/city/weekly/" url1_suffix="" url1_follow="" />
+
+	<url2 url2_prefix="" url2_suffix="" url2_follow="" />
+
+	<url3 url3_prefix="" url3_suffix="" url3_follow="" />
+
+	<url4 url4_prefix="" url4_suffix="" url4_follow="" />
+
+	<url5 url5_prefix="" url5_suffix="" url5_follow="" />
+
+	<url6 url6_prefix="" url6_suffix="" url6_follow="" />
+
+	<url7 url7_prefix="" url7_suffix="" url7_follow="" />
+
+	<data_location url="urlc"
+		location="grep -B 1 scity | head -n 1 | sed -e &quot;s/.*&lt;[^&gt;]*&gt;\(.*\).*&lt;[^&gt;]*&gt;.*/\1/&quot;"
+		country="grep scity | sed -e &quot;s/.*catalog[^&gt;]*&gt;[^&lt;]*\(.*catalog.*\)/\1/&quot; | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot; | sed -e &quot;s/\///g&quot; | sed -e &quot;s/,\s\(.*\)/\1/&quot;"
+		/>
+
+	<data_sun url="urlc"
+		sunrise="grep &apos;Восход&lt;&apos; | sed &apos;s/.*Восход&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&apos;"
+		sunset="grep &apos;Заход&apos; | sed &apos;s/.*Заход&lt;[^&gt;]*&gt;\([^&lt;]*\).*/\1/&apos;"
+		/>
+
+	<data_current_temperature url="urlc"
+		update_time="grep icon\ date | sed -e &quot;s/.*icon date[^&gt;]*&gt;[^:]* \([0-9]\+:[0-9]\+\).*/\1/&quot; | awk &apos;{if ($1 ~ /^[0-9]+:[0-9]+$/) {print} else {print &quot;N.A.&quot;} ; }&apos;"
+		temperature="grep -A 21 id=\&quot;weather\&quot; | grep &quot;temp c&quot; | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/.*[^-0-9]\([-0-9]\+\)&amp;deg.*/\1/&quot;"
+		temperature_felt="echo -n"
+		/>
+
+	<data_current_wind url="urlc"
+		wind="grep -A 21 id=\&quot;weather\&quot;|grep -A 4 wicon| tr -d &apos;\r&apos; | tr -d &apos;\n&apos;| sed -e &quot;s/.*wind ms[^&gt;]*&gt;\([^&lt;]*\)&lt;[^&lt;]*class=.unit[^&gt;]&gt;\([^&lt;]*\)&lt;.*&lt;dt&gt;\([^&lt;]*\)&lt;.*/\3 - \1 \2/&quot;"
+		wind_code="grep -A 21 id=\&quot;weather\&quot;| grep -A 4 wicon| tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		wind_speed="grep -A 21 id=\&quot;weather\&quot; | grep &quot;wind ms&quot; | sed -e &quot;s/.*class=.value[^&gt;]*&gt;\([^&lt;]*\)&lt;.*class=.unit[^&gt;]*&gt;\([^&lt;]*\)&lt;.*/\1 \2/&quot;"
+		/>
+
+	<data_current_icon url="urlc"
+		icon="grep -A 21 id=\&quot;weather\&quot; | grep background-image | sed -e &quot;s/.*\(http[^)]*\).*/\1/&quot;"
+		icon_code="grep -A 21 id=\&quot;weather\&quot; | grep background-image | sed -e &quot;s/.*\(http[^)]*\).*/\1/&quot; | sed &apos;s/.*new\/\(.*\)\.png.*/\1/&apos;"
+		icon_text="grep -A 21 id=\&quot;weather\&quot; | grep -A 1 background-image | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		/>
+
+	<data_current_additional url="urlc"
+		humidity="grep -A 26 id=\&quot;weather\&quot; | grep hum | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot; | sed -e &quot;s/&amp;nbsp;/ /&quot;"
+		rain="echo -n"
+		dew_point="echo -n"
+		visibility="echo -n"
+		pressure="grep -A 26 id=\&quot;weather\&quot; | grep &quot;press tor&quot; | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		uv_index="echo -n"
+		/>
+
+	<data_day1 url="url1"
+		name="grep -A 8 weekday | head -n 9 | tail -n 9 | grep weekday | sed -e &quot;s/.*weekday[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_low="grep -A 8 weekday | head -n 9 | tail -n 9 | grep temp | head -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		temperature_high="grep -A 8 weekday | head -n 9 | tail -n 9 | grep temp | tail -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		icon="grep -A 8 weekday | head -n 9 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot;"
+		icon_code="grep -A 8 weekday | head -n 9 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot; | sed &apos;s/.*new\/\(.*\)\.png.*/\1/&apos;"
+		icon_text="grep -A 8 weekday | head -n 9 | tail -n 9 | grep cltext | tail -n 1 | sed -e &quot;s/.*cltext[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+	<data_day2 url="url1"
+		name="grep -A 8 weekday | head -n 19 | tail -n 9 | grep weekday | sed -e &quot;s/.*weekday[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_low="grep -A 8 weekday | head -n 19 | tail -n 9 | grep temp | head -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		temperature_high="grep -A 8 weekday | head -n 19 | tail -n 9 | grep temp | tail -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		icon="grep -A 8 weekday | head -n 19 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot;"
+		icon_code="grep -A 8 weekday | head -n 19 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot; | sed &apos;s/.*new\/\(.*\)\.png.*/\1/&apos;"
+		icon_text="grep -A 8 weekday | head -n 19 | tail -n 9 | grep cltext | tail -n 1 | sed -e &quot;s/.*cltext[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+	<data_day3 url="url1"
+		name="grep -A 8 weekday | head -n 29 | tail -n 9 | grep weekday | sed -e &quot;s/.*weekday[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_low="grep -A 8 weekday | head -n 29 | tail -n 9 | grep temp | head -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		temperature_high="grep -A 8 weekday | head -n 29 | tail -n 9 | grep temp | tail -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		icon="grep -A 8 weekday | head -n 29 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot;"
+		icon_code="grep -A 8 weekday | head -n 29 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot; | sed &apos;s/.*new\/\(.*\)\.png.*/\1/&apos;"
+		icon_text="grep -A 8 weekday | head -n 29 | tail -n 9 | grep cltext | tail -n 1 | sed -e &quot;s/.*cltext[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+	<data_day4 url="url1"
+		name="grep -A 8 weekday | head -n 39 | tail -n 9 | grep weekday | sed -e &quot;s/.*weekday[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_low="grep -A 8 weekday | head -n 39 | tail -n 9 | grep temp | head -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		temperature_high="grep -A 8 weekday | head -n 39 | tail -n 9 | grep temp | tail -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		icon="grep -A 8 weekday | head -n 39 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot;"
+		icon_code="grep -A 8 weekday | head -n 39 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot; | sed &apos;s/.*new\/\(.*\)\.png.*/\1/&apos;"
+		icon_text="grep -A 8 weekday | head -n 39 | tail -n 9 | grep cltext | tail -n 1 | sed -e &quot;s/.*cltext[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+	<data_day5 url="url1"
+		name="grep -A 8 weekday | head -n 49 | tail -n 9 | grep weekday | sed -e &quot;s/.*weekday[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_low="grep -A 8 weekday | head -n 49 | tail -n 9 | grep temp | head -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		temperature_high="grep -A 8 weekday | head -n 49 | tail -n 9 | grep temp | tail -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		icon="grep -A 8 weekday | head -n 49 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot;"
+		icon_code="grep -A 8 weekday | head -n 49 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot; | sed &apos;s/.*new\/\(.*\)\.png.*/\1/&apos;"
+		icon_text="grep -A 8 weekday | head -n 49 | tail -n 9 | grep cltext | tail -n 1 | sed -e &quot;s/.*cltext[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+	<data_day6 url="url1"
+		name="grep -A 8 weekday | head -n 59 | tail -n 9 | grep weekday | sed -e &quot;s/.*weekday[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_low="grep -A 8 weekday | head -n 59 | tail -n 9 | grep temp | head -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		temperature_high="grep -A 8 weekday | head -n 59 | tail -n 9 | grep temp | tail -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		icon="grep -A 8 weekday | head -n 59 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot;"
+		icon_code="grep -A 8 weekday | head -n 59 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot; | sed &apos;s/.*new\/\(.*\)\.png.*/\1/&apos;"
+		icon_text="grep -A 8 weekday | head -n 59 | tail -n 9 | grep cltext | tail -n 1 | sed -e &quot;s/.*cltext[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+	<data_day7 url="url1"
+		name="grep -A 8 weekday | head -n 69 | tail -n 9 | grep weekday | sed -e &quot;s/.*weekday[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		temperature_low="grep -A 8 weekday | head -n 69 | tail -n 9 | grep temp | head -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		temperature_high="grep -A 8 weekday | head -n 69 | tail -n 9 | grep temp | tail -n 1 | sed -e &quot;s/&amp;minus;/-/&quot; | sed -e &quot;s/.*temp c[^&gt;]*&gt;+*\([-0-9]\+\).*/\1/&quot;"
+		icon="grep -A 8 weekday | head -n 69 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot;"
+		icon_code="grep -A 8 weekday | head -n 69 | tail -n 9 | grep png | tail -n 1 | sed -e &quot;s/.*\(http[^\&quot;]*\).*/\1/&quot; | sed &apos;s/.*new\/\(.*\)\.png.*/\1/&apos;"
+		icon_text="grep -A 8 weekday | head -n 69 | tail -n 9 | grep cltext | tail -n 1 | sed -e &quot;s/.*cltext[^&gt;]*&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<icon_transform
+	i1="d.sun" o1="32"
+
+	i2="d.sun.c1" o2="34"
+	i3="d.sun.c2" o3="34"
+	i4="d.sun.c3" o4="30"
+	i5="d.sun.c4" o5="26"
+
+	i6="d.sun.c1.s1" o6="41"
+	i7="d.sun.c1.s2" o7="41"
+	i8="d.sun.c1.s3" o8="41"
+	i9="d.sun.c1.s4" o9="41"
+	i10="d.sun.c2.s1" o10="41"
+	i11="d.sun.c2.s2" o11="41"
+	i12="d.sun.c2.s3" o12="41"
+	i13="d.sun.c2.s4" o13="41"
+	i14="d.sun.c3.s1" o14="41"
+	i15="d.sun.c3.s2" o15="41"
+	i16="d.sun.c3.s3" o16="41"
+	i17="d.sun.c3.s4" o17="41"
+	i18="d.sun.c4.s1" o18="43"
+	i19="d.sun.c4.s2" o19="13"
+	i20="d.sun.c4.s3" o20="13"
+	i21="d.sun.c4.s4" o21="13"
+
+	i22="d.sun.c1.r1" o22="39"
+	i23="d.sun.c1.r2" o23="39"
+	i24="d.sun.c1.r3" o24="39"
+	i25="d.sun.c1.r4" o25="40"
+	i26="d.sun.c2.r1" o26="39"
+	i27="d.sun.c2.r2" o27="39"
+	i28="d.sun.c2.r3" o28="39"
+	i29="d.sun.c2.r4" o29="40"
+	i30="d.sun.c3.r1" o30="39"
+	i31="d.sun.c3.r2" o31="39"
+	i32="d.sun.c3.r3" o32="39"
+	i33="d.sun.c3.r4" o33="40"
+	i34="d.sun.c4.r1" o34="11"
+	i35="d.sun.c4.r2" o35="40"
+	i36="d.sun.c4.r3" o36="40"
+	i37="d.sun.c4.r4" o37="40"
+
+	i38="d.sun.c1.r1.st" o38="38"
+	i39="d.sun.c1.r2.st" o39="38"
+	i40="d.sun.c1.r3.st" o40="38"
+	i41="d.sun.c1.r4.st" o41="38"
+	i42="d.sun.c2.r1.st" o42="38"
+	i43="d.sun.c2.r2.st" o43="38"
+	i44="d.sun.c2.r3.st" o44="38"
+	i45="d.sun.c2.r4.st" o45="38"
+	i46="d.sun.c3.r1.st" o46="38"
+	i47="d.sun.c3.r2.st" o47="38"
+	i48="d.sun.c3.r3.st" o48="38"
+	i49="d.sun.c3.r4.st" o49="38"
+	i50="d.sun.c4.r1.st" o50="35"
+	i51="d.sun.c4.r2.st" o51="35"
+	i52="d.sun.c4.r3.st" o52="35"
+	i53="d.sun.c4.r4.st" o53="35"
+
+	i54="d.sun.c1.s1.st" o54="38"
+	i55="d.sun.c1.s2.st" o55="35"
+	i56="d.sun.c1.s3.st" o56="35"
+	i57="d.sun.c1.s4.st" o57="35"
+	i58="d.sun.c2.s1.st" o58="38"
+	i59="d.sun.c2.s2.st" o59="35"
+	i60="d.sun.c2.s3.st" o60="35"
+	i61="d.sun.c2.s4.st" o61="35"
+	i62="d.sun.c3.s1.st" o62="38"
+	i63="d.sun.c3.s2.st" o63="35"
+	i64="d.sun.c3.s3.st" o64="35"
+	i65="d.sun.c3.s4.st" o65="35"
+	i66="d.sun.c4.s1.st" o66="35"
+	i67="d.sun.c4.s2.st" o67="35"
+	i68="d.sun.c4.s3.st" o68="35"
+	i69="d.sun.c4.s4.st" o69="35"
+
+	i70="n.moon" o70="31"
+	i71="n.moon.c1" o71="33"
+	i72="n.moon.c2" o72="33"
+	i73="n.moon.c3" o73="29"
+	i74="n.moon.c4" o74="26"
+
+	i75="n.moon.c1.s1" o75="46"
+	i76="n.moon.c1.s2" o76="46"
+	i77="n.moon.c1.s3" o77="46"
+	i78="n.moon.c1.s4" o78="46"
+	i79="n.moon.c2.s1" o79="46"
+	i80="n.moon.c2.s2" o80="46"
+	i81="n.moon.c2.s3" o81="46"
+	i82="n.moon.c2.s4" o82="46"
+	i83="n.moon.c3.s1" o83="46"
+	i84="n.moon.c3.s2" o84="46"
+	i85="n.moon.c3.s3" o85="46"
+	i86="n.moon.c3.s4" o86="46"
+	i87="n.moon.c4.s1" o87="46"
+	i88="n.moon.c4.s2" o88="13"
+	i89="n.moon.c4.s3" o89="13"
+	i90="n.moon.c4.s4" o90="13"
+
+	i91="n.moon.c1.r1" o91="45"
+	i92="n.moon.c1.r2" o92="45"
+	i93="n.moon.c1.r3" o93="45"
+	i94="n.moon.c1.r4" o94="45"
+	i95="n.moon.c2.r1" o95="45"
+	i96="n.moon.c2.r2" o96="45"
+	i97="n.moon.c2.r3" o97="45"
+	i98="n.moon.c2.r4" o98="45"
+	i99="n.moon.c3.r1" o99="45"
+	i100="n.moon.c3.r2" o100="45"
+	i101="n.moon.c3.r3" o101="45"
+	i102="n.moon.c3.r4" o102="45"
+	i103="n.moon.c4.r1" o103="11"
+	i104="n.moon.c4.r2" o104="40"
+	i105="n.moon.c4.r3" o105="40"
+	i106="n.moon.c4.r4" o106="40"
+
+	i107="n.moon.c1.r1.st" o107="47"
+	i108="n.moon.c1.r2.st" o108="47"
+	i109="n.moon.c1.r3.st" o109="47"
+	i110="n.moon.c1.r4.st" o110="47"
+	i111="n.moon.c2.r1.st" o111="47"
+	i112="n.moon.c2.r2.st" o112="47"
+	i113="n.moon.c2.r3.st" o113="47"
+	i114="n.moon.c2.r4.st" o114="47"
+	i115="n.moon.c3.r1.st" o115="47"
+	i116="n.moon.c3.r2.st" o116="47"
+	i117="n.moon.c3.r3.st" o117="47"
+	i118="n.moon.c3.r4.st" o118="47"
+	i119="n.moon.c4.r1.st" o119="35"
+	i120="n.moon.c4.r2.st" o120="35"
+	i121="n.moon.c4.r3.st" o121="35"
+	i122="n.moon.c4.r4.st" o122="35"
+
+	i123="n.moon.c1.s1.st" o123="47"
+	i124="n.moon.c1.s2.st" o124="47"
+	i125="n.moon.c1.s3.st" o125="47"
+	i126="n.moon.c1.s4.st" o126="47"
+	i127="n.moon.c2.s1.st" o127="47"
+	i128="n.moon.c2.s2.st" o128="47"
+	i129="n.moon.c2.s3.st" o129="47"
+	i130="n.moon.c2.s4.st" o130="47"
+	i131="n.moon.c3.s1.st" o131="47"
+	i132="n.moon.c3.s2.st" o132="47"
+	i133="n.moon.c3.s3.st" o133="47"
+	i134="n.moon.c3.s4.st" o134="47"
+	i135="n.moon.c4.s1.st" o135="35"
+	i136="n.moon.c4.s2.st" o136="35"
+	i137="n.moon.c4.s3.st" o137="35"
+	i138="n.moon.c4.s4.st" o138="35"
+	/>
+
+	<wind_transform i1="С" o1="N"
+		i2="ССВ" o2="NNE"
+		i3="СВ" o3="NE"
+		i4="ВСВ" o4="ENE"
+		i5="В" o5="E"
+		i6="ЮЮВ" o6="SSE"
+		i7="ЮВ" o7="SE"
+		i8="ВЮВ" o8="ESE"
+		i9="Ю" o9="S"
+		i10="ССЗ" o10="NNW"
+		i11="СЗ" o11="NW"
+		i12="ЗСЗ" o12="WNW"
+		i13="З" o13="W"
+		i14="ЮЮЗ" o14="SSW"
+		i15="ЮЗ" o15="SW"
+		i16="ЗЮЗ" o16="WSW"
+		i17="Var" o17="Var"
+		i18="Переменный" o18="Var"
+		i19="" o19=""
+		i20="" o20=""
+	/>
+</custom_weather>

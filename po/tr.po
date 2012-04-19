@@ -1,0 +1,1490 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Yavuz Öztürk <yesproblemsir@hotmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.4.0\n"
+"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php?content=98925\n"
+"POT-Creation-Date: 2011-02-25 11:10+0100\n"
+"PO-Revision-Date: 2009-05-15 20:21+0300\n"
+"Last-Translator: Yavuz Öztürk\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. i18n: file: config.ui:72
+#. i18n: ectx: property (text), widget (QPushButton, importSettingsPushButton)
+#: build/ui_config.h:875 po/rc.cpp:9 rc.cpp:9
+msgid "Import settings"
+msgstr ""
+
+#. i18n: file: config.ui:92
+#. i18n: ectx: property (text), widget (QPushButton, exportSettingsPushButton)
+#: build/ui_config.h:876 po/rc.cpp:12 rc.cpp:12
+msgid "Export settings"
+msgstr ""
+
+#. i18n: file: config.ui:110
+#. i18n: ectx: property (text), widget (QLabel, providerLabel)
+#: build/ui_config.h:877 po/rc.cpp:15 rc.cpp:15
+msgid "Provider:"
+msgstr "Sağlayıcı:"
+
+#. i18n: file: config.ui:136
+#. i18n: ectx: property (text), widget (QCheckBox, showTemperatureUnitCheckBox)
+#: build/ui_config.h:878 po/rc.cpp:18 rc.cpp:18
+msgid "Show temperature unit"
+msgstr "Sıcaklık birimini göster"
+
+#. i18n: file: config.ui:162
+#. i18n: ectx: property (text), widget (QLabel, zipCodeLabel)
+#: build/ui_config.h:880 po/rc.cpp:21 rc.cpp:21
+msgid "City Identifier:"
+msgstr "Şehir Tanımlayıcı:"
+
+#. i18n: file: config.ui:175
+#. i18n: ectx: property (text), widget (QLabel, customImageLabel)
+#: build/ui_config.h:881 po/rc.cpp:24 rc.cpp:24
+msgid "Custom image:"
+msgstr "Özel resim:"
+
+#. i18n: file: config.ui:188
+#. i18n: ectx: property (text), widget (QLabel, customImageListLabel)
+#: build/ui_config.h:882 po/rc.cpp:27 rc.cpp:27
+msgid "Image list:"
+msgstr "Resim listesi:"
+
+#. i18n: file: config.ui:203
+#. i18n: ectx: property (text), widget (QPushButton, newCustomImagePushButton)
+#. i18n: file: config.ui:282
+#. i18n: ectx: property (text), widget (QPushButton, newPreferredLocationPushButton)
+#. i18n: file: config.ui:203
+#. i18n: ectx: property (text), widget (QPushButton, newCustomImagePushButton)
+#. i18n: file: config.ui:282
+#. i18n: ectx: property (text), widget (QPushButton, newPreferredLocationPushButton)
+#: build/ui_config.h:883 build/ui_config.h:889 po/rc.cpp:30 po/rc.cpp:45
+#: rc.cpp:30 rc.cpp:45
+msgid "New"
+msgstr "Yeni"
+
+#. i18n: file: config.ui:210
+#. i18n: ectx: property (text), widget (QPushButton, saveCustomImagePushButton)
+#. i18n: file: config.ui:289
+#. i18n: ectx: property (text), widget (QPushButton, savePreferredLocationPushButton)
+#. i18n: file: config.ui:210
+#. i18n: ectx: property (text), widget (QPushButton, saveCustomImagePushButton)
+#. i18n: file: config.ui:289
+#. i18n: ectx: property (text), widget (QPushButton, savePreferredLocationPushButton)
+#: build/ui_config.h:884 build/ui_config.h:890 po/rc.cpp:33 po/rc.cpp:48
+#: rc.cpp:33 rc.cpp:48
+msgid "Save"
+msgstr "Kaydet"
+
+#. i18n: file: config.ui:217
+#. i18n: ectx: property (text), widget (QPushButton, editNameCustomImagePushButton)
+#. i18n: file: config.ui:296
+#. i18n: ectx: property (text), widget (QPushButton, editNamePreferredLocationPushButton)
+#. i18n: file: config.ui:217
+#. i18n: ectx: property (text), widget (QPushButton, editNameCustomImagePushButton)
+#. i18n: file: config.ui:296
+#. i18n: ectx: property (text), widget (QPushButton, editNamePreferredLocationPushButton)
+#: build/ui_config.h:885 build/ui_config.h:891 po/rc.cpp:36 po/rc.cpp:51
+#: rc.cpp:36 rc.cpp:51
+msgid "Edit Name"
+msgstr "İsmi Düzenle"
+
+#. i18n: file: config.ui:224
+#. i18n: ectx: property (text), widget (QPushButton, deleteCustomImagePushButton)
+#. i18n: file: config.ui:303
+#. i18n: ectx: property (text), widget (QPushButton, deletePreferredLocationPushButton)
+#. i18n: file: config.ui:224
+#. i18n: ectx: property (text), widget (QPushButton, deleteCustomImagePushButton)
+#. i18n: file: config.ui:303
+#. i18n: ectx: property (text), widget (QPushButton, deletePreferredLocationPushButton)
+#: build/ui_config.h:886 build/ui_config.h:892 po/rc.cpp:39 po/rc.cpp:54
+#: rc.cpp:39 rc.cpp:54
+msgid "Remove"
+msgstr "Kaldır"
+
+#. i18n: file: config.ui:267
+#. i18n: ectx: property (text), widget (QLabel, preferredLocationLabel)
+#: build/ui_config.h:888 po/rc.cpp:42 rc.cpp:42
+msgid "Preferred Locations:"
+msgstr "Tercih Edilen Yerler:"
+
+#. i18n: file: config.ui:312
+#. i18n: ectx: property (text), widget (QLabel, freqChooserLabel)
+#: build/ui_config.h:893 po/rc.cpp:57 rc.cpp:57
+msgid "Update Frequency:"
+msgstr "Frekansı Güncelle"
+
+#. i18n: file: config.ui:322
+#. i18n: ectx: property (suffix), widget (QSpinBox, freqChooser)
+#: build/ui_config.h:894 po/rc.cpp:60 rc.cpp:60
+msgid " minutes"
+msgstr " dakika"
+
+#. i18n: file: config.ui:338
+#. i18n: ectx: property (text), widget (QCheckBox, updateTimeCheckBox)
+#: build/ui_config.h:895 po/rc.cpp:63 rc.cpp:63
+msgid "Display update time"
+msgstr "Güncelleme zamanını göster"
+
+#. i18n: file: config.ui:48
+#. i18n: ectx: attribute (title), widget (QWidget, tab0)
+#: build/ui_config.h:896 po/rc.cpp:6 rc.cpp:6
+msgid "Weather data"
+msgstr "Hava durumu"
+
+#. i18n: file: config.ui:355
+#. i18n: ectx: property (text), widget (QLabel, layoutLabel)
+#: build/ui_config.h:897 po/rc.cpp:69 rc.cpp:69
+msgid "Layout:"
+msgstr "Düzenleme:"
+
+#. i18n: file: config.ui:368
+#. i18n: ectx: property (text), widget (QLabel, dayNamesLabel)
+#: build/ui_config.h:898 po/rc.cpp:72 rc.cpp:72
+msgid "Day names:"
+msgstr "Gün adları:"
+
+#. i18n: file: config.ui:393
+#. i18n: ectx: property (text), widget (QRadioButton, dayNamesProviderSelect)
+#. i18n: file: config.ui:476
+#. i18n: ectx: property (text), widget (QRadioButton, iconsProviderSelect)
+#. i18n: file: config.ui:933
+#. i18n: ectx: property (text), widget (QRadioButton, windLayoutProviderSelect)
+#. i18n: file: config.ui:393
+#. i18n: ectx: property (text), widget (QRadioButton, dayNamesProviderSelect)
+#. i18n: file: config.ui:476
+#. i18n: ectx: property (text), widget (QRadioButton, iconsProviderSelect)
+#. i18n: file: config.ui:933
+#. i18n: ectx: property (text), widget (QRadioButton, windLayoutProviderSelect)
+#: build/ui_config.h:899 build/ui_config.h:904 build/ui_config.h:939
+#: po/rc.cpp:75 po/rc.cpp:90 po/rc.cpp:159 rc.cpp:75 rc.cpp:90 rc.cpp:159
+msgid "From weather provider"
+msgstr "Hava durumu sağlayıcısından"
+
+#. i18n: file: config.ui:403
+#. i18n: ectx: property (text), widget (QRadioButton, dayNamesSystemShortSelect)
+#: build/ui_config.h:900 po/rc.cpp:78 rc.cpp:78
+msgid "System (short)"
+msgstr "Sistem (kısa)"
+
+#. i18n: file: config.ui:416
+#. i18n: ectx: property (text), widget (QRadioButton, dayNamesSystemLongSelect)
+#: build/ui_config.h:901 po/rc.cpp:81 rc.cpp:81
+msgid "System (long)"
+msgstr "Sistem (uzun)"
+
+#. i18n: file: config.ui:429
+#. i18n: ectx: property (text), widget (QRadioButton, dayNamesSystemDateSelect)
+#: build/ui_config.h:902 po/rc.cpp:84 rc.cpp:84
+msgid "System (date)"
+msgstr "Sistem (tarih)"
+
+#. i18n: file: config.ui:451
+#. i18n: ectx: property (text), widget (QLabel, weatherIconsLabel)
+#: build/ui_config.h:903 po/rc.cpp:87 rc.cpp:87
+msgid "Weather icons:"
+msgstr "Hava durumu simgeleri:"
+
+#. i18n: file: config.ui:486
+#. i18n: ectx: property (text), widget (QRadioButton, iconsKDESelect)
+#: build/ui_config.h:905 po/rc.cpp:93 rc.cpp:93
+msgid "Native KDE"
+msgstr "Yerel KDE"
+
+#. i18n: file: config.ui:499
+#. i18n: ectx: property (text), widget (QRadioButton, iconsCustomSelect)
+#: build/ui_config.h:906 po/rc.cpp:96 rc.cpp:96
+msgid "Custom Icons"
+msgstr "Özel Simgeler"
+
+#. i18n: file: config.ui:525
+#. i18n: ectx: property (text), widget (QLabel, iconsScaleLabel)
+#: build/ui_config.h:907 po/rc.cpp:99 rc.cpp:99
+msgid "Scale weather icons:"
+msgstr "Hava durumu simgelerini ayarla:"
+
+#. i18n: file: config.ui:566
+#. i18n: ectx: property (text), widget (QLabel, iconBackgroundLabel)
+#: build/ui_config.h:915 po/rc.cpp:105 rc.cpp:105
+msgid "Icon background:"
+msgstr "Simge arkaplanı:"
+
+#. i18n: file: config.ui:579
+#. i18n: ectx: property (text), widget (QCheckBox, omitIconDescriptionCheckBox)
+#: build/ui_config.h:916 po/rc.cpp:108 rc.cpp:108
+msgid "Omit icon description"
+msgstr "Simge açıklamasını atla"
+
+#. i18n: file: config.ui:589
+#. i18n: ectx: property (text), widget (QLabel, fontLabel)
+#: build/ui_config.h:917 po/rc.cpp:111 rc.cpp:111
+msgid "Font:"
+msgstr "Yazı Tipi:"
+
+#. i18n: file: config.ui:602
+#. i18n: ectx: property (text), widget (QLabel, fontScaleLabel)
+#: build/ui_config.h:918 po/rc.cpp:114 rc.cpp:114
+msgid "Scale font:"
+msgstr "Yazı tipini ayarla:"
+
+#. i18n: file: config.ui:634
+#. i18n: ectx: property (text), widget (QLabel, fontColorLabel)
+#: build/ui_config.h:925 po/rc.cpp:117 rc.cpp:117
+msgid "Font color:"
+msgstr "Yazı rengi:"
+
+#. i18n: file: config.ui:675
+#. i18n: ectx: property (text), widget (QCheckBox, fontShadowCheckBox)
+#: build/ui_config.h:926 po/rc.cpp:120 rc.cpp:120
+msgid "Enable font shadow"
+msgstr "Gölgeli yazıları etkinleştir"
+
+#. i18n: file: config.ui:349
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: build/ui_config.h:927 po/rc.cpp:66 rc.cpp:66
+msgid "Layout 1"
+msgstr "Düzenleme 1"
+
+#. i18n: file: config.ui:711
+#. i18n: ectx: property (text), widget (QLabel, forecastSeparatorLayoutLabel)
+#: build/ui_config.h:928 po/rc.cpp:126 rc.cpp:126
+msgid "Forecast separator:"
+msgstr "Havadurumu ayırıcı"
+
+#. i18n: file: config.ui:736
+#. i18n: ectx: property (text), widget (QRadioButton, forecastSeparatorNoneSelect)
+#. i18n: file: config.ui:846
+#. i18n: ectx: property (text), widget (QRadioButton, noBackgroundSelect)
+#. i18n: file: config.ui:736
+#. i18n: ectx: property (text), widget (QRadioButton, forecastSeparatorNoneSelect)
+#. i18n: file: config.ui:846
+#. i18n: ectx: property (text), widget (QRadioButton, noBackgroundSelect)
+#: build/ui_config.h:929 build/ui_config.h:935 po/rc.cpp:129 po/rc.cpp:147
+#: rc.cpp:129 rc.cpp:147
+msgid "None"
+msgstr "Hiçbiri"
+
+#. i18n: file: config.ui:749
+#. i18n: ectx: property (text), widget (QRadioButton, forecastSeparatorCustomSelect)
+#: build/ui_config.h:930 po/rc.cpp:132 rc.cpp:132
+msgid "CWP style"
+msgstr "CWP tarzı"
+
+#. i18n: file: config.ui:759
+#. i18n: ectx: property (text), widget (QRadioButton, forecastSeparatorPlasmaSelect)
+#: build/ui_config.h:931 po/rc.cpp:135 rc.cpp:135
+msgid "Plasma style"
+msgstr "Plasma tarzı"
+
+#. i18n: file: config.ui:772
+#. i18n: ectx: property (text), widget (QLabel, backgroundLabel)
+#: build/ui_config.h:932 po/rc.cpp:138 rc.cpp:138
+msgid "Background:"
+msgstr "Arkaplan:"
+
+#. i18n: file: config.ui:826
+#. i18n: ectx: property (text), widget (QRadioButton, defaultBackgroundSelect)
+#: build/ui_config.h:933 po/rc.cpp:141 rc.cpp:141
+msgid "Default"
+msgstr "Varsayılan"
+
+#. i18n: file: config.ui:833
+#. i18n: ectx: property (text), widget (QRadioButton, translucentBackgroundSelect)
+#: build/ui_config.h:934 po/rc.cpp:144 rc.cpp:144
+msgid "Translucent"
+msgstr "Yarı saydam"
+
+#. i18n: file: config.ui:853
+#. i18n: ectx: property (text), widget (QRadioButton, customColorBackgroundSelect)
+#: build/ui_config.h:936 po/rc.cpp:150 rc.cpp:150
+msgid "Custom color:"
+msgstr "Özel renk:"
+
+#. i18n: file: config.ui:873
+#. i18n: ectx: property (text), widget (QLabel, transparencyLabel)
+#: build/ui_config.h:937 po/rc.cpp:153 rc.cpp:153
+msgid "Transparency:"
+msgstr "Saydamlık:"
+
+#. i18n: file: config.ui:908
+#. i18n: ectx: property (text), widget (QLabel, windLayoutLabel)
+#: build/ui_config.h:938 po/rc.cpp:156 rc.cpp:156
+msgid "Wind layout:"
+msgstr "Rüzgar  düzenleme:"
+
+#. i18n: file: config.ui:943
+#. i18n: ectx: property (text), widget (QRadioButton, windLayoutRoseSelect)
+#: build/ui_config.h:940 po/rc.cpp:162 rc.cpp:162
+msgid "Wind rose"
+msgstr "Rüzgar gülü"
+
+#. i18n: file: config.ui:972
+#. i18n: ectx: property (text), widget (QLabel, scaleWindArrowLabel)
+#: build/ui_config.h:941 po/rc.cpp:165 rc.cpp:165
+msgid "Scale wind arrow:"
+msgstr "Rüzgar okunu ayarla"
+
+#. i18n: file: config.ui:1038
+#. i18n: ectx: property (text), widget (QCheckBox, invertWindRoseCheckBox)
+#: build/ui_config.h:949 po/rc.cpp:171 rc.cpp:171
+msgid "Invert wind rose direction"
+msgstr "Rüzgar gülü yönünü değiştir"
+
+#. i18n: file: config.ui:699
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: build/ui_config.h:950 po/rc.cpp:123 rc.cpp:123
+msgid "Layout 2"
+msgstr "Düzenleme 2"
+
+#. i18n: file: config.ui:1068
+#. i18n: ectx: property (text), widget (QLabel, feelsLikeLabel)
+#: build/ui_config.h:951 po/rc.cpp:177 rc.cpp:177
+msgid "<Feels Like> translation:"
+msgstr "<Feels Like> çeviri:"
+
+#. i18n: file: config.ui:1078
+#. i18n: ectx: property (text), widget (QLineEdit, feelsLikeText)
+#: build/ui_config.h:952 po/rc.cpp:180 rc.cpp:180
+msgid "feels like"
+msgstr "hissedilen"
+
+#. i18n: file: config.ui:1085
+#. i18n: ectx: property (text), widget (QLabel, humidityLabel)
+#: build/ui_config.h:953 po/rc.cpp:183 rc.cpp:183
+msgid "<Humidity> translation:"
+msgstr "<Humidity> çeviri:"
+
+#. i18n: file: config.ui:1095
+#. i18n: ectx: property (text), widget (QLineEdit, humidityText)
+#: build/ui_config.h:954 plasma-cwp.cpp:276 plasma-cwp.cpp:1904 po/rc.cpp:186
+#: rc.cpp:186
+msgid "Humidity"
+msgstr "Nem"
+
+#. i18n: file: config.ui:1102
+#. i18n: ectx: property (text), widget (QLabel, windLabel)
+#: build/ui_config.h:955 po/rc.cpp:189 rc.cpp:189
+msgid "<Wind> translation:"
+msgstr "<Wind> çeviri:"
+
+#. i18n: file: config.ui:1112
+#. i18n: ectx: property (text), widget (QLineEdit, windText)
+#: build/ui_config.h:956 plasma-cwp.cpp:277 plasma-cwp.cpp:1905 po/rc.cpp:192
+#: rc.cpp:192
+msgid "Wind"
+msgstr "Rüzgar"
+
+#. i18n: file: config.ui:1119
+#. i18n: ectx: property (text), widget (QLabel, windRoseLabel)
+#: build/ui_config.h:957 po/rc.cpp:195 rc.cpp:195
+msgid "<N;S;E;W;> translation:"
+msgstr "<N;S;E;W;> çeviri:"
+
+#. i18n: file: config.ui:1129
+#. i18n: ectx: property (text), widget (QLineEdit, windRoseText)
+#: build/ui_config.h:958 po/rc.cpp:198 rc.cpp:198
+msgid "N;S;E;W;"
+msgstr "K;G;D;B;"
+
+#. i18n: file: config.ui:1136
+#. i18n: ectx: property (text), widget (QLabel, rainLabel)
+#: build/ui_config.h:959 po/rc.cpp:201 rc.cpp:201
+msgid "<Rain> translation:"
+msgstr "<Rain> çeviri:"
+
+#. i18n: file: config.ui:1146
+#. i18n: ectx: property (text), widget (QLineEdit, rainText)
+#: build/ui_config.h:960 plasma-cwp.cpp:281 plasma-cwp.cpp:1909 po/rc.cpp:204
+#: rc.cpp:204
+msgid "Rain"
+msgstr "Yağmur"
+
+#. i18n: file: config.ui:1153
+#. i18n: ectx: property (text), widget (QLabel, dewPointLabel)
+#: build/ui_config.h:961 po/rc.cpp:207 rc.cpp:207
+msgid "<Dew Point> translation:"
+msgstr "<Dew Point> çeviri:"
+
+#. i18n: file: config.ui:1163
+#. i18n: ectx: property (text), widget (QLineEdit, dewPointText)
+#: build/ui_config.h:962 plasma-cwp.cpp:282 plasma-cwp.cpp:1910 po/rc.cpp:210
+#: rc.cpp:210
+msgid "Dew Point"
+msgstr "Donma Noktası"
+
+#. i18n: file: config.ui:1170
+#. i18n: ectx: property (text), widget (QLabel, visibilityLabel)
+#: build/ui_config.h:963 po/rc.cpp:213 rc.cpp:213
+msgid "<Visibility> translation:"
+msgstr "<Visibility> çeviri:"
+
+#. i18n: file: config.ui:1180
+#. i18n: ectx: property (text), widget (QLineEdit, visibilityText)
+#: build/ui_config.h:964 plasma-cwp.cpp:283 plasma-cwp.cpp:1911 po/rc.cpp:216
+#: rc.cpp:216
+msgid "Visibility"
+msgstr "Görüş"
+
+#. i18n: file: config.ui:1187
+#. i18n: ectx: property (text), widget (QLabel, pressureLabel)
+#: build/ui_config.h:965 po/rc.cpp:219 rc.cpp:219
+msgid "<Pressure> translation:"
+msgstr "<Pressure> çeviri:"
+
+#. i18n: file: config.ui:1197
+#. i18n: ectx: property (text), widget (QLineEdit, pressureText)
+#: build/ui_config.h:966 plasma-cwp.cpp:284 plasma-cwp.cpp:1912 po/rc.cpp:222
+#: rc.cpp:222
+msgid "Pressure"
+msgstr "Basınç"
+
+#. i18n: file: config.ui:1204
+#. i18n: ectx: property (text), widget (QLabel, uvIndexLabel)
+#: build/ui_config.h:967 po/rc.cpp:225 rc.cpp:225
+msgid "<UV Index> translation:"
+msgstr "<UV Index> çeviri:"
+
+#. i18n: file: config.ui:1214
+#. i18n: ectx: property (text), widget (QLineEdit, uvIndexText)
+#: build/ui_config.h:968 plasma-cwp.cpp:285 plasma-cwp.cpp:1913 po/rc.cpp:228
+#: rc.cpp:228
+msgid "UV Index"
+msgstr "UV Şiddeti"
+
+#. i18n: file: config.ui:1062
+#. i18n: ectx: attribute (title), widget (QWidget, tab3)
+#: build/ui_config.h:969 po/rc.cpp:174 rc.cpp:174
+msgid "Translation"
+msgstr "Çeviri"
+
+#: plasma-cwp.cpp:128
+msgctxt "No background image for weather icons"
+msgid "< none >"
+msgstr ""
+
+#: plasma-cwp.cpp:275 plasma-cwp.cpp:1903
+msgctxt "Due to wind chill, temperature is felt like"
+msgid "feels like"
+msgstr "hissedilen"
+
+#: plasma-cwp.cpp:278 plasma-cwp.cpp:1906
+msgctxt ""
+"Wind directions: North, South, East, West. Separated by \";\", no spaces!"
+msgid "N;S;E;W;"
+msgstr "K;G;D;B;"
+
+#: plasma-cwp.cpp:1389
+msgid "1 Day - horizontal"
+msgstr "1 Gün - yatay"
+
+#: plasma-cwp.cpp:1390
+msgid "1 Day - vertical"
+msgstr "1 Gün - düşey"
+
+#: plasma-cwp.cpp:1391
+msgid "3 Days - horizontal"
+msgstr "3 Gün - yatay"
+
+#: plasma-cwp.cpp:1392
+msgid "3 Days - vertical"
+msgstr "3 Gün - düşey"
+
+#: plasma-cwp.cpp:1393
+msgid "5 Days - horizontal"
+msgstr "5 Gün - yatay"
+
+#: plasma-cwp.cpp:1394
+msgid "5 Days - horizontal (compact)"
+msgstr "5 Gün - yatay (sıkışık)"
+
+#: plasma-cwp.cpp:1395
+msgid "5 Days - vertical"
+msgstr "5 Gün - düşey"
+
+#: plasma-cwp.cpp:1396
+msgid "7 Days - horizontal"
+msgstr "7 Gün - yatay"
+
+#: plasma-cwp.cpp:1397
+msgid "7 Days - horizontal (compact)"
+msgstr "7 Gnü - yatay (sıkışık)"
+
+#: plasma-cwp.cpp:1398
+msgid "7 Days - vertical"
+msgstr "7 Gün - düşey"
+
+#: plasma-cwp.cpp:1399
+msgid "4 Days - custom image - horizontal"
+msgstr "4 Gün - özel resim - yatay"
+
+#: plasma-cwp.cpp:1400
+msgid "4 Days - custom image - vertical"
+msgstr "4 Gün - özel resim - düşey"
+
+#: plasma-cwp.cpp:1401
+msgid "7 Days - custom image"
+msgstr "7 Gün - özel resim"
+
+#: plasma-cwp.cpp:1855 plasma-cwp.cpp:2250
+msgid "Could not open CWP settings file %1."
+msgstr ""
+
+#: plasma-cwp.cpp:1866
+msgid ""
+"Loading CWP settings from file.\n"
+"This will overwrite the current configuration. Continue?"
+msgstr ""
+
+#: plasma-cwp.cpp:2256
+msgid "This will overwrite the CWP settings file. Continue?"
+msgstr ""
+
+#: plasma-cwp.cpp:2357
+msgid ""
+"Find your city on the <a href=%1>weather provider's homepage</a> and copy "
+"the city identifier from the address line of your browser.<br>Example: %2"
+msgstr ""
+"Şehrinizi hava durumunu sağlayıcısının <a href=%1>internet adresinde</a> "
+"bulun ve şehrinizin tanımlayıcısını buraya kopyalayın.<br>Örnek: %2"
+
+#: plasma-cwp.cpp:2427
+msgid "Select a satellite image:"
+msgstr "Bir uydu resmi seçin:"
+
+#: plasma-cwp.cpp:2512 plasma-cwp.cpp:2572
+msgid "Name of preferred location:"
+msgstr "Tercih edilen yerin ismi:"
+
+#: plasma-cwp.cpp:2696 plasma-cwp.cpp:2789
+msgid "Name of custom image:"
+msgstr "Özel resmin ismi:"
+
+#: plasma-cwp.cpp:2867
+msgid "Reload Weather Data"
+msgstr "Hava Durumunu Yeniden Yükle"
+
+#: plasma-cwp.cpp:2873
+msgid "Link"
+msgstr ""
+
+#: po/rc.cpp:229 rc.cpp:229
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "İsimleriniz"
+
+#: po/rc.cpp:230 rc.cpp:230
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "E-posta adresleriniz"
+
+#: po/rc.cpp:231 rc.cpp:231
+msgid "Accuweather.com - Asia (Infrared)"
+msgstr "Accuweather.com - Asya (Kızılötesi)"
+
+#: po/rc.cpp:232 rc.cpp:232
+msgid "Accuweather.com - Atlantic (Infrared)"
+msgstr "Accuweather.com - Atlantik (Kızılötesi)"
+
+#: po/rc.cpp:233 rc.cpp:233
+msgid "Accuweather.com - Australia / New Zealand (Infrared)"
+msgstr "Accuweather.com - Avustralya / Yeni Zelanda (Kızılötesi)"
+
+#: po/rc.cpp:234 rc.cpp:234
+msgid "Accuweather.com - Caribbean (Infrared)"
+msgstr "Accuwether.com - Karayipler (Kızılötesi)"
+
+#: po/rc.cpp:235 rc.cpp:235
+msgid "Accuweather.com - Central America (Infrared)"
+msgstr "Accuweather.com - Orta Amerika (Kızılötesi)"
+
+#: po/rc.cpp:236 rc.cpp:236
+msgid "Accuweather.com - Central Atlantic (Infrared)"
+msgstr "Accuweather.com - Orta Atlantik (Kızılötesi)"
+
+#: po/rc.cpp:237 rc.cpp:237
+msgid "Accuweather.com - Central South America (Infrared)"
+msgstr "Accuweather.com - Orta Güney Amerika (Kızılötesi)"
+
+#: po/rc.cpp:238 rc.cpp:238
+msgid "Accuweather.com - Eastern Atlantic (Infrared)"
+msgstr "Accuweather.com - Doğu Atlantik (Kızılötesi)"
+
+#: po/rc.cpp:239 rc.cpp:239
+msgid "Accuweather.com - Europe (Infrared)"
+msgstr "Accuweather.com - Avrupa (Kızılötesi)"
+
+#: po/rc.cpp:240 rc.cpp:240
+msgid "Accuweather.com - India (Infrared)"
+msgstr "Accuweather.com - Hindistan (Kızılötesi)"
+
+#: po/rc.cpp:241 rc.cpp:241
+msgid "Accuweather.com - Mexico (Infrared)"
+msgstr "Accuweather.com - Meksika (Kızılötesi)"
+
+#: po/rc.cpp:242 rc.cpp:242
+msgid "Accuweather.com - Mid East (Infrared)"
+msgstr "Accuweather.com - Orta Doğu (Kızılötesi)"
+
+#: po/rc.cpp:243 rc.cpp:243
+msgid "Accuweather.com - Northern Africa (Infrared)"
+msgstr "Accuweather.com - Kuzey Afrika (Kızılötesi)"
+
+#: po/rc.cpp:244 rc.cpp:244
+msgid "Accuweather.com - Northern Atlantic (Infrared)"
+msgstr "Accuweather.com - Kuzey Atlantik (Kızılötesi)"
+
+#: po/rc.cpp:245 rc.cpp:245
+msgid "Accuweather.com - Northern South America (Infrared)"
+msgstr "Accuweather.com - Kuzey Güney Amerika (Kızılötesi)"
+
+#: po/rc.cpp:246 rc.cpp:246
+msgid "Accuweather.com - Southern Africa (Infrared)"
+msgstr "Accuweather.com - Güney Afrika (Kızılötesi)"
+
+#: po/rc.cpp:247 rc.cpp:247
+msgid "Accuweather.com - Southern South America (Infrared)"
+msgstr "Accuweather.com - Güney Güney Amerika (Kızılötesi)"
+
+#: po/rc.cpp:248 rc.cpp:248
+msgid "Accuweather.com - Western Atlantic (Infrared)"
+msgstr "Accuweather.com - Batı Atlantik (Kızılötesi)"
+
+#: po/rc.cpp:249 rc.cpp:249
+msgid "Accuweather.com - Western Europe (Infrared)"
+msgstr "Accuweather.com - Batı Avrupa (Kızılötesi)"
+
+#: po/rc.cpp:250 rc.cpp:250
+msgid "Accuweather.com - World"
+msgstr "Accuweather.com - Dünya"
+
+#: po/rc.cpp:251 rc.cpp:251
+msgid "Accuweather.com - World - North East Pacific (Infrared)"
+msgstr "Accuweather.com - Dünya - Kuzey Doğu Pasifik (Kızılötesi)"
+
+#: po/rc.cpp:252 rc.cpp:252
+msgid "Accuweather.com - World - Northern Atlantic (Infrared)"
+msgstr "Accuweather.com - Dünya - Kuzey Atlantik (Kızılötesi)"
+
+#: po/rc.cpp:253 rc.cpp:253
+msgid "- - Africa & Mid East - -"
+msgstr "- - Afrika & Orta Doğu - -"
+
+#: po/rc.cpp:254 rc.cpp:254
+msgid "- - Asia - -"
+msgstr "- - Asya - -"
+
+#: po/rc.cpp:255 rc.cpp:255
+msgid "- - Atlantic Ocean - -"
+msgstr "- - Atlantik Okyanusu - -"
+
+#: po/rc.cpp:256 rc.cpp:256
+msgid "- - Australia - -"
+msgstr "- - Avustralya - -"
+
+#: po/rc.cpp:257 rc.cpp:257
+msgid "Bom.gov.au - Australia (Infrared)"
+msgstr "Bom.gov.au - Avustralya (Kızılötesi)"
+
+#: po/rc.cpp:258 rc.cpp:258
+msgid "Bom.gov.au - Australia (Infrared B/W)"
+msgstr "Bom.gov.au - Avustralya (Kızılötesi B/W)"
+
+#: po/rc.cpp:259 rc.cpp:259
+msgid "Bom.gov.au - Australia (Visible)"
+msgstr "Bom.gov.au - Avustralya (Görünür)"
+
+#: po/rc.cpp:260 rc.cpp:260
+msgid "- - Central America - -"
+msgstr "- - Orta Amerika - -"
+
+#: po/rc.cpp:261 rc.cpp:261
+msgid "Dwd.de - Africa / Europe"
+msgstr "Dwd.de - Afrika / Avrupa"
+
+#: po/rc.cpp:262 rc.cpp:262
+msgid "Dwd.de - America"
+msgstr "Dwd.de - Amerika"
+
+#: po/rc.cpp:263 rc.cpp:263
+msgid "Dwd.de - Australia"
+msgstr "Dwd.de - Avustralya"
+
+#: po/rc.cpp:264 rc.cpp:264
+msgid "Dwd.de - Germany (Rain)"
+msgstr "Dwd.de - Almanya (Yağmur)"
+
+#: po/rc.cpp:265 rc.cpp:265
+msgid "Dwd.de - Germany (Stability)"
+msgstr "Dwd.de - Almanya (Kararlılık)"
+
+#: po/rc.cpp:266 rc.cpp:266
+msgid "Dwd.de - Global (Flat)"
+msgstr "Dwd.de - Küresel (Düz)"
+
+#: po/rc.cpp:267 rc.cpp:267
+msgid "Dwd.de - Global (Hammer)"
+msgstr "Dwd.de - Küresel (Çekiç)"
+
+#: po/rc.cpp:268 rc.cpp:268
+msgid "Dwd.de - Indian Ocean"
+msgstr "Dwd.de - Hint Okyanusu"
+
+#: po/rc.cpp:269 rc.cpp:269
+msgid "Dwd.de - MET9 - Central Europe (1.5km, Infrared)"
+msgstr "Dwd.de - MET9 - Orta Avrupa (1.5km, Kızılötesi)"
+
+#: po/rc.cpp:270 rc.cpp:270
+msgid "Dwd.de - MET9 - Central Europe (3km, Infrared)"
+msgstr "Dwd.de - MET9 - Orta Avrupa (3km, Kızılötesi)"
+
+#: po/rc.cpp:271 rc.cpp:271
+msgid "Dwd.de - MET9 - Europe (8km, Infrared)"
+msgstr "Dwd.de - MET9 - Avrupa (8km, Kızılötesi)"
+
+#: po/rc.cpp:272 rc.cpp:272
+msgid "Dwd.de - MET9 - Europe SW (8km, Infrared)"
+msgstr "Dwd.de - MET9 - Avrupa SW (8km, Kızılötesi)"
+
+#: po/rc.cpp:273 rc.cpp:273
+msgid "Dwd.de - MET9 - Germany (1km, Infrared)"
+msgstr "Dwd.de - MET9 - Almanya (1km, Kızılötesi)"
+
+#: po/rc.cpp:274 rc.cpp:274
+msgid "Dwd.de - Pacific"
+msgstr "Dwd.de - Pasifik"
+
+#: po/rc.cpp:275 rc.cpp:275
+msgid "Eumetsat.org - Meteosat-7 - Antarctic (Infrared 11.5)"
+msgstr "Eumetsat.org - Meteosat-7 - Antarktika (Kızılötesi 11.5)"
+
+#: po/rc.cpp:276 rc.cpp:276
+msgid "Eumetsat.org - Meteosat-7 - Antarctic (Visual 0.7)"
+msgstr "Eumetsat.org - Meteosat-7 - Antarktika (Görsel 0.7)"
+
+#: po/rc.cpp:277 rc.cpp:277
+msgid "Eumetsat.org - Meteosat-7 - Central Africa (Infrared 11.5)"
+msgstr "Eumetsat.org - Meteosat-7 - Orta Afrika (Kızılötesi 11.5)"
+
+#: po/rc.cpp:278 rc.cpp:278
+msgid "Eumetsat.org - Meteosat-7 - Central Africa (Visual 0.7)"
+msgstr "Eumetsat.org - Meteosat-7 - Orta Afrika (Görsel 0.7)"
+
+#: po/rc.cpp:279 rc.cpp:279
+msgid "Eumetsat.org - Meteosat-7 - Eastern Indian Ocean (Infrared 11.5)"
+msgstr "Eumetsat.org - Meteosat-7 - Doğu Hint Okyanusu (Kızılötesi 11.5)"
+
+#: po/rc.cpp:280 rc.cpp:280
+msgid "Eumetsat.org - Meteosat-7 - Eastern Indian Ocean (Visual 0.7)"
+msgstr "Eumetsat.org - Meteosat-7 - Doğu Hint Okyanusu (Görsel 0.7)"
+
+#: po/rc.cpp:281 rc.cpp:281
+msgid "Eumetsat.org - Meteosat-7 - Europe (Infrared 11.5)"
+msgstr "Eumetsat.og - Meteosat-7 - Avrupa (Kızılötesi 11.5)"
+
+#: po/rc.cpp:282 rc.cpp:282
+msgid "Eumetsat.org - Meteosat-7 - Europe (Visual 0.7)"
+msgstr "Eumetsat.org - Meteosat-7 - Avrupa (Görsel 0.7)"
+
+#: po/rc.cpp:283 rc.cpp:283
+msgid "Eumetsat.org - Meteosat-7 - Indonesia (Infrared 11.5)"
+msgstr "Eumetsat.org - Meteosat-7 - Endonezya (Kızılötesi 11.5)"
+
+#: po/rc.cpp:284 rc.cpp:284
+msgid "Eumetsat.org - Meteosat-7 - Indonesia (Visual 0.7)"
+msgstr "eumetsat.org - Meteosat-7 - Endonezya (Görsel 0.7)"
+
+#: po/rc.cpp:285 rc.cpp:285
+msgid "Eumetsat.org - Meteosat-7 - Middle East (Infrared 11.5)"
+msgstr "Eumetsat.org - Meteosat-7 - Orta Doğu (Kızılötesi 11.5)"
+
+#: po/rc.cpp:286 rc.cpp:286
+msgid "Eumetsat.org - Meteosat-7 - Middle East (Visual 0.7)"
+msgstr "Eumetsat.org - Meteosat-7 - Orta Doğu (Görsel 0.7)"
+
+#: po/rc.cpp:287 rc.cpp:287
+msgid "Eumetsat.org - Meteosat-7 - Northern Africa (Infrared 11.5)"
+msgstr "Eumetsat.org - Meteosat-7 - Kuzey Afrika (Kızılötesi 11.5)"
+
+#: po/rc.cpp:288 rc.cpp:288
+msgid "Eumetsat.org - Meteosat-7 - Northern Africa (Visual 0.7)"
+msgstr "Eumetsat.org - Meteosat-7 - Kuzey Afrika (Görsel 0.7)"
+
+#: po/rc.cpp:289 rc.cpp:289
+msgid "Eumetsat.org - Meteosat-7 - Southern Africa (Infrared 11.5)"
+msgstr "Eumetsat.org - Meteosat-7 - Güney Afrika (Kızılötesi 11.5)"
+
+#: po/rc.cpp:290 rc.cpp:290
+msgid "Eumetsat.org - Meteosat-7 - Southern Africa (Visual 0.7)"
+msgstr "Eumetsat.org - Meteosat-7 - Güney Afrika (Görsel 0.7)"
+
+#: po/rc.cpp:291 rc.cpp:291
+msgid "Eumetsat.org - Meteosat-7 - Western Indian Ocean (Infrared 11.5)"
+msgstr "Eumetsat.org - Meteosat-7 - Batı Hint Okyanusu (Kızılötesi 11.5)"
+
+#: po/rc.cpp:292 rc.cpp:292
+msgid "Eumetsat.org - Meteosat-7 - Western Indian Ocean (Visual 0.7)"
+msgstr "Eumetsat.org - Meteosat-7 - Batı Hint Okyanusu (Görsel 0.7)"
+
+#: po/rc.cpp:293 rc.cpp:293
+msgid "Eumetsat.org - Meteosat-9 - Algeria (RGB Composite)"
+msgstr "Eumetsat.org  - Meteosat-9 - Cezayir (KYM Bileşimi)"
+
+#: po/rc.cpp:294 rc.cpp:294
+msgid "Eumetsat.org - Meteosat-9 - America (Infrared 10.8)"
+msgstr "Eumetsat.org - Meteosat-9 - Amerika (Kızılötesi 10.8)"
+
+#: po/rc.cpp:295 rc.cpp:295
+msgid "Eumetsat.org - Meteosat-9 - America (Infrared 3.9)"
+msgstr "Eumetsat.org - Meteosat-9 - Amerika (Kızılötesi 3.9)"
+
+#: po/rc.cpp:296 rc.cpp:296
+msgid "Eumetsat.org - Meteosat-9 - America (Natural Colors)"
+msgstr "Eumetsat.org - Meteosat-9 - Amerika (Doğal Renkler)"
+
+#: po/rc.cpp:297 rc.cpp:297
+msgid "Eumetsat.org - Meteosat-9 - America (Visual 0.6)"
+msgstr "Eumetsat.org - Meteosat-9 - Amerika (Görsel 0.6)"
+
+#: po/rc.cpp:298 rc.cpp:298
+msgid "Eumetsat.org - Meteosat-9 - Antarctic (Infrared 10.8)"
+msgstr "Eumetsat.org - Meteosat-9 - Antarktika (Kızılötesi 10.8)"
+
+#: po/rc.cpp:299 rc.cpp:299
+msgid "Eumetsat.org - Meteosat-9 - Antarctic (Infrared 3.9)"
+msgstr "Eumetsat.org - Meteosat-9 - Antarktika (Kızılötesi 3.9)"
+
+#: po/rc.cpp:300 rc.cpp:300
+msgid "Eumetsat.org - Meteosat-9 - Antarctic (Natural Colors)"
+msgstr "Eumetsat.org - Meteosat-9 - Antarktika (Doğal Renkler)"
+
+#: po/rc.cpp:301 rc.cpp:301
+msgid "Eumetsat.org - Meteosat-9 - Antarctic (Visual 0.6)"
+msgstr "eumetsat.org - Meteosat-9 - Antarktika (Görsel 0.6)"
+
+#: po/rc.cpp:302 rc.cpp:302
+msgid "Eumetsat.org - Meteosat-9 - Canary (RGB Composite)"
+msgstr "eumetsat.org - Meteosat-9 - Kanarya Adaları (KYM Bileşimi)"
+
+#: po/rc.cpp:303 rc.cpp:303
+msgid "Eumetsat.org - Meteosat-9 - Central Africa (Infrared 10.8)"
+msgstr "Eumetsat.org - Meteosat-9 - Orta Afrika (Kızılötesi 10.8)"
+
+#: po/rc.cpp:304 rc.cpp:304
+msgid "Eumetsat.org - Meteosat-9 - Central Africa (Infrared 3.9)"
+msgstr "Eumetsat.org - Meteosat-9 - Orta Afrika (Kızılötesi 3.9)"
+
+#: po/rc.cpp:305 rc.cpp:305
+msgid "Eumetsat.org - Meteosat-9 - Central Africa (Natural Colors)"
+msgstr "Eumetsat.org - Meteosat-9 - Orta Afrika (Doğal Renkler)"
+
+#: po/rc.cpp:306 rc.cpp:306
+msgid "Eumetsat.org - Meteosat-9 - Central Africa (Visual 0.6)"
+msgstr "Eumetsat.org - Meteosat-9 - Orta Afrika (Görsel 0.6)"
+
+#: po/rc.cpp:307 rc.cpp:307
+msgid "Eumetsat.org - Meteosat-9 - Central Europe (Infrared 10.8)"
+msgstr "Eumetsat.org - Meteosat-9 - Orta Avrupa (Kızılötesi 10.8)"
+
+#: po/rc.cpp:308 rc.cpp:308
+msgid "Eumetsat.org - Meteosat-9 - Central Europe (Infrared 3.9)"
+msgstr "Eumetsat.org - Meteosat-9 - Orta Avrupa (Kızılötesi 3.9)"
+
+#: po/rc.cpp:309 rc.cpp:309
+msgid "Eumetsat.org - Meteosat-9 - Central Europe (Natural Colors)"
+msgstr "Eumetsat.org - Meteosat-9 - Orta Avrupa (Doğal Renkler)"
+
+#: po/rc.cpp:310 rc.cpp:310
+msgid "Eumetsat.org - Meteosat-9 - Central Europe (Visual 0.6)"
+msgstr "Eumetsat.org - Meteosat-9 - Orta Avrupa (Görsel 0.6)"
+
+#: po/rc.cpp:311 rc.cpp:311
+msgid "Eumetsat.org - Meteosat-9 - Eastern Africa (Infrared 10.8)"
+msgstr "eumetsat.org - Meteosat-9 - Doğu Afrika (Kızılötesi 10.8)"
+
+#: po/rc.cpp:312 rc.cpp:312
+msgid "Eumetsat.org - Meteosat-9 - Eastern Africa (Infrared 3.9)"
+msgstr "Eumetsat.org - Meteosat-9 - Doğu Afrika (Kızılötesi 3.9)"
+
+#: po/rc.cpp:313 rc.cpp:313
+msgid "Eumetsat.org - Meteosat-9 - Eastern Africa (Natural Colors)"
+msgstr "Eumetsat.org - Meteosat-9 - Doğu Afrika (Doğal Renkler)"
+
+#: po/rc.cpp:314 rc.cpp:314
+msgid "Eumetsat.org - Meteosat-9 - Eastern Africa (Visual 0.6)"
+msgstr "Eumetsat.org - Meteosat-9 - Doğu Afrika (Görsel 0.6)"
+
+#: po/rc.cpp:315 rc.cpp:315
+msgid "Eumetsat.org - Meteosat-9 - Eastern Europe (Infrared 10.8)"
+msgstr "Eumetsat.org - Meteosat-9 - Doğu Avrupa (Kızılötesi 10.8)"
+
+#: po/rc.cpp:316 rc.cpp:316
+msgid "Eumetsat.org - Meteosat-9 - Eastern Europe (Infrared 3.9)"
+msgstr "Eumetsat.org - Meteosat-9 - Doğu Avrupa (Kızılötesi 3.9)"
+
+#: po/rc.cpp:317 rc.cpp:317
+msgid "Eumetsat.org - Meteosat-9 - Eastern Europe (Natural Colors)"
+msgstr "Eumetsat.org - Meteosat-9 - Doğu Avrupa (Doğal Renkler)"
+
+#: po/rc.cpp:318 rc.cpp:318
+msgid "Eumetsat.org - Meteosat-9 - Eastern Europe (Visual 0.6)"
+msgstr "Eumetsat.org - Meteosat-9 - Doğu Avrupa (Görsel 0.6)"
+
+#: po/rc.cpp:319 rc.cpp:319
+msgid "Eumetsat.org - Meteosat-9 - Egypt (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - Mısır (KYM Bileşimi)"
+
+#: po/rc.cpp:320 rc.cpp:320
+msgid "Eumetsat.org - Meteosat-9 - France (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - Fransa (KYM Bileşimi)"
+
+#: po/rc.cpp:321 rc.cpp:321
+msgid "Eumetsat.org - Meteosat-9 - Full disc (Infrared 10.8)"
+msgstr "Eumetsat.org - Meteosat-9 - Tüm dünya (Kızılötesi 10.8)"
+
+#: po/rc.cpp:322 rc.cpp:322
+msgid "Eumetsat.org - Meteosat-9 - Full disc (Infrared 3.9)"
+msgstr "Eumetsat.org - Meteosat-9 - Tüm dünya (Kızılötesi 3.9)"
+
+#: po/rc.cpp:323 rc.cpp:323
+msgid "Eumetsat.org - Meteosat-9 - Full disc (Natural Colors)"
+msgstr "Eumetsat.org - Meteosat-9 - Tüm dünya (Doğal Renkler)"
+
+#: po/rc.cpp:324 rc.cpp:324
+msgid "Eumetsat.org - Meteosat-9 - Full disc (Visual 0.6)"
+msgstr "Eumetsat.org - Meteosat-9 - Tüm dünya (Görsel 0.6)"
+
+#: po/rc.cpp:325 rc.cpp:325
+msgid "Eumetsat.org - Meteosat-9 - Germany / Poland (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - Almanya / Polonya (KYM Bileşimi)"
+
+#: po/rc.cpp:326 rc.cpp:326
+msgid "Eumetsat.org - Meteosat-9 - Greece (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - Yunanistan (KYM Bileşimi)"
+
+#: po/rc.cpp:327 rc.cpp:327
+msgid "Eumetsat.org - Meteosat-9 - Iraque (RGB Composite)"
+msgstr "Eumetsat.org - Meteoesat-9 - Irak (KYM Bileşimi)"
+
+#: po/rc.cpp:328 rc.cpp:328
+msgid "Eumetsat.org - Meteosat-9 - Island (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - Ada (KYM Bileşimi)"
+
+#: po/rc.cpp:329 rc.cpp:329
+msgid "Eumetsat.org - Meteosat-9 - Italy (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - İtalya (KYM Bileşimi)"
+
+#: po/rc.cpp:330 rc.cpp:330
+msgid "Eumetsat.org - Meteosat-9 - Libya (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - Libya (KYM Bileşimi)"
+
+#: po/rc.cpp:331 rc.cpp:331
+msgid "Eumetsat.org - Meteosat-9 - Marocco (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - Fas (KYM Bileşimi)"
+
+#: po/rc.cpp:332 rc.cpp:332
+msgid "Eumetsat.org - Meteosat-9 - Scandinavia (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - İskandinavya (KYM Bileşimi)"
+
+#: po/rc.cpp:333 rc.cpp:333
+msgid "Eumetsat.org - Meteosat-9 - Southern Africa (Infrared 10.8)"
+msgstr "Eumetsat.org - Meteosat-9 - Güney Afrika (Kızılötesi 10.8)"
+
+#: po/rc.cpp:334 rc.cpp:334
+msgid "Eumetsat.org - Meteosat-9 - Southern Africa (Infrared 3.9)"
+msgstr "Eumetsat.org - Meteosat-9 - Güney Afrika (Kızılötesi 3.9)"
+
+#: po/rc.cpp:335 rc.cpp:335
+msgid "Eumetsat.org - Meteosat-9 - Southern Africa (Natural Colors)"
+msgstr "Eumetsat.org - Meteosat-9 - Güney Afrika (Doğal Renkler)"
+
+#: po/rc.cpp:336 rc.cpp:336
+msgid "Eumetsat.org - Meteosat-9 - Southern Africa (Visual 0.6)"
+msgstr "Eumetsat.org - Meteosat-9 - Güney Afrika (Görsel 0.6)"
+
+#: po/rc.cpp:337 rc.cpp:337
+msgid "Eumetsat.org - Meteosat-9 - Spain (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - İspanya (KYM Bileşimi)"
+
+#: po/rc.cpp:338 rc.cpp:338
+msgid "Eumetsat.org - Meteosat-9 - Turkey (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - Türkiye (KYM Bileşimi)"
+
+#: po/rc.cpp:339 rc.cpp:339
+msgid "Eumetsat.org - Meteosat-9 - United Kingdom (RGB Composite)"
+msgstr "Eumetsat.org - Meteosat-9 - Birleşik Krallık (KYM Bileşimi)"
+
+#: po/rc.cpp:340 rc.cpp:340
+msgid "Eumetsat.org - Meteosat-9 - West Atlantic (Infrared 10.8)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Atlantik (Kızılötesi 10.8)"
+
+#: po/rc.cpp:341 rc.cpp:341
+msgid "Eumetsat.org - Meteosat-9 - West Atlantic (Infrared 3.9)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Atlantik (Kızılötesi 3.9)"
+
+#: po/rc.cpp:342 rc.cpp:342
+msgid "Eumetsat.org - Meteosat-9 - West Atlantic (Natural Colors)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Atlantik (Doğal Renkler)"
+
+#: po/rc.cpp:343 rc.cpp:343
+msgid "Eumetsat.org - Meteosat-9 - West Atlantic (Visual 0.6)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Atlantik (Görsel 0.6)"
+
+#: po/rc.cpp:344 rc.cpp:344
+msgid "Eumetsat.org - Meteosat-9 - Western Africa (Infrared 10.8)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Afrika (Kızılötesi 10.8)"
+
+#: po/rc.cpp:345 rc.cpp:345
+msgid "Eumetsat.org - Meteosat-9 - Western Africa (Infrared 3.9)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Afrika (Kızılötesi 3.9)"
+
+#: po/rc.cpp:346 rc.cpp:346
+msgid "Eumetsat.org - Meteosat-9 - Western Africa (Natural Colors)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Afrika (Doğal Renkler)"
+
+#: po/rc.cpp:347 rc.cpp:347
+msgid "Eumetsat.org - Meteosat-9 - Western Africa (Visual 0.6)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Afrika (Görsel 0.6)"
+
+#: po/rc.cpp:348 rc.cpp:348
+msgid "Eumetsat.org - Meteosat-9 - Western Europe (Infrared 10.8)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Avrupa (Kızılötesi 10.8)"
+
+#: po/rc.cpp:349 rc.cpp:349
+msgid "Eumetsat.org - Meteosat-9 - Western Europe (Infrared 3.9)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Avrupa (Kızılötesi 3.9)"
+
+#: po/rc.cpp:350 rc.cpp:350
+msgid "Eumetsat.org - Meteosat-9 - Western Europe (Natural Colors)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Avrupa (Doğal Renkler)"
+
+#: po/rc.cpp:351 rc.cpp:351
+msgid "Eumetsat.org - Meteosat-9 - Western Europe (Visual 0.6)"
+msgstr "Eumetsat.org - Meteosat-9 - Batı Avrupa (Görsel 0.6)"
+
+#: po/rc.cpp:352 rc.cpp:352
+msgid "- - Europe - -"
+msgstr "- - Avrupa - -"
+
+#: po/rc.cpp:353 rc.cpp:353
+msgid "- - Global - -"
+msgstr "- - Küresel - -"
+
+#: po/rc.cpp:354 rc.cpp:354
+msgid "Imd.ernet.in - India (Infrared)"
+msgstr "Imd.ernet.in - Hindistan (Kızılötesi)"
+
+#: po/rc.cpp:355 rc.cpp:355
+msgid "Imd.ernet.in - India (Infrared / Colour Composite)"
+msgstr "Imd.ernet.in - Hindistan (Kızılötesi / Renk Bileşimi)"
+
+#: po/rc.cpp:356 rc.cpp:356
+msgid "Imd.ernet.in - India (Visible)"
+msgstr "Imd.ernet.in - Hindistan (Görünür)"
+
+#: po/rc.cpp:357 rc.cpp:357
+msgid "Imd.ernet.in - India (Water Vapour)"
+msgstr "Imd.ernet.in - Hindistan (Su Buharı)"
+
+#: po/rc.cpp:358 rc.cpp:358
+msgid "Meteoromania.ro - INMH Europe Eumetsat Meteosat 9 Infrared"
+msgstr "Meteoromania.ro - INMH Avrupa Eumetsat Meteosat 9 Kızılötesi"
+
+#: po/rc.cpp:359 rc.cpp:359
+msgid "Meteoromania.ro - INMH Romania Radar"
+msgstr "Meteoromania.ro - INHM Romanya Radarı"
+
+#: po/rc.cpp:360 rc.cpp:360
+msgid "Meteoromania.ro - INMH Romania Temperatures"
+msgstr "Meteoromania.ro - INMH Romanya Sıcaklıkları"
+
+#: po/rc.cpp:361 rc.cpp:361
+msgid "- - North America - -"
+msgstr "- - Kuzey Amerika - -"
+
+#: po/rc.cpp:362 rc.cpp:362
+msgid "- - Pacific Ocean - -"
+msgstr "- - Pasifik Okyanusu - -"
+
+#: po/rc.cpp:363 rc.cpp:363
+msgid "- - Polar - -"
+msgstr "- - Kutupsal - -"
+
+#: po/rc.cpp:364 rc.cpp:364
+msgid "Smn.gov.ar - Argentina - Cloud Top Temperature"
+msgstr "Smn.gov.ar - Arjantin - Bulut Üstü Sıcaklık"
+
+#: po/rc.cpp:365 rc.cpp:365
+msgid "Smn.gov.ar - Argentina - Infrared"
+msgstr "Smn.gov.ar - Arjantin - Kızılötesi"
+
+#: po/rc.cpp:366 rc.cpp:366
+msgid "Smn.gov.ar - Argentina - Visible"
+msgstr "Smn.gov.ar - Arjantin - Görünür"
+
+#: po/rc.cpp:367 rc.cpp:367
+msgid "Smn.gov.ar - South America - Cloud Top Temperature"
+msgstr "Smn.gov.ar - Güney Amerika - Bulut Üstü Sıcaklık"
+
+#: po/rc.cpp:368 rc.cpp:368
+msgid "Smn.gov.ar - South America - Infrared"
+msgstr "Smn.gov.ar - Güney Amerika - Kızılötesi"
+
+#: po/rc.cpp:369 rc.cpp:369
+msgid "Smn.gov.ar - South America - Water Vapor"
+msgstr "Smn.gov.ar - Güney Amerika - Su Buharı"
+
+#: po/rc.cpp:370 rc.cpp:370
+msgid "- - South America - -"
+msgstr "- - Güney Amerika - -"
+
+#: po/rc.cpp:371 rc.cpp:371
+msgid "Terkep.idokep.hu - Hungary (Rain)"
+msgstr "Terkep.idokep.hu - Macaristan (Yağmur)"
+
+#: po/rc.cpp:372 rc.cpp:372
+msgid "Weather.com - Global - Africa / Europe (Infrared)"
+msgstr "Weather.com - Küresel - Afrika / Avrupa (Kızılötesi)"
+
+#: po/rc.cpp:373 rc.cpp:373
+msgid "Weather.com - Global - Pacific Ocean (Infrared)"
+msgstr "Weather.com - Küresel - Pasifik Okyanusu (Kızılötesi)"
+
+#: po/rc.cpp:374 rc.cpp:374
+msgid "Weather.com - Global - Western Hemisphere (Infrared)"
+msgstr "Weather.com - Küresel - Batı Yarımküre (Kızılötesi)"
+
+#: po/rc.cpp:375 rc.cpp:375
+msgid "Weather.com - Global - West Pacific Ocean (Infrared)"
+msgstr "Weather.com - Küresel - Batı Pasifik Okyanusu (Kızılötesi)"
+
+#: po/rc.cpp:376 rc.cpp:376
+msgid "Weather.com - US - Alaska (Infrared)"
+msgstr "Weather.com - ABD - Alaska (Kızılötesi)"
+
+#: po/rc.cpp:377 rc.cpp:377
+msgid "Weather.com - US - Alaska (Radar)"
+msgstr "Weather.com - ABD - Alaska (Radar)"
+
+#: po/rc.cpp:378 rc.cpp:378
+msgid "Weather.com - US - Central (Doppler Radar)"
+msgstr "Weather.com - ABD - Merkez (Doppler Radarı)"
+
+#: po/rc.cpp:379 rc.cpp:379
+msgid "Weather.com - US - Central (Infrared)"
+msgstr "Weather.com - ABD - Merkez (Kızılötesi)"
+
+#: po/rc.cpp:380 rc.cpp:380
+msgid "Weather.com - US - Central (Visible)"
+msgstr "Weather.com - ABD - Merkez (Görünür)"
+
+#: po/rc.cpp:381 rc.cpp:381
+msgid "Weather.com - US - Complete (Infrared)"
+msgstr "Weather.com - ABD - Bütün (Kızılötesi)"
+
+#: po/rc.cpp:382 rc.cpp:382
+msgid "Weather.com - US - Complete (Visible)"
+msgstr "Weather.com - ABD - Bütün (Görünür)"
+
+#: po/rc.cpp:383 rc.cpp:383
+msgid "Weather.com - US - Complete (Water Vapor)"
+msgstr "Weather.com - ABD - Bütün (Su Buharı)"
+
+#: po/rc.cpp:384 rc.cpp:384
+msgid "Weather.com - US - East Central (Doppler Radar)"
+msgstr "Weather.com - ABD - Merkezin Doğusu (Doppler Radarı)"
+
+#: po/rc.cpp:385 rc.cpp:385
+msgid "Weather.com - US - East Central (Infrared)"
+msgstr "Weather.com - ABD - Merkezin Doğusu (Kızılötesi)"
+
+#: po/rc.cpp:386 rc.cpp:386
+msgid "Weather.com - US - East Central (Visible)"
+msgstr "Weather.com - ABD - Merkezin Doğusu (Görünür)"
+
+#: po/rc.cpp:387 rc.cpp:387
+msgid "Weather.com - US - Hawaii (Infrared)"
+msgstr "Weather.com - ABD - Hawaii (Kızılötesi)"
+
+#: po/rc.cpp:388 rc.cpp:388
+msgid "Weather.com - US - Hawaii (Radar)"
+msgstr "Weather.com - ABD - Hawaii (Radar)"
+
+#: po/rc.cpp:389 rc.cpp:389
+msgid "Weather.com - US - Midwest (Doppler Radar)"
+msgstr "Weather.com - ABD - Orta Batı (Doppler Radar)"
+
+#: po/rc.cpp:390 rc.cpp:390
+msgid "Weather.com - US - North Central (Doppler Radar)"
+msgstr "Weather.com - ABD - Merkezin Kuzeyi (Doppler Radar)"
+
+#: po/rc.cpp:391 rc.cpp:391
+msgid "Weather.com - US - North Central (Infrared)"
+msgstr "Weather.com - ABD - Merkezin Kuzeyi (Kızılötesi)"
+
+#: po/rc.cpp:392 rc.cpp:392
+msgid "Weather.com - US - North Central (Visible)"
+msgstr "Weather.com - ABD - Merkezin Kuzeyi (Görünür)"
+
+#: po/rc.cpp:393 rc.cpp:393
+msgid "Weather.com - US - Northeast (Doppler Radar)"
+msgstr "Weather.com - ABD - Kuzeydoğu (Doppler Radarı)"
+
+#: po/rc.cpp:394 rc.cpp:394
+msgid "Weather.com - US - Northeast (Infrared)"
+msgstr "Weather.com - ABD - kuzeydoğu (Kızılötesi)"
+
+#: po/rc.cpp:395 rc.cpp:395
+msgid "Weather.com - US - Northeast (Visible)"
+msgstr "Weather.com - ABD - Kuzeydoğu (Görünür)"
+
+#: po/rc.cpp:396 rc.cpp:396
+msgid "Weather.com - US - Northwest (Doppler Radar)"
+msgstr "Weather.com - ABD - Kuzeybatı (Doppler Radarı)"
+
+#: po/rc.cpp:397 rc.cpp:397
+msgid "Weather.com - US - Northwest (Infrared)"
+msgstr "Weather.com - ABD - Kuzeybatı (Kızılötesi)"
+
+#: po/rc.cpp:398 rc.cpp:398
+msgid "Weather.com - US - Northwest (Visible)"
+msgstr "Weather.com - ABD - Kuzeybatı (Görünür)"
+
+#: po/rc.cpp:399 rc.cpp:399
+msgid "Weather.com - US - South Central (Doppler Radar)"
+msgstr "Weather.com - ABD - Merkezin Güneyi (Doppler Radarı)"
+
+#: po/rc.cpp:400 rc.cpp:400
+msgid "Weather.com - US - South Central (Infrared)"
+msgstr "Weather.com - ABD - Merkezin Güneyi (Kızılötesi)"
+
+#: po/rc.cpp:401 rc.cpp:401
+msgid "Weather.com - US - South Central (Visible)"
+msgstr "Weather.com - ABD - Merkezin Güneyi (Görünür)"
+
+#: po/rc.cpp:402 rc.cpp:402
+msgid "Weather.com - US - Southeast (Doppler Radar)"
+msgstr "Weather.com - ABD - Güneydoğu (Doppler Radar)"
+
+#: po/rc.cpp:403 rc.cpp:403
+msgid "Weather.com - US - Southeast (Infrared)"
+msgstr "Weather.com - ABD - Güneydoğu (Kızılötesi)"
+
+#: po/rc.cpp:404 rc.cpp:404
+msgid "Weather.com - US - Southeast (Visible)"
+msgstr "Weather.com - ABD - Güneydoğu (Görünür)"
+
+#: po/rc.cpp:405 rc.cpp:405
+msgid "Weather.com - US - Southwest (Doppler Radar)"
+msgstr "Weather.com - ABD - Güneybatı (Doppler Radarı)"
+
+#: po/rc.cpp:406 rc.cpp:406
+msgid "Weather.com - US - Southwest (Infrared)"
+msgstr "Weather.com - ABD - Güneybatı (Kızılötesi)"
+
+#: po/rc.cpp:407 rc.cpp:407
+msgid "Weather.com - US - Southwest (Visible)"
+msgstr "Weather.com - ABD - Güneybatı (Görünür)"
+
+#: po/rc.cpp:408 rc.cpp:408
+msgid "Weather.com - US - West Central (Doppler Radar)"
+msgstr "Weather.com - ABD - Merkezin Batısı (Doppler Radar)"
+
+#: po/rc.cpp:409 rc.cpp:409
+msgid "Weather.com - US - West Central (Infrared)"
+msgstr "Weather.com - ABD - Merkezin Batısı (Kızılötesi)"
+
+#: po/rc.cpp:410 rc.cpp:410
+msgid "Weather.com - US - West Central (Visible)"
+msgstr "Weather.com - ABD - Merkezin Batısı (Görünür)"
+
+#: po/rc.cpp:411 rc.cpp:411
+msgid "Weather.com - US - West (Infrared)"
+msgstr "Weather.com - ABD - Batı (Kızılötesi)"
+
+#: po/rc.cpp:412 rc.cpp:412
+msgid "Weather.com - US - West (Radar)"
+msgstr "Weather.com - ABD - Batı (Radar)"
+
+#: po/rc.cpp:413 rc.cpp:413
+msgid "Weather.com - World - Afghanistan (Infrared)"
+msgstr "Weather.com - Dünya - Afganistan (Kızılötesi)"
+
+#: po/rc.cpp:414 rc.cpp:414
+msgid "Weather.com - World - Africa (Infrared)"
+msgstr "Weather.com - Dünya - Afrika (Kızılötesi)"
+
+#: po/rc.cpp:415 rc.cpp:415
+msgid "Weather.com - World - Argentina (Infrared)"
+msgstr "Weather.com - Dünya - Arjantin (Kızılötesi)"
+
+#: po/rc.cpp:416 rc.cpp:416
+msgid "Weather.com - World - Asia (Infrared)"
+msgstr "Weather.com - Dünya - Asya (Kızılötesi)"
+
+#: po/rc.cpp:417 rc.cpp:417
+msgid "Weather.com - World - Atlantic Ocean (Infrared)"
+msgstr "Weather.com - Dünya - Atlantik Okyanusu (Kızılötesi)"
+
+#: po/rc.cpp:418 rc.cpp:418
+msgid "Weather.com - World - Australia (Infrared)"
+msgstr "Weather.com - Dünya - Avustralya (Kızılötesi)"
+
+#: po/rc.cpp:419 rc.cpp:419
+msgid "Weather.com - World - Brazil (Infrared)"
+msgstr "Weather.com - Dünya - Brezilya (Kızılötesi)"
+
+#: po/rc.cpp:420 rc.cpp:420
+msgid "Weather.com - World - Canada (Infrared)"
+msgstr "Weather.com - Dünya - Kanada (Kızılötesi)"
+
+#: po/rc.cpp:421 rc.cpp:421
+msgid "Weather.com - World - Caribbean (Infrared)"
+msgstr "Weather.com - Dünya - Karayipler (Kızılötesi)"
+
+#: po/rc.cpp:422 rc.cpp:422
+msgid "Weather.com - World - Central America (Infrared)"
+msgstr "Weather.com - Dünya - Merkez Amerika (Kızılötesi)"
+
+#: po/rc.cpp:423 rc.cpp:423
+msgid "Weather.com - World - Central Asia (Infrared)"
+msgstr "Weather.com - Dünya - Merkez Asya (Kızılötesi)"
+
+#: po/rc.cpp:424 rc.cpp:424
+msgid "Weather.com - World - Central Mexico (Infrared)"
+msgstr "Weather.com - Dünya - Merkez MEksika (Kızılötesi)"
+
+#: po/rc.cpp:425 rc.cpp:425
+msgid "Weather.com - World - East Asia (Infrared)"
+msgstr "Weather.com - Dünya - Doğu Asya (Kızılötesi)"
+
+#: po/rc.cpp:426 rc.cpp:426
+msgid "Weather.com - World - Europe (Infrared)"
+msgstr "Weather.com - Dünya - Avrupa (Kızılötesi)"
+
+#: po/rc.cpp:427 rc.cpp:427
+msgid "Weather.com - World - France (Infrared)"
+msgstr "Weather.com - Dünya - Fransa (Kızılötesi)"
+
+#: po/rc.cpp:428 rc.cpp:428
+msgid "Weather.com - World - Germany (Infrared)"
+msgstr "Weather.com - Dünya - Almanya (Kızılötesi)"
+
+#: po/rc.cpp:429 rc.cpp:429
+msgid "Weather.com - World - Gulf of Mexico (Infrared)"
+msgstr "Weather.com - Dünya - Meksika Körfezi (Kızılötesi)"
+
+#: po/rc.cpp:430 rc.cpp:430
+msgid "Weather.com - World - India (Infrared)"
+msgstr "Weather.com - Dünya - Hindistan (Kızılötesi)"
+
+#: po/rc.cpp:431 rc.cpp:431
+msgid "Weather.com - World - Indian Ocean (Infrared)"
+msgstr "Weather.com - Dünya - Hint Okyanusu (Kızılötesi)"
+
+#: po/rc.cpp:432 rc.cpp:432
+msgid "Weather.com - World - Italy (Infrared)"
+msgstr "Weather.com - Dünya - İtalya (Kızılötesi)"
+
+#: po/rc.cpp:433 rc.cpp:433
+msgid "Weather.com - World - Japan (Infrared)"
+msgstr "Weather.com - Dünya - Japonya (Kızılötesi)"
+
+#: po/rc.cpp:434 rc.cpp:434
+msgid "Weather.com - World - Mexico (Infrared)"
+msgstr "Weather.com - Dünya - Meksika (Kızılötesi)"
+
+#: po/rc.cpp:435 rc.cpp:435
+msgid "Weather.com - World - Middle East (Infrared)"
+msgstr "Weather.com - Dünya - Orta Doğu (Kızılötesi)"
+
+#: po/rc.cpp:436 rc.cpp:436
+msgid "Weather.com - World - New Zealand (Infrared)"
+msgstr "Weather.com - Dünya - Yeni Zelanda (Kızılötesi)"
+
+#: po/rc.cpp:437 rc.cpp:437
+msgid "Weather.com - World - Northeast Brazil (Infrared)"
+msgstr "Weather.com - Dünya - Kuzeydoğu Brezilya (Kızılötesi)"
+
+#: po/rc.cpp:438 rc.cpp:438
+msgid "Weather.com - World - North Pole (Infrared)"
+msgstr "Weather.com - Dünya - Kuzey Kutbu (Kızılötesi)"
+
+#: po/rc.cpp:439 rc.cpp:439
+msgid "Weather.com - World - Northwest Brazil (Infrared)"
+msgstr "Weather.com - Dünya - Kuzeybatı Brezilya (Kızılötesi)"
+
+#: po/rc.cpp:440 rc.cpp:440
+msgid "Weather.com - World - Pacific Ocean (Infrared)"
+msgstr "Weather.com - Dünya - Pasifik Okyanusu (Kızılötesi)"
+
+#: po/rc.cpp:441 rc.cpp:441
+msgid "Weather.com - World - Russia (Infrared)"
+msgstr "Weather.com - Dünya - Rusya (Kızılötesi)"
+
+#: po/rc.cpp:442 rc.cpp:442
+msgid "Weather.com - World - Scandinavia (Infrared)"
+msgstr "Weather.com - Dünya - İskandinavya (Kızılötesi)"
+
+#: po/rc.cpp:443 rc.cpp:443
+msgid "Weather.com - World - South America (Infrared)"
+msgstr "Weather.com - Dünya - Güney Amerika (Kızılötesi)"
+
+#: po/rc.cpp:444 rc.cpp:444
+msgid "Weather.com - World - South Brazil (Infrared)"
+msgstr "Weather.com - Dünya - Güney Brezilya (Kızılötesi)"
+
+#: po/rc.cpp:445 rc.cpp:445
+msgid "Weather.com - World - South Pole (Infrared)"
+msgstr "Weather.com - Dünya - Güney Kutbu (Kızılötesi)"
+
+#: po/rc.cpp:446 rc.cpp:446
+msgid "Weather.com - World - Tropical Atlantic Ocean (Infrared)"
+msgstr "Weather.com - Dünya - Tropik Atlantik Okyanusu (Kızılötesi)"
+
+#: po/rc.cpp:447 rc.cpp:447
+msgid "Weather.com - World - United Kingdom (Infrared)"
+msgstr "Weather.com - Dünya - Birleşik Krallık (Kızılötesi)"
+
+#: po/rc.cpp:448 rc.cpp:448
+msgid "Weather.com - World - Venezuela (Infrared)"
+msgstr "Weather.com - Dünya - Venezuella (Kızılötesi)"
+
+#: po/rc.cpp:449 rc.cpp:449
+msgid "circle black"
+msgstr "çember siyah"
+
+#: po/rc.cpp:450 rc.cpp:450
+msgid "circle grey"
+msgstr "çember gri"
+
+#: po/rc.cpp:451 rc.cpp:451
+msgid "circle white"
+msgstr "çember beyaz"
+
+#: po/rc.cpp:452 rc.cpp:452
+msgid "rectangle black"
+msgstr "dikdörtgen siyah"
+
+#: po/rc.cpp:453 rc.cpp:453
+msgid "rectangle grey"
+msgstr "dikdörtgen gri"
+
+#: po/rc.cpp:454 rc.cpp:454
+msgid "rectangle white"
+msgstr "dikdörtgen beyaz"
+
+#: po/rc.cpp:455 rc.cpp:455
+msgid "rounded rectangle black"
+msgstr "yumuşatılmış dikdörtgen siyah "
+
+#: po/rc.cpp:456 rc.cpp:456
+msgid "rounded rectangle grey"
+msgstr "yumuşatılmış dikdörtgen gri"
+
+#: po/rc.cpp:457 rc.cpp:457
+msgid "rounded rectangle white"
+msgstr "yumuşatılmış dikdörtgen beyaz"

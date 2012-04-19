@@ -1,0 +1,43 @@
+#!/usr/bin/make -f
+
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+endif
+
+ifeq (,$(NUMJOBS))
+	NUMJOBS = 1
+endif
+
+BUILDDIR = builddir
+
+PACKAGE = plasma-widget-cwp
+
+CUR_VER = $(shell dpkg-parsechangelog | sed -ne 's/^Version: \(\([0-9]\+\):\)\?\(.*\)-.*/\3/p')
+
+CMAKEOPTS = -DCMAKE_SKIP_RPATH=ON \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            ../
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_configure:
+	mkdir -p $(BUILDDIR) && cd $(BUILDDIR) && cmake $(CMAKEOPTS)
+
+override_dh_auto_build:
+	cd $(BUILDDIR) && $(MAKE) -j$(NUMJOBS)
+
+override_dh_auto_clean:
+	dh_testroot
+	[ ! -f Makefile ] || ( cd $(BUILDDIR) && $(MAKE) clean )
+	[ ! -d $(BUILDDIR) ] || rm -r $(BUILDDIR)
+
+override_dh_auto_install:
+	cd $(BUILDDIR) && $(MAKE) install DESTDIR=$(CURDIR)/debian/$(PACKAGE)
+
+get-orig-source:
+	wget -4 -c "http://kde-look.org/CONTENT/content-files/98925-cwp-$(CUR_VER).tar.bz2"
+	mv -f "98925-cwp-$(CUR_VER).tar.bz2" ../"$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
+
+.PHONY: override_dh_auto_test

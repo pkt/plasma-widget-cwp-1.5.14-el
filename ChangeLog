@@ -1,0 +1,437 @@
+1.5.14
+======
+- xml: gismeteo.com: current wind condition fixed
+
+1.5.13
+======
+- xml: www.wetter.com: current temperature fixed (thanks to Steffen)
+- xml: accuweather.com (World): forecast temperature fixed
+
+1.5.12
+======
+- xml: www.wetter.com: complete rewrite
+- xml: www.weather.com: current weather description fixed
+
+1.5.11
+======
+- xml: gismeteo.com: fixed (thanks to Dreid)
+- xml: www.weather.com.cn: fixes
+
+1.5.10
+======
+- xml: gismeteo.com: negative temperature values fixed
+
+1.5.9
+=====
+- xml: accuweather.com (World): mostly fixed (thanks to Jota Jota)
+- xml: accuweather.com (US): bugs fixed
+- xml: gismeteo.com: wind and location bugs fixed
+- xml: uk.weather.com: variable wind bug fixed
+- xml: in.weather.com: variable wind bug fixed
+- xml: espanol.weather.com: variable wind bug fixed
+
+1.5.8
+=====
+- xml: weather.com: location fixed
+- xml: accuweather.com (US): wrong days for forecast fixed
+
+1.5.7
+=====
+- xml: accuweather.com (US): fixed
+
+1.5.6
+=====
+- xml: accuweather.com (US): fixed
+- xml: pogodynka.pl: fixed
+
+1.5.5
+=====
+- xml: accuweather.com (US): Forecast icon for 1st day fixed
+- xml: weather.com: Fixed
+- xml: pogodynka.pl: Fixed
+
+1.5.4
+=====
+- xml: ilmeteo.it: icon and description fixes
+
+1.5.3
+=====
+- xml: accuweather.com (US): links and location fixes
+
+1.5.2
+=====
+- xml: espanol.weather.com: date name fixes
+- xml: fr.weather.com: date name fixes
+- xml: in.weather.com: date name fixes
+- xml: uk.weather.com: date name fixes
+- xml: accuweather.com (US): update time fixed
+- xml: www.weather.com: current weather icon fixed
+
+1.5.1
+=====
+- ru.po updated (thanks to Boris Pek)
+- new cwp-app directory not used in some cases
+- xml: gismeteo.com: add some icon codes
+- xml: www.weather.com.cn: fixes
+
+1.5.0
+=====
+- on request: changed app directory from ~/.cwp to ~/.<kdedir>/share/apps/cwp
+- xml: gismeteo.com: display N.A. if no update time is available
+- xml: gismeteo.com: add some icon codes
+
+1.4.0
+=====
+- on request: export / import settings from configuration dialog
+
+1.3.4
+=====
+- xml: accuweather.com (US): fixed temperature not shown in some cases
+- xml: ilmeteo.it: fixed icon and forecast information issues
+
+1.3.3
+=====
+- xml: www.weather.com: update time fixed, weather description fixed
+- xml: www.weather.com.cn: current weather description fixed
+- xml: www.accuweather.com (US): fixed
+
+1.3.2
+=====
+- xml: www.gismeteo.com: location fixed (thanks to yurikirin)
+- xml: pogodynka.pl: fixed
+- xml: wetter.com: fixed rain forecast
+- xml: ilmeteo.it: fixed missing weather description
+
+1.3.1
+=====
+- xml: pogodynka.pl: fixed forecast for 1st day
+
+1.3.0
+=====
+- display invalid weather data rather than spinning circle
+- xml: www.gismeteo.com: links to www.gismeteo.ru now
+- xml: accuweather.com (US): fixed
+- xml: pogodynka.pl: fixed
+- xml: others: small fixes
+
+1.2.3
+=====
+- xml: www.weather.com: fixed
+
+1.2.2
+=====
+- tiny spelling fix (thanks to tehnick)
+- debug information for icon codes added
+- xml: ilmeteo.it: fixes for some locations like Roma
+- xml: accuweather.com (US): night icon fixes
+
+1.2.1
+=====
+- xml: accuweather.com (World): small fixes (thanks to naradla)
+- xml: gismeteo.com: location name fixed
+- xml: www.weather.com: wind & encoding fixed
+- xml: ilmeteo.it: fixes (thanks to lbonco)
+- xml: www.weather.com.cn: icon description fixed
+- xml: accuweather.com (US): special icons fixed
+- xml: gismeteo.com: some missing icons added
+
+1.2.0
+=====
+- use KDE's scheduler for download jobs (let KDE limit kio_http process number to 30)
+- xml: accuweather.com (World): new URL to find location code
+
+1.1.1
+=====
+- xml: fr.weather.com: fixed wind direction
+- xml: espanol.weather.com: fixed wind direction
+- xml: www.weather.com: fixed
+- xml: accuweather.com (World): fixed (both °C and °F)
+
+1.1.0
+=====
+- fixed namespace bug in xml files
+- fixed panel bug in KDE 4.5
+- xml: gismeteo.com: fixed
+
+1.0.5
+=====
+- xml: freemeteo.com: fixed & added new languages support
+
+1.0.4
+=====
+- xml: accuweather.com (World): fixed (thanks to Jota Jota)
+- xml: accuweather.com (US): fixed
+
+1.0.3
+=====
+- xml: satellite_images: broken links fixed
+- xml: accuweather.com (World): fixed wrong icon code
+
+1.0.2
+=====
+- xml: accuweather.com (World) fixed (both °C and °F)
+
+1.0.1
+=====
+- xml: www.gismeteo.com: location fixed
+- xml: wetter.com: update time fixed, current weather icon fixed
+- xml: weather.com.cn: day names fixed
+
+1.0.0
+=====
+- update function (xml files in .cwp folder preferred over xml files from install directory)
+- weather-windy icon: fixed (newer kde versions don't load scalable icons any more)
+- xml: accuweather.com: US celsius and fahrenheit: fixed
+- xml: ilmeteo.it: fixed (thanks to Pasquale Ceres)
+- xml: www.weather.com: fixed
+
+0.9.18
+======
+- xml: ilmeteo.it: fixed
+- xml: www.metservice.co.nz: removed, homepage is unusable
+- xml: freemeteo.com: fixed
+- xml: wetter.com: fixed
+
+0.9.17
+======
+- xml: www.metservice.co.nz: fixed
+- xml: ilmeteo.it: fixed
+
+0.9.16
+======
+- link to current weather data homepage accessible through context menu
+- xml: pogodynka.pl: fixed
+
+0.9.15
+======
+- xml: www.metservice.co.nz: fixes
+- xml: www.weather.com.cn: fixes
+- fixed local custom images (sorry)
+
+0.9.14
+======
+- data engine completely rewritten
+- "network disconnected" icon shown, when download failed
+- remember current satellite image (again)
+- minor gui fixes
+
+0.9.13
+======
+- xml: www.weather.com.cn: fixed
+- xml: minor fixes
+
+0.9.12
+======
+- workaround for "empty folderview" bug (thanks to Bogdan Gribincea)
+- workaround for Qt animated gif bug
+- full size wind rose if no sunrise/sunset data was found
+- xml: freemeteo.com (celsius and fahrenheit): added
+- xml: satellite_images: updated (animated images)
+
+0.9.11
+======
+- animated satellite images support (thanks to NDL)
+- xml: small fixes
+- xml: www.wetter.com: fixed
+- xml: www.gismeteo.com: added (thanks to NDL)
+
+0.9.10
+======
+- different set of custom images for each preferred location
+- small gui fix ("feels like" temperature position)
+- added latin2 encoding (for pogodynka.pl, thanks to Paul Zawila-Niedzwiecki)
+- xml: ilmeteo.it: fixes (thanks to Federico Brega)
+- xml: weather.com: small fixes
+- xml: accuweather.com: small fixes
+- xml: www.weather.com.cn: fixes
+- Russian translation (thanks to Alexey Pavlov)
+- Turkish translation (thanks to Yavuz Selim)
+
+0.9.9
+=====
+- rewritten font size policy (depends on area of plasmoid now) (probably you need to reset font scale value)
+- new 1 day forecast layouts (you need to reselct the layout you want)
+- vertical layouts: more space for location title
+- Serbian translation (sr.po and sr@latin.po) (thanks to Mladen Pejaković)
+- xml: accuweather fixes
+- xml: www.weather.com fixes
+- xml: ilmeteo.it added
+- xml: pogodynka.pl added
+
+0.9.8
+=====
+- fix download via proxy (thanks to paran0id)
+- kill download processes after update time
+- custom/satellite image list: display several images, switch between them clicking on the arrow buttons
+- user can show / hide temperature unit (C or F)
+- adjust font sizes also by height
+- fixed some horizontal layout regression
+- center current temperature
+- icon text overlaps half of the icon at most (reduced font size if necessary)
+- xml: wetter.com: title extracted correctly
+- xml: minor fixes
+- Polish translation (thanks to Piotr Hryciuk)
+- Italian translation (thanks to Federico Zenith)
+- Norwegian translation (thanks to Federico Zenith)
+
+0.9.7
+=====
+- font size automatically reduced if it doesn't fit inside (not for all text elements)
+- slightly modified cwp forecast separator style
+- adjust satellite image and extended weather information size according to plasma theme
+- fixed some icon and text positions
+- fixed plasma forecast separator sizes
+- location image and extended weather information do not show up in task bar any more
+- xml: satellite images updates
+
+0.9.6
+=====
+- links in configuration dialog are working now
+- reuse old values if reloading values failed
+- reload automatically after 1 minute if data is invalid (no internet connection on startup, for example)
+- tooltip / extended weather information window uses plasma theme's font color now
+- animate busy widget
+- enlarged satellite image / extended weather information displayed in external window
+- icon for access to satellite image for layouts without custom image
+- wind rose size increased for horizontal layouts
+- xml: small fixes
+- xml: added accuweather satellite images
+- xml: fixed metservice_co_nz.xml: website uses javascript now
+
+0.9.5
+=====
+- custom image can be selected from a list of satellite images
+- added weather-windy icon to oxygen icons
+- fixed current weather condition possibly not centered on horizontal layouts
+- configuration dialog is divided in 4 tabs now: reduzed height
+- fixed a panel positioning bug
+- new layouts: 4 days horizontal and vertical with custom image
+- xml: accuweather.com (world °C and °F, US °C and °F)
+
+0.9.4
+=====
+- icon description shows more lines now
+- tooltip when run in systray mode
+- wind rose direction may be inverted
+- scale systray icon's text so it fits inside
+- wind rose arrow scalable
+- show weather provider's update time when clicked on update time
+- preferred locations which appear as shortcuts in context menu
+- fixed a bug that prevented position/size to be saved
+- Renamed "Customizable Weather Plasmoid" to "CWP". Make sure to "make uninstall" before installing new cwp!
+
+0.9.3
+=====
+- fixed resizing problem when switching between layouts or cancelling configuration dialog
+- display old data instead of empty data when download failed
+- "Reload Weather Data" option in context menu
+- Reduzed wind arrow size by 10%
+- Dutch translation (Thanks to Rinse de Vries)
+- French translation (Thanks to JaJaX)
+- Brazilian translation (Thanks to Paulo Dias)
+
+0.9.2
+=====
+- can be run in systray now
+- fixed I18N_ARGUMENT_MISSING bug
+
+0.9.1
+=====
+- minor layout fixes, mainly for vertical layouts and plasma-style forecast separators
+- avoid temporary files completely
+- configuration dialog modified (added more information)
+- Spanish translation (Thanks to Cristian Daniel Fadón)
+- Hungarian translation (Thanks to Nitai)
+- Romanian translation (Thanks to Patkos Csaba)
+- Chinese (simplified) translation (Thanks to Meng Zhuo)
+- xml: new provider: www.weather.com.cn
+
+0.9
+===
+- fixed a bug freezing plasma when kio_http hangs (doesn't fix hanging kio_http itself)
+- custom icon sets can be loaded (yaWP theme files)
+- forecast separators can imitate plasma style now
+- translation (only DE added for now, you can easily write your own translation file!)
+- minor fixes
+
+0.8.3
+=====
+- finally fixed wind rose arrow size, sorry
+
+0.8.2
+=====
+- enlarged wind rose arrow (resized - might overlap with NSEW now, smoothed rotation, NSEW smaller but bold)
+- location image may be an url now (show a satellite image, for example)
+- location image is set to full plasmoid size when clicking on it
+- fixed resize problems
+
+0.8.1
+=====
+- custom background color and transparency
+
+0.8
+===
+- fixed configuration dialog again
+- two new layouts (more compact horizontal layouts for 5 and 7 days forecast)
+- Transferred celsius/fahrenheit choice to xml file
+- font sizes changed
+- all layout modified
+- added background files black and grey
+- added background for native kde icons
+- wind rose
+- extended current weather information (click inside current weather values to see extended information!)
+- xml: uk.weather.com, fr.weather.com, espanol.weather.com: fixed forecast icon text
+- xml: new provider: myforecast_com_celsius.xml, myforecast_com_fahrenheit.xml, metservice_co_nz.xml
+- many bug fixes
+
+0.7
+===
+- font/icon size fixes
+- fixed crash when clicking opening configuration dialog (buggy mandriva's kde)
+- fixed configuration dialog
+- possibility to scale weather icons
+- xml: uk.weather.com, fr.weather.com, espanol.weather.com: fixed forecast day names
+- xml: www.weather.com: fixed current values for non-US locations
+
+0.6
+===
+- possibility to use native KDE weather icons
+
+0.5
+===
+- fixed locale problems
+- updated icon background files
+- nicer looking icon background file description
+- possibility to select no icon background file
+- forecast separator
+- new layout with custom image displayed (e.g. a photo of a landmark)
+
+0.4
+===
+- install xml files and background images to data directory
+- automatically search data directories for valid xml files and background images
+  valid directories are: installation data directory and ~/.custom_weather
+- delete ~/.custom_weather folder, if you want to, or place your custom xml files and background images there
+- fixed a possible problem with "degree" character
+
+0.3
+===
+- use KDE's internal download function, not wget
+- save downloaded data in memory, not in temporary files
+- background may be set to: default, translucent, none (transparent)
+- font type and color customizable (optional font shadows)
+- fonts scalable (for fonts that appear too small)
+- display "..." when no data could be downloaded at first
+- show time when last data download took place
+
+0.2
+===
+- resize fixes
+- gui tweaks
+- locale setting
+- xml: www.weather.com, in.weather.com, uk.weather.com, fr.weather.com, br.weather.com, espanol.weather.com
+
+0.1
+===
+- initial release
+- xml: wetter.com and de.weather.com

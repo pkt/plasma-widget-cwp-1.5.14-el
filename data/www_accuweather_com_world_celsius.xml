@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<custom_weather>
+	<xml_file_version type="cwp" version="2012-04-02" name="www.accuweather.com World" search_page="http://www.accuweather.com/rss-center.asp" example_zip="AFR|ZA|SF004|JOHANNESBURG" unit="C" />
+
+	<locale_settings locale="utf-8" encoding="utf8" />
+
+	<urlc urlc_prefix="http://www.accuweather.com/world-forecast-current-conditions.asp?locCode=" urlc_suffix="" urlc_follow="grep starturl | sed -e &quot;s/.*content=\&quot;\([^\&quot;]*\)\&quot;.*/\1?mt=1/&quot;" />
+
+	<url1 url1_prefix="http://www.accuweather.com/world-forecast-current-conditions.asp?locCode=" url1_suffix="" url1_follow="grep daily-weather-forecast | head -n 1 | sed -e &quot;s/.*action-uri=\([^;]*\);.*/\1?day=1\&amp;mt=1/&quot;" />
+
+	<url2 url2_prefix="http://www.accuweather.com/world-forecast-current-conditions.asp?locCode=" url2_suffix="" url2_follow="grep daily-weather-forecast | head -n 1 | sed -e &quot;s/.*action-uri=\([^;]*\);.*/\1?day=6\&amp;mt=1/&quot;" />
+
+	<url3 url3_prefix="http://www.accuweather.com/world-forecast-current-conditions.asp?locCode=" url3_suffix="" url3_follow="grep current-weather | tail -n 1 | sed -e &quot;s/.*href=\&quot;\([^\&quot;]*\)\&quot;.*/\1?mt=1/&quot;" />
+
+	<url4 url4_prefix="" url4_suffix="" url4_follow="" />
+
+	<url5 url5_prefix="" url5_suffix="" url5_follow="" />
+
+	<url6 url6_prefix="" url6_suffix="" url6_follow="" />
+
+	<url7 url7_prefix="" url7_suffix="" url7_follow="" />
+
+	<data_location url="url3"
+		location="grep var\ apgUserInfoObj | sed -e &quot;s/.*city: &apos;\([^&apos;]*\)&apos;.*/\1/&quot;"
+		country="grep class=\&quot;country-name\&quot; | sed -e &apos;s/.*title=&quot;\([^&quot;]*\).*/\1/&apos;"
+		/>
+
+	<data_sun url="url3"
+		sunrise="grep -A 1 Rises\ at | head -n 2 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		sunset="grep -A 1 sets\ at | head -n 2 | tail -n 1 | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		/>
+
+	<data_current_temperature url="urlc"
+		update_time="grep Now | head -n 1 | sed -e &quot;s/.*[^0-9]\([0-9]*:[0-9]*[apm]*\).*/\1/&quot;"
+		temperature="grep class=[\&quot;]*temp | head -n 1 | sed -e &quot;s/.*class=\&quot;temp\&quot;>\(-*[0-9]*\).*/\1/&quot;"
+		temperature_felt="grep -A 2 class=[\&quot;]*temp | head -n 2 | tail -n 1 | sed -e &quot;s/.*RealFeel[^0-9-]*\(-*[0-9]*\).*/\1/&quot;"
+		/>
+
+	<data_current_wind url="url3"
+		wind="grep -A 6 Visibility | tail -n 1 | sed -e &quot;s/.*center;\&quot;&gt;\([0-9]*\)\([^&lt;]*\).*/\1 \2/&quot;"
+		wind_code="grep icons-wind | sed -e &quot;s/.*icons-wind\/\([^\.]*\).gif.*/\1/&quot;"
+		wind_speed="grep -A 6 Visibility | tail -n 1 | sed -e &quot;s/.*center;\&quot;&gt;\([0-9]*\)\([^&lt;]*\).*/\1 \2/&quot;"
+		/>
+
+	<data_current_icon url="url3"
+		icon="grep -A 5 id=\&quot;detail-now | tr -d &apos;\r&apos; | tr -d &apos;\n&apos; | awk &apos;{print}&apos; | sed -e &quot;s/.*detail-tab-panel \([^\&quot;]*\).*class=\&quot;icon i-\([^\&quot; ]*\).*/http:\/\/www.accuweather.com\/adc2010\/images\/icons-\1\/\2-m.png/&quot;"
+		icon_code="grep -A 5 id=\&quot;detail-now | tr -d &apos;\r&apos; | tr -d &apos;\n&apos; | awk &apos;{print}&apos; | sed -e &quot;s/.*detail-tab-panel \([^\&quot;]*\).*class=\&quot;icon i-\([^\&quot; ]*\).*/\1_\2/&quot;"
+		icon_text="grep info\&quot; | grep cond\&quot; | sed -e &quot;s/.*cond\&quot;&gt;\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_current_additional url="url3"
+		humidity="grep Humidity | sed -e &quot;s/[^0-9]*\([^&lt;]*\).*/\1/&quot;"
+		rain="grep Precipitation | sed -e &quot;s/.*&lt;strong&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		dew_point="grep Dew\ Point | sed -e &quot;s/[^0-9]*\([^&lt;&amp;]*\).*/\1/&quot;"
+		visibility="grep Visibility | sed -e &quot;s/.*&lt;strong&gt;\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		pressure="grep Pressure | sed -e &quot;s/[^0-9]*\([^&lt;]*\).*/\1/&quot; | sed -e &quot;s/&amp;nbsp;/ /g&quot;"
+		uv_index="grep UV\ Index | sed -e &quot;s/[^0-9]*\([^&lt;]*\).*/\1/&quot;"
+		/>
+
+	<data_day1 url="url1"
+		name="grep -A13 class=\&quot;.*day=1 | head -n 14 | grep href=\&quot;#\&quot; | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A13 class=\&quot;.*day=1 | head -n 14 | grep temp | tail -n 1 | sed -e &quot;s/.*Lo *&lt;\/span&gt; *\([-0-9]*\).*/\1/&quot;"
+		temperature_high="grep -A13 class=\&quot;.*day=1 | head -n 14 | grep temp | tail -n 1 | sed -e &quot;s/.*temp *\&quot;&gt; *\([-0-9]*\).*/\1/&quot;"
+		icon="grep -A13 class=\&quot;.*day=1 | head -n 14 | grep -A 3 href=\&quot;#\&quot; | tr -d &apos;\r&apos; | tr -d &apos;\n&apos; | awk &apos;{print}&apos; | sed -e &quot;s/.*href=\&quot;#\&quot;>\(To\|Over\)\([^&amp;&lt;]*\).*icon i-\([^\&quot; ]*\).*/http:\/\/www.accuweather.com\/adc2010\/images\/icons-\2\/\3-m.png/&quot;"
+		icon_code="grep -A13 class=\&quot;.*day=1 | head -n 14 | grep -A 3 href=\&quot;#\&quot; | tr -d &apos;\r&apos; | tr -d &apos;\n&apos; | awk &apos;{print}&apos; | sed -e &quot;s/.*href=\&quot;#\&quot;>\(To\|Over\)\([^&amp;&lt;]*\).*icon i-\([^\&quot; ]*\).*/\2_\3/&quot;"
+		icon_text="grep -A13 class=\&quot;.*day=1 | head -n 14 | grep cond | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		/>
+
+	<data_day2 url="url1"
+ 		name="grep -A14 class=\&quot;day.*day=2 | grep href=\&quot;#\&quot; | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A14 class=\&quot;day.*day=2 | grep temp | tail -n 1 | sed -e &quot;s/.*Lo *&lt;\/span&gt; *\([-0-9]*\).*/\1/&quot;"
+		temperature_high="grep -A14 class=\&quot;day.*day=2 | grep temp | tail -n 1 | sed -e &quot;s/.*temp *\&quot;&gt; *\([-0-9]*\).*/\1/&quot;"
+		icon="grep -A14 class=\&quot;day.*day=2 | grep icon | sed -e &quot;s/.*icon i-\([^\&quot; ]*\).*/http:\/\/www.accuweather.com\/adc2010\/images\/icons-day\/\1-m.png/&quot;"
+		icon_code="grep -A14 class=\&quot;day.*day=2 | grep icon | sed -e &quot;s/.*class=\&quot;icon i-\([^\&quot; ]*\).*/day_\1/&quot;"
+		icon_text="grep -A14 class=\&quot;day.*day=2 | grep cond | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		/>
+
+	<data_day3 url="url1"
+ 		name="grep -A14 class=\&quot;day.*day=3 | grep href=\&quot;#\&quot; | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A14 class=\&quot;day.*day=3 | grep temp | tail -n 1 | sed -e &quot;s/.*Lo *&lt;\/span&gt; *\([-0-9]*\).*/\1/&quot;"
+		temperature_high="grep -A14 class=\&quot;day.*day=3 | grep temp | tail -n 1 | sed -e &quot;s/.*temp *\&quot;&gt; *\([-0-9]*\).*/\1/&quot;"
+		icon="grep -A14 class=\&quot;day.*day=3 | grep icon | sed -e &quot;s/.*icon i-\([^\&quot; ]*\).*/http:\/\/www.accuweather.com\/adc2010\/images\/icons-day\/\1-m.png/&quot;"
+		icon_code="grep -A14 class=\&quot;day.*day=3 | grep icon | sed -e &quot;s/.*class=\&quot;icon i-\([^\&quot; ]*\).*/day_\1/&quot;"
+		icon_text="grep -A14 class=\&quot;day.*day=3 | grep cond | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		/>
+
+	<data_day4 url="url1"
+ 		name="grep -A14 class=\&quot;day.*day=4 | grep href=\&quot;#\&quot; | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A14 class=\&quot;day.*day=4 | grep temp | tail -n 1 | sed -e &quot;s/.*Lo *&lt;\/span&gt; *\([-0-9]*\).*/\1/&quot;"
+		temperature_high="grep -A14 class=\&quot;day.*day=4 | grep temp | tail -n 1 | sed -e &quot;s/.*temp *\&quot;&gt; *\([-0-9]*\).*/\1/&quot;"
+		icon="grep -A14 class=\&quot;day.*day=4 | grep icon | sed -e &quot;s/.*icon i-\([^\&quot; ]*\).*/http:\/\/www.accuweather.com\/adc2010\/images\/icons-day\/\1-m.png/&quot;"
+		icon_code="grep -A14 class=\&quot;day.*day=4 | grep icon | sed -e &quot;s/.*class=\&quot;icon i-\([^\&quot; ]*\).*/day_\1/&quot;"
+		icon_text="grep -A14 class=\&quot;day.*day=4 | grep cond | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		/>
+
+	<data_day5 url="url1"
+ 		name="grep -A14 class=\&quot;day.*day=5 | grep href=\&quot;#\&quot; | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A14 class=\&quot;day.*day=5 | grep temp | tail -n 1 | sed -e &quot;s/.*Lo *&lt;\/span&gt; *\([-0-9]*\).*/\1/&quot;"
+		temperature_high="grep -A14 class=\&quot;day.*day=5 | grep temp | tail -n 1 | sed -e &quot;s/.*temp *\&quot;&gt; *\([-0-9]*\).*/\1/&quot;"
+		icon="grep -A14 class=\&quot;day.*day=5 | grep icon | sed -e &quot;s/.*icon i-\([^\&quot; ]*\).*/http:\/\/www.accuweather.com\/adc2010\/images\/icons-day\/\1-m.png/&quot;"
+		icon_code="grep -A14 class=\&quot;day.*day=5 | grep icon | sed -e &quot;s/.*class=\&quot;icon i-\([^\&quot; ]*\).*/day_\1/&quot;"
+		icon_text="grep -A14 class=\&quot;day.*day=5 | grep cond | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		/>
+
+	<data_day6 url="url2"
+ 		name="grep -A14 class=\&quot;day.*day=6 | grep href=\&quot;#\&quot; | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A14 class=\&quot;day.*day=6 | grep temp | tail -n 1 | sed -e &quot;s/.*Lo *&lt;\/span&gt; *\([-0-9]*\).*/\1/&quot;"
+		temperature_high="grep -A14 class=\&quot;day.*day=6 | grep temp | tail -n 1 | sed -e &quot;s/.*temp *\&quot;&gt; *\([-0-9]*\).*/\1/&quot;"
+		icon="grep -A14 class=\&quot;day.*day=6 | grep icon | sed -e &quot;s/.*icon i-\([^\&quot; ]*\).*/http:\/\/www.accuweather.com\/adc2010\/images\/icons-day\/\1-m.png/&quot;"
+		icon_code="grep -A14 class=\&quot;day.*day=6 | grep icon | sed -e &quot;s/.*class=\&quot;icon i-\([^\&quot; ]*\).*/day_\1/&quot;"
+		icon_text="grep -A14 class=\&quot;day.*day=6 | grep cond | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		/>
+
+	<data_day7 url="url2"
+ 		name="grep -A14 class=\&quot;day.*day=7 | grep href=\&quot;#\&quot; | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		temperature_low="grep -A14 class=\&quot;day.*day=7 | grep temp | tail -n 1 | sed -e &quot;s/.*Lo *&lt;\/span&gt; *\([-0-9]*\).*/\1/&quot;"
+		temperature_high="grep -A14 class=\&quot;day.*day=7 | grep temp | tail -n 1 | sed -e &quot;s/.*temp *\&quot;&gt; *\([-0-9]*\).*/\1/&quot;"
+		icon="grep -A14 class=\&quot;day.*day=7 | grep icon | sed -e &quot;s/.*icon i-\([^\&quot; ]*\).*/http:\/\/www.accuweather.com\/adc2010\/images\/icons-day\/\1-m.png/&quot;"
+		icon_code="grep -A14 class=\&quot;day.*day=7 | grep icon | sed -e &quot;s/.*class=\&quot;icon i-\([^\&quot; ]*\).*/day_\1/&quot;"
+		icon_text="grep -A14 class=\&quot;day.*day=7 | grep cond | sed -e &quot;s/&lt;[^&gt;]*&gt;//g&quot;"
+		/>
+
+	<icon_transform
+		i1="day_su" o1="32"
+		i2="day_msu" o2="30"
+		i3="day_psu" o3="26"
+		i4="day_ic" o4="26"
+		i5="day_h" o5="34"
+		i6="day_mc" o6="28"
+		i7="day_c" o7="28"
+		i8="day_d" o8="28"
+		i9="" o9=""
+		i10="" o10=""
+		i11="day_f" o11="20"
+		i12="day_s" o12="40"
+		i13="day_mcs" o13="39"
+		i14="day_psus" o14="12"
+		i15="day_t" o15="01"
+		i16="day_mct" o16="37"
+		i17="day_psut" o17="37"
+		i18="day_r" o18="40"
+		i19="day_fl" o19="15"
+		i20="day_mcfl" o20="13"
+		i21="day_psfl" o21="13"
+		i22="day_sn" o22="43"
+		i23="day_mcsn" o23="15"
+		i24="day_i" o24="06"
+		i25="day_sl" o25="06"
+		i26="day_fr" o26="06"
+		i27="" o27=""
+		i28="" o28=""
+		i29="day_rsn" o29="05"
+		i30="day_ho" o30="36"
+		i31="day_co" o31="25"
+		i32="day_w" o32="23"
+		i33="night_cl" o33="31"
+		i34="night_mcl" o34="29"
+		i35="night_pc" o35="27"
+		i36="night_ic" o36="27"
+		i37="night_h" o37="33"
+		i38="night_mc" o38="27"
+		i39="night_pcs" o39="45"
+		i40="night_mcs" o40="45"
+		i41="night_pct" o41="47"
+		i42="night_mct" o42="47"
+		i43="night_mcfl" o43="46"
+		i44="night_mcsn" o44="46"
+		i45="night_s" o45="40"
+		i46="night_c" o46="28"
+		i47="night_r" o47="40"
+		i48="night_sn" o48="43"
+		i49="night_rsn" o49="05"
+		i50="night_w" o50="23"
+	/>
+
+	<wind_transform
+		i1="N" o1="N"
+		i2="NNE" o2="NNE"
+		i3="NE" o3="NE"
+		i4="ENE" o4="ENE"
+		i5="E" o5="E"
+		i6="SSE" o6="SSE"
+		i7="SE" o7="SE"
+		i8="ESE" o8="ESE"
+		i9="S" o9="S"
+		i10="NNW" o10="NNW"
+		i11="NW" o11="NW"
+		i12="WNW" o12="WNW"
+		i13="W" o13="W"
+		i14="SSW" o14="SSW"
+		i15="SW" o15="SW"
+		i16="WSW" o16="WSW"
+		i17="Var" o17="Var"
+		i18="Variable" o18="Var"
+		i19="CLM" o19="Vars"
+		i20="" o20=""
+	/>
+</custom_weather>
