@@ -138,7 +138,7 @@ msgstr " Εμφάνιση ώρας ανανέωσης"
 #. i18n: ectx: attribute (title), widget (QWidget, tab0)
 #: build/ui_config.h:896 po/rc.cpp:6 rc.cpp:6
 msgid "Weather data"
-msgstr "Καιρικά δεδομένα"
+msgstr "Δεδομένα καιρού"
 
 #. i18n: file: config.ui:355
 #. i18n: ectx: property (text), widget (QLabel, layoutLabel)
@@ -191,7 +191,7 @@ msgstr "Σύστημα (ημερομηνία)"
 #. i18n: ectx: property (text), widget (QLabel, weatherIconsLabel)
 #: build/ui_config.h:903 po/rc.cpp:87 rc.cpp:87
 msgid "Weather icons:"
-msgstr "Καιρικά εικονίδια:"
+msgstr "Εικονίδια καιρού"
 
 #. i18n: file: config.ui:486
 #. i18n: ectx: property (text), widget (QRadioButton, iconsKDESelect)
@@ -354,7 +354,7 @@ msgstr "<Μετάφραση του <Feels Like>"
 #. i18n: ectx: property (text), widget (QLineEdit, feelsLikeText)
 #: build/ui_config.h:952 po/rc.cpp:180 rc.cpp:180
 msgid "feels like"
-msgstr "μοιάζει με"
+msgstr "αισθητή"
 
 #. i18n: file: config.ui:1085
 #. i18n: ectx: property (text), widget (QLabel, humidityLabel)
@@ -418,7 +418,7 @@ msgstr "Μετάφραση του <Dew Point>"
 #: build/ui_config.h:962 plasma-cwp.cpp:282 plasma-cwp.cpp:1910 po/rc.cpp:210
 #: rc.cpp:210
 msgid "Dew Point"
-msgstr "Επίπεδο Πάχνης"
+msgstr "Σημείο Δρόσου"
 
 #. i18n: file: config.ui:1170
 #. i18n: ectx: property (text), widget (QLabel, visibilityLabel)
